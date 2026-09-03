@@ -1,1 +1,624 @@
+/* =====================================================
+   ARCONEST CONSULTANTS
+   ARCHITECTURAL NAVBAR
+===================================================== */
 
+
+/* ---------- ROOT ---------- */
+
+:root {
+    --arconest-purple: #32145f;
+    --arconest-purple-dark: #241044;
+    --arconest-white: #ffffff;
+    --arconest-offwhite: #f8f7f5;
+    --arconest-line: rgba(50, 20, 95, 0.25);
+}
+
+
+/* ---------- HEADER ---------- */
+
+.arconest-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    pointer-events: none;
+}
+
+
+/* ---------- NAVBAR ---------- */
+
+.arconest-navbar {
+
+    position: relative;
+
+    width: calc(100% - 80px);
+    max-width: 1500px;
+
+    margin: 24px auto 0;
+
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 34px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(50, 20, 95, 0.15);
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.08);
+
+    pointer-events: auto;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* ---------- ARCHITECTURAL TOP LINE ---------- */
+
+.arconest-navbar::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -8px;
+    left: 25px;
+    right: 25px;
+
+    height: 1px;
+
+    background: var(--arconest-purple);
+
+    opacity: 0.45;
+}
+
+
+/* ---------- LOGO ---------- */
+
+.nav-logo {
+
+    display: flex;
+    align-items: center;
+
+    width: 150px;
+
+    text-decoration: none;
+}
+
+
+.nav-logo img {
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* ---------- DESKTOP NAV ---------- */
+
+.desktop-nav {
+
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    gap: 42px;
+}
+
+
+/* ---------- NAV LINKS ---------- */
+
+.nav-link {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    height: 78px;
+
+    color: var(--arconest-purple);
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.02em;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Number */
+
+.nav-link span {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 9px;
+
+    opacity: 0.45;
+
+    transform: translateY(-8px);
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* Bottom architectural line */
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 17px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--arconest-purple);
+
+    transition: width 0.4s cubic-bezier(.77,0,.18,1);
+}
+
+
+/* Hover */
+
+.nav-link:hover {
+
+    color: var(--arconest-purple-dark);
+}
+
+
+.nav-link:hover span {
+
+    opacity: 1;
+}
+
+
+.nav-link:hover::after {
+
+    width: 100%;
+}
+
+
+/* Active */
+
+.nav-link.active::after {
+
+    width: 100%;
+}
+
+
+/* ---------- HANGING ARCHITECTURAL LINES ---------- */
+
+.nav-hanger {
+
+    position: absolute;
+
+    top: 0;
+
+    width: 1px;
+
+    height: 24px;
+
+    background: var(--arconest-purple);
+
+    opacity: 0.45;
+
+    z-index: 1;
+}
+
+
+.nav-hanger-left {
+
+    left: calc(50% - 700px);
+
+}
+
+
+.nav-hanger-right {
+
+    right: calc(50% - 700px);
+
+}
+
+
+/* Small architectural nodes */
+
+.nav-hanger::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -3px;
+
+    left: 50%;
+
+    width: 6px;
+    height: 6px;
+
+    transform: translateX(-50%);
+
+    border: 1px solid var(--arconest-purple);
+
+    background: var(--arconest-white);
+
+}
+
+
+/* ---------- MOBILE BUTTON ---------- */
+
+.menu-toggle {
+
+    display: none;
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid var(--arconest-purple);
+
+    background: transparent;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+
+/* Hamburger */
+
+.menu-toggle span {
+
+    position: absolute;
+
+    left: 12px;
+
+    width: 20px;
+    height: 1px;
+
+    background: var(--arconest-purple);
+
+    transition:
+        transform 0.4s ease,
+        top 0.4s ease;
+}
+
+
+.menu-toggle span:first-child {
+    top: 18px;
+}
+
+
+.menu-toggle span:last-child {
+    top: 25px;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.mobile-menu {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    background: var(--arconest-offwhite);
+
+    padding: 28px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transform: translateY(-20px);
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease,
+        visibility 0.45s ease;
+}
+
+
+/* Open */
+
+.mobile-menu.active {
+
+    visibility: visible;
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ---------- MOBILE TOP ---------- */
+
+.mobile-menu-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid var(--arconest-line);
+}
+
+
+.mobile-menu-label {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.2em;
+
+    color: var(--arconest-purple);
+}
+
+
+/* ---------- CLOSE BUTTON ---------- */
+
+.menu-close {
+
+    position: relative;
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid var(--arconest-purple);
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+.menu-close span {
+
+    position: absolute;
+
+    left: 12px;
+
+    width: 20px;
+
+    height: 1px;
+
+    background: var(--arconest-purple);
+
+    top: 21px;
+}
+
+
+.menu-close span:first-child {
+
+    transform: rotate(45deg);
+}
+
+
+.menu-close span:last-child {
+
+    transform: rotate(-45deg);
+}
+
+
+/* ---------- MOBILE NAVIGATION ---------- */
+
+.mobile-navigation {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* ---------- MOBILE LINKS ---------- */
+
+.mobile-nav-link {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    align-items: center;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid var(--arconest-line);
+
+    color: var(--arconest-purple);
+
+    text-decoration: none;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(30px, 8vw, 55px);
+
+    font-weight: 400;
+
+    transition:
+        padding-left 0.4s ease,
+        color 0.3s ease;
+}
+
+
+.mobile-number {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    opacity: 0.5;
+}
+
+
+/* Mobile hover */
+
+.mobile-nav-link:hover {
+
+    padding-left: 15px;
+
+    color: var(--arconest-purple-dark);
+}
+
+
+/* ---------- MOBILE BOTTOM ---------- */
+
+.mobile-menu-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 25px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 0.12em;
+
+    color: var(--arconest-purple);
+
+    opacity: 0.6;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .arconest-navbar {
+
+        width: calc(100% - 30px);
+
+        margin-top: 15px;
+
+        min-height: 68px;
+
+        padding: 0 18px;
+    }
+
+
+    .desktop-nav {
+
+        display: none;
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+    }
+
+
+    .nav-logo {
+
+        width: 130px;
+    }
+
+
+    .nav-hanger {
+
+        display: none;
+    }
+
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 480px) {
+
+    .arconest-navbar {
+
+        width: calc(100% - 20px);
+
+        min-height: 64px;
+
+        padding: 0 14px;
+
+        margin-top: 10px;
+    }
+
+
+    .nav-logo {
+
+        width: 115px;
+    }
+
+
+    .menu-toggle {
+
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .mobile-menu {
+
+        padding: 20px;
+    }
+
+
+    .mobile-nav-link {
+
+        grid-template-columns: 35px 1fr;
+
+        font-size: 32px;
+
+        padding: 18px 0;
+    }
+
+
+    .mobile-menu-bottom {
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
