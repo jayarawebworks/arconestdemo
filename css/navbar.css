@@ -1,171 +1,186 @@
 /* =====================================================
    ARCONEST CONSULTANTS
-   ARCHITECTURAL NAVBAR
+   FLOATING GLASS NAVBAR
 ===================================================== */
 
-
-/* ---------- ROOT ---------- */
-
 :root {
-    --arconest-purple: #32145f; 
-    --arconest-purple-dark: #241044;
+    --arconest-purple: #32145f;
+    --arconest-purple-dark: #241043;
     --arconest-white: #ffffff;
-    --arconest-offwhite: #f8f7f5;
-    --arconest-line: rgba(50, 20, 95, 0.25);
+
+    --glass-white: rgba(255, 255, 255, 0.78);
+    --glass-border: rgba(255, 255, 255, 0.65);
+
+    --navbar-radius: 18px;
+
+    --nav-transition: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 
-/* ---------- HEADER ---------- */
+/* =====================================================
+   NAVBAR
+===================================================== */
 
-.arconest-header {
+.arconest-navbar {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
+
+    top: 24px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(1180px, calc(100% - 48px));
+
+    z-index: 9000;
 
     pointer-events: none;
 }
 
 
-/* ---------- NAVBAR ---------- */
+/* =====================================================
+   NAVBAR INNER
+===================================================== */
 
-.arconest-navbar {
+.navbar-inner {
 
-    position: relative;
+    height: 76px;
 
-    width: calc(100% - 80px);
-    max-width: 1500px;
-
-    margin: 24px auto 0;
-
-    min-height: 78px;
+    padding: 0 18px 0 24px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    padding: 0 34px;
+    background: var(--glass-white);
 
-    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid var(--glass-border);
 
-    border: 1px solid rgba(50, 20, 95, 0.15);
+    border-radius: var(--navbar-radius);
 
-    border-radius: 4px;
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
 
     box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.08);
-
-    pointer-events: auto;
+        0 10px 40px rgba(24, 10, 45, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.75);
 
     transition:
-        transform 0.5s ease,
-        box-shadow 0.5s ease;
+        height var(--nav-transition),
+        background var(--nav-transition),
+        box-shadow var(--nav-transition);
+
+    pointer-events: auto;
 }
 
 
-/* ---------- ARCHITECTURAL TOP LINE ---------- */
+/* =====================================================
+   LOGO
+===================================================== */
 
-.arconest-navbar::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: -8px;
-    left: 25px;
-    right: 25px;
-
-    height: 1px;
-
-    background: var(--arconest-purple);
-
-    opacity: 0.45;
-}
-
-
-/* ---------- LOGO ---------- */
-
-.nav-logo {
-
-    display: flex;
-    align-items: center;
+.navbar-logo {
 
     width: 150px;
 
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
     text-decoration: none;
+
+    flex-shrink: 0;
 }
 
 
-.nav-logo img {
+.navbar-logo img {
 
     display: block;
 
     width: 100%;
+
+    max-width: 145px;
+
     height: auto;
 
     object-fit: contain;
 }
 
 
-/* ---------- DESKTOP NAV ---------- */
+/* =====================================================
+   DESKTOP NAVIGATION
+===================================================== */
 
 .desktop-nav {
 
-    display: flex;
-    align-items: center;
-
     height: 100%;
 
-    gap: 42px;
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
 }
 
 
-/* ---------- NAV LINKS ---------- */
+/* =====================================================
+   NAV LINKS
+===================================================== */
 
 .nav-link {
 
     position: relative;
 
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    height: 42px;
 
-    height: 78px;
+    padding: 0 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
 
     color: var(--arconest-purple);
 
     text-decoration: none;
 
-    font-family: "Inter", sans-serif;
+    font-family:
+        "Space Grotesk",
+        "Inter",
+        sans-serif;
 
     font-size: 13px;
 
     font-weight: 500;
 
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
 
-    transition: color 0.3s ease;
+    border-radius: 10px;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease;
 }
 
-
-/* Number */
 
 .nav-link span {
 
-    font-family: "Space Grotesk", sans-serif;
-
-    font-size: 9px;
+    font-size: 8px;
 
     opacity: 0.45;
 
-    transform: translateY(-8px);
+    letter-spacing: 0.08em;
 
-    transition: opacity 0.3s ease;
+    transform: translateY(-5px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
 
-
-/* Bottom architectural line */
 
 .nav-link::after {
 
@@ -173,154 +188,181 @@
 
     position: absolute;
 
-    left: 0;
-    bottom: 17px;
+    left: 15px;
+    right: 15px;
 
-    width: 0;
+    bottom: 5px;
+
     height: 1px;
 
     background: var(--arconest-purple);
 
-    transition: width 0.4s cubic-bezier(.77,0,.18,1);
+    transform: scaleX(0);
+
+    transform-origin: right;
+
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 
-/* Hover */
-
 .nav-link:hover {
 
-    color: var(--arconest-purple-dark);
+    background: rgba(50, 20, 95, 0.06);
 }
 
 
 .nav-link:hover span {
 
     opacity: 1;
+
+    transform: translateY(-7px);
 }
 
 
 .nav-link:hover::after {
 
-    width: 100%;
+    transform: scaleX(1);
+
+    transform-origin: left;
 }
 
 
-/* Active */
+/* ACTIVE */
+
+.nav-link.active {
+
+    background: rgba(50, 20, 95, 0.07);
+}
+
 
 .nav-link.active::after {
 
-    width: 100%;
+    transform: scaleX(1);
 }
 
 
-/* ---------- HANGING ARCHITECTURAL LINES ---------- */
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
 
-.nav-hanger {
-
-    position: absolute;
-
-    top: 0;
-
-    width: 1px;
-
-    height: 24px;
-
-    background: var(--arconest-purple);
-
-    opacity: 0.45;
-
-    z-index: 1;
-}
-
-
-.nav-hanger-left {
-
-    left: calc(50% - 700px);
-
-}
-
-
-.nav-hanger-right {
-
-    right: calc(50% - 700px);
-
-}
-
-
-/* Small architectural nodes */
-
-.nav-hanger::after {
-
-    content: "";
-
-    position: absolute;
-
-    bottom: -3px;
-
-    left: 50%;
-
-    width: 6px;
-    height: 6px;
-
-    transform: translateX(-50%);
-
-    border: 1px solid var(--arconest-purple);
-
-    background: var(--arconest-white);
-
-}
-
-
-/* ---------- MOBILE BUTTON ---------- */
-
-.menu-toggle {
+.menu-trigger {
 
     display: none;
 
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
 
-    border: 1px solid var(--arconest-purple);
+    padding: 0;
+
+    border: 0;
 
     background: transparent;
 
     cursor: pointer;
 
-    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
 
-/* Hamburger */
+/* =====================================================
+   ARCHITECTURAL RING
+===================================================== */
 
-.menu-toggle span {
+.menu-ring {
+
+    position: relative;
+
+    width: 39px;
+    height: 39px;
+
+    border: 1px solid var(--arconest-purple);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.5s ease,
+        background 0.3s ease;
+}
+
+
+.menu-ring::before {
+
+    content: "";
 
     position: absolute;
 
-    left: 12px;
+    width: 23px;
+    height: 23px;
 
-    width: 20px;
+    border: 1px solid rgba(50, 20, 95, 0.45);
+
+    border-radius: 50%;
+}
+
+
+.menu-dot {
+
+    width: 5px;
+    height: 5px;
+
+    background: var(--arconest-purple);
+
+    border-radius: 50%;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.ring-line {
+
+    position: absolute;
+
+    width: 8px;
     height: 1px;
 
     background: var(--arconest-purple);
 
     transition:
-        transform 0.4s ease,
-        top 0.4s ease;
+        transform 0.4s ease;
 }
 
 
-.menu-toggle span:first-child {
-    top: 18px;
+.ring-line-1 {
+    transform: rotate(45deg);
 }
 
 
-.menu-toggle span:last-child {
-    top: 25px;
+.ring-line-2 {
+    transform: rotate(-45deg);
+}
+
+
+/* HOVER */
+
+.menu-trigger:hover .menu-ring {
+
+    transform: rotate(90deg);
+
+    background: rgba(50, 20, 95, 0.06);
+}
+
+
+.menu-trigger:hover .menu-dot {
+
+    transform: scale(1.5);
 }
 
 
 /* =====================================================
-   MOBILE MENU
+   FULL SCREEN MOBILE MENU
 ===================================================== */
 
 .mobile-menu {
@@ -329,81 +371,173 @@
 
     inset: 0;
 
-    z-index: 10000;
+    z-index: 8999;
 
-    background: var(--arconest-offwhite);
+    background:
+        rgba(255, 255, 255, 0.76);
 
-    padding: 28px 30px;
-
-    display: flex;
-    flex-direction: column;
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
 
     visibility: hidden;
+
     opacity: 0;
 
-    transform: translateY(-20px);
+    clip-path: circle(0% at calc(100% - 42px) 42px);
 
     transition:
-        opacity 0.45s ease,
-        transform 0.45s ease,
-        visibility 0.45s ease;
+        clip-path 0.8s cubic-bezier(0.77, 0, 0.18, 1),
+        opacity 0.3s ease,
+        visibility 0.8s;
 }
 
 
-/* Open */
+/* OPEN */
 
-.mobile-menu.active {
+.mobile-menu.is-open {
 
     visibility: visible;
 
     opacity: 1;
 
-    transform: translateY(0);
+    clip-path: circle(150% at calc(100% - 42px) 42px);
 }
 
 
-/* ---------- MOBILE TOP ---------- */
+/* =====================================================
+   ARCHITECTURAL BACKGROUND
+===================================================== */
+
+.menu-architecture {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+.architecture-circle {
+
+    position: absolute;
+
+    border: 1px solid rgba(50, 20, 95, 0.08);
+
+    border-radius: 50%;
+}
+
+
+.circle-one {
+
+    width: 620px;
+    height: 620px;
+
+    right: -280px;
+    top: 80px;
+}
+
+
+.circle-two {
+
+    width: 900px;
+    height: 900px;
+
+    left: -600px;
+    bottom: -400px;
+}
+
+
+.architecture-line {
+
+    position: absolute;
+
+    background: rgba(50, 20, 95, 0.07);
+}
+
+
+.line-horizontal {
+
+    width: 100%;
+    height: 1px;
+
+    top: 50%;
+    left: 0;
+}
+
+
+.line-vertical {
+
+    width: 1px;
+    height: 100%;
+
+    top: 0;
+    left: 50%;
+}
+
+
+/* =====================================================
+   MOBILE MENU TOP
+===================================================== */
 
 .mobile-menu-top {
+
+    position: relative;
+
+    z-index: 2;
+
+    height: 100px;
+
+    padding: 20px 24px;
 
     display: flex;
 
     align-items: center;
 
     justify-content: space-between;
-
-    padding-bottom: 25px;
-
-    border-bottom: 1px solid var(--arconest-line);
 }
 
 
-.mobile-menu-label {
+.mobile-logo {
 
-    font-family: "Space Grotesk", sans-serif;
+    width: 145px;
 
-    font-size: 10px;
-
-    letter-spacing: 0.2em;
-
-    color: var(--arconest-purple);
+    display: block;
 }
 
 
-/* ---------- CLOSE BUTTON ---------- */
+.mobile-logo img {
+
+    width: 100%;
+
+    display: block;
+}
+
+
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
 
 .menu-close {
 
     position: relative;
 
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
 
-    border: 1px solid var(--arconest-purple);
+    border: 1px solid rgba(50, 20, 95, 0.25);
 
-    background: transparent;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.35);
 
     cursor: pointer;
+
+    transition:
+        transform 0.4s ease,
+        background 0.3s ease;
 }
 
 
@@ -411,15 +545,14 @@
 
     position: absolute;
 
-    left: 12px;
-
-    width: 20px;
-
+    width: 18px;
     height: 1px;
 
-    background: var(--arconest-purple);
+    left: 14px;
 
-    top: 21px;
+    top: 23px;
+
+    background: var(--arconest-purple);
 }
 
 
@@ -435,55 +568,97 @@
 }
 
 
-/* ---------- MOBILE NAVIGATION ---------- */
+.menu-close:hover {
 
-.mobile-navigation {
+    transform: rotate(90deg);
 
-    flex: 1;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
+    background: rgba(50, 20, 95, 0.08);
 }
 
 
-/* ---------- MOBILE LINKS ---------- */
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
+
+.mobile-nav {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(900px, calc(100% - 48px));
+
+    margin: 55px auto 0;
+}
+
 
 .mobile-nav-link {
 
     position: relative;
 
+    min-height: 76px;
+
     display: grid;
 
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 45px 1fr 35px;
 
     align-items: center;
 
-    padding: 22px 0;
-
-    border-bottom: 1px solid var(--arconest-line);
+    border-bottom: 1px solid rgba(50, 20, 95, 0.15);
 
     color: var(--arconest-purple);
 
     text-decoration: none;
 
-    font-family: "Space Grotesk", sans-serif;
+    overflow: hidden;
 
-    font-size: clamp(30px, 8vw, 55px);
+    transform: translateY(25px);
 
-    font-weight: 400;
+    opacity: 0;
 
     transition:
-        padding-left 0.4s ease,
-        color 0.3s ease;
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.5s ease,
+        padding 0.3s ease;
+}
+
+
+.mobile-menu.is-open .mobile-nav-link {
+
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+
+.mobile-menu.is-open .mobile-nav-link:nth-child(1) {
+    transition-delay: 0.12s;
+}
+
+
+.mobile-menu.is-open .mobile-nav-link:nth-child(2) {
+    transition-delay: 0.18s;
+}
+
+
+.mobile-menu.is-open .mobile-nav-link:nth-child(3) {
+    transition-delay: 0.24s;
+}
+
+
+.mobile-menu.is-open .mobile-nav-link:nth-child(4) {
+    transition-delay: 0.30s;
+}
+
+
+.mobile-menu.is-open .mobile-nav-link:nth-child(5) {
+    transition-delay: 0.36s;
 }
 
 
 .mobile-number {
 
-    font-family: "Inter", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
 
     font-size: 10px;
 
@@ -491,37 +666,78 @@
 }
 
 
-/* Mobile hover */
+.mobile-link-text {
 
-.mobile-nav-link:hover {
+    font-family:
+        "Space Grotesk",
+        "Inter",
+        sans-serif;
 
-    padding-left: 15px;
+    font-size: clamp(30px, 8vw, 52px);
 
-    color: var(--arconest-purple-dark);
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
 }
 
 
-/* ---------- MOBILE BOTTOM ---------- */
+.mobile-arrow {
+
+    font-size: 22px;
+
+    opacity: 0.45;
+
+    transform: translate(-10px, 10px);
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.3s ease;
+}
+
+
+.mobile-nav-link:hover {
+
+    padding-left: 10px;
+}
+
+
+.mobile-nav-link:hover .mobile-arrow {
+
+    opacity: 1;
+
+    transform: translate(0, 0);
+}
+
+
+/* =====================================================
+   MOBILE BOTTOM IDENTITY
+===================================================== */
 
 .mobile-menu-bottom {
 
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 28px;
+
+    left: 24px;
+
     display: flex;
 
-    justify-content: space-between;
+    flex-direction: column;
 
-    gap: 20px;
+    font-family: "Space Grotesk", sans-serif;
 
-    padding-top: 25px;
+    font-size: 9px;
 
-    font-family: "Inter", sans-serif;
+    letter-spacing: 0.18em;
 
-    font-size: 8px;
-
-    letter-spacing: 0.12em;
+    line-height: 1.5;
 
     color: var(--arconest-purple);
 
-    opacity: 0.6;
+    opacity: 0.55;
 }
 
 
@@ -533,13 +749,31 @@
 
     .arconest-navbar {
 
-        width: calc(100% - 30px);
+        top: 16px;
 
-        margin-top: 15px;
+        width: calc(100% - 32px);
+    }
 
-        min-height: 68px;
 
-        padding: 0 18px;
+    .navbar-inner {
+
+        height: 68px;
+
+        padding: 0 10px 0 18px;
+
+        border-radius: 16px;
+    }
+
+
+    .navbar-logo {
+
+        width: 135px;
+    }
+
+
+    .navbar-logo img {
+
+        max-width: 130px;
     }
 
 
@@ -549,76 +783,99 @@
     }
 
 
-    .menu-toggle {
+    .menu-trigger {
 
-        display: block;
+        display: flex;
     }
-
-
-    .nav-logo {
-
-        width: 130px;
-    }
-
-
-    .nav-hanger {
-
-        display: none;
-    }
-
 }
 
 
-/* ---------- SMALL MOBILE ---------- */
+/* =====================================================
+   SMALL PHONES
+===================================================== */
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
 
     .arconest-navbar {
 
-        width: calc(100% - 20px);
+        top: 12px;
 
-        min-height: 64px;
-
-        padding: 0 14px;
-
-        margin-top: 10px;
+        width: calc(100% - 24px);
     }
 
 
-    .nav-logo {
+    .navbar-inner {
 
-        width: 115px;
+        height: 64px;
+
+        padding-left: 14px;
     }
 
 
-    .menu-toggle {
+    .navbar-logo {
 
-        width: 40px;
-        height: 40px;
+        width: 125px;
     }
 
 
-    .mobile-menu {
+    .navbar-logo img {
 
-        padding: 20px;
+        max-width: 120px;
+    }
+
+
+    .menu-trigger {
+
+        width: 46px;
+        height: 46px;
+    }
+
+
+    .mobile-menu-top {
+
+        padding: 16px 20px;
+    }
+
+
+    .mobile-nav {
+
+        width: calc(100% - 40px);
+
+        margin-top: 40px;
     }
 
 
     .mobile-nav-link {
 
-        grid-template-columns: 35px 1fr;
+        min-height: 70px;
 
-        font-size: 32px;
-
-        padding: 18px 0;
+        grid-template-columns: 35px 1fr 30px;
     }
 
 
     .mobile-menu-bottom {
 
-        flex-direction: column;
+        left: 20px;
 
-        gap: 8px;
+        bottom: 20px;
     }
+}
 
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
 }
