@@ -22,101 +22,120 @@
 
 <body>
 
-    <!-- =====================================================
-         NAVBAR
-    ====================================================== -->
+  <!-- =========================
+     ARCONEST NAVBAR
+========================= -->
 
-    <header class="site-header">
+<header class="arconest-header">
 
-        <nav class="navbar">
+    <!-- Architectural hanging lines -->
+    <div class="nav-hanger nav-hanger-left"></div>
+    <div class="nav-hanger nav-hanger-right"></div>
 
-            <!-- Logo -->
-            <a href="index.html" class="navbar-logo">
-                <img src="assets/arconest-logo.png"
-                     alt="Arconest Consultants LLP">
+    <nav class="arconest-navbar">
+
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo">
+            <img src="assets/logo.png" alt="Arconest Consultants LLP">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="desktop-nav">
+
+            <a href="index.html" class="nav-link active">
+                <span>01</span>
+                Home
             </a>
 
-            <!-- Desktop Navigation -->
-            <div class="navbar-menu">
-
-                <a href="index.html" class="nav-link active">
-                    Home
-                </a>
-
-                <a href="about.html" class="nav-link">
-                    About Us
-                </a>
-
-                <a href="services.html" class="nav-link">
-                    Services
-                </a>
-
-                <a href="career.html" class="nav-link">
-                    Career
-                </a>
-
-                <a href="contact.html" class="nav-link">
-                    Contact Us
-                </a>
-
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button class="menu-toggle"
-                    type="button"
-                    aria-label="Open Menu"
-                    aria-expanded="false">
-
-                <span></span>
-                <span></span>
-
-            </button>
-
-        </nav>
-
-    </header>
-
-
-    <!-- =====================================================
-         MOBILE FULL SCREEN MENU
-    ====================================================== -->
-
-    <div class="mobile-menu">
-
-        <div class="mobile-menu-inner">
-
-            <p class="mobile-menu-label">
-                ARCONEST / NAVIGATION
-            </p>
-
-            <a href="index.html">
-                <span>Home</span>
-                <small>01</small>
+            <a href="about.html" class="nav-link">
+                <span>02</span>
+                About Us
             </a>
 
-            <a href="about.html">
-                <span>About Us</span>
-                <small>02</small>
+            <a href="services.html" class="nav-link">
+                <span>03</span>
+                Services
             </a>
 
-            <a href="services.html">
-                <span>Services</span>
-                <small>03</small>
+            <a href="career.html" class="nav-link">
+                <span>04</span>
+                Career
             </a>
 
-            <a href="career.html">
-                <span>Career</span>
-                <small>04</small>
-            </a>
-
-            <a href="contact.html">
-                <span>Contact Us</span>
-                <small>05</small>
+            <a href="contact.html" class="nav-link">
+                <span>05</span>
+                Contact Us
             </a>
 
         </div>
 
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+        </button>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     MOBILE FULLSCREEN MENU
+========================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <div class="mobile-menu-top">
+
+        <span class="mobile-menu-label">
+            NAVIGATION
+        </span>
+
+        <button class="menu-close" id="menuClose" aria-label="Close menu">
+            <span></span>
+            <span></span>
+        </button>
+
     </div>
+
+
+    <div class="mobile-navigation">
+
+        <a href="index.html" class="mobile-nav-link">
+            <span class="mobile-number">01</span>
+            <span>Home</span>
+        </a>
+
+        <a href="about.html" class="mobile-nav-link">
+            <span class="mobile-number">02</span>
+            <span>About Us</span>
+        </a>
+
+        <a href="services.html" class="mobile-nav-link">
+            <span class="mobile-number">03</span>
+            <span>Services</span>
+        </a>
+
+        <a href="career.html" class="mobile-nav-link">
+            <span class="mobile-number">04</span>
+            <span>Career</span>
+        </a>
+
+        <a href="contact.html" class="mobile-nav-link">
+            <span class="mobile-number">05</span>
+            <span>Contact Us</span>
+        </a>
+
+    </div>
+
+
+    <div class="mobile-menu-bottom">
+        <span>ARCONEST CONSULTANTS LLP</span>
+        <span>THE CONSTRUCTION CONSULTANTS</span>
+    </div>
+
+</div>
 
 
     <!-- =====================================================
