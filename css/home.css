@@ -86,16 +86,7 @@
    ARCHITECTURAL FRAME
 ----------------------------------------------------- */
 
-.hero-frame {
 
-    position: absolute;
-
-    z-index: 2;
-
-    background: rgba(255, 255, 255, 0.55);
-
-    pointer-events: none;
-}
 
 
 /* Top */
