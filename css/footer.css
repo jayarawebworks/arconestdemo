@@ -509,3 +509,164 @@
     }
 
 }
+
+/* =====================================================
+   FOOTER QUICK LINKS
+===================================================== */
+
+.footer-quick-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+
+.footer-quick-label {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    color: #fff;
+
+    opacity: 0.55;
+}
+
+
+/* Navigation */
+
+.footer-nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.footer-nav a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    position: relative;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+
+/* Number */
+
+.footer-nav a span {
+    width: 18px;
+
+    font-size: 8px;
+
+    letter-spacing: 0.08em;
+
+    opacity: 0.45;
+}
+
+
+/* Hover */
+
+.footer-nav a:hover {
+
+    transform: translateX(7px);
+
+    opacity: 0.65;
+
+}
+
+
+/* =====================================================
+   FOOTER RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .footer-bottom {
+
+        grid-template-columns: 1fr 1fr;
+
+        row-gap: 35px;
+
+    }
+
+
+    .footer-quick-links {
+
+        grid-column: 1 / -1;
+
+    }
+
+
+    .footer-nav {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, auto);
+
+        column-gap: 35px;
+
+        row-gap: 10px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .footer-bottom {
+
+        grid-template-columns: 1fr;
+
+        row-gap: 30px;
+
+    }
+
+
+    .footer-quick-links {
+
+        grid-column: auto;
+
+    }
+
+
+    .footer-nav {
+
+        grid-template-columns: repeat(2, auto);
+
+        column-gap: 30px;
+
+    }
+
+
+    .footer-location {
+
+        text-align: left;
+
+    }
+
+}
