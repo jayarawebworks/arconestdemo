@@ -1,12 +1,18 @@
 /* =====================================================
-   ARCONEST CONSULTANTS
-   HERO SECTION
+   ARCONEST CONSULTANTS LLP
+   HOME PAGE — HERO SECTION
 ===================================================== */
 
+:root {
+    --arconest-purple: #32145f;
+    --arconest-purple-dark: #241044;
+    --arconest-light: #f8f6f3;
+}
 
-/* -----------------------------------------------------
+
+/* =====================================================
    HERO
------------------------------------------------------ */
+===================================================== */
 
 .hero-section {
 
@@ -20,13 +26,13 @@
 
     background: #17121d;
 
-    color: #ffffff;
+    color: var(--arconest-purple);
 }
 
 
-/* -----------------------------------------------------
-   VIDEO
------------------------------------------------------ */
+/* =====================================================
+   BACKGROUND VIDEO
+===================================================== */
 
 .hero-video-wrapper {
 
@@ -38,6 +44,8 @@
     height: 100%;
 
     overflow: hidden;
+
+    z-index: 0;
 }
 
 
@@ -55,14 +63,17 @@
 
     transform: translate(-50%, -50%);
 
-    filter: brightness(0.72) contrast(1.05);
+    filter:
+        brightness(0.62)
+        contrast(1.05)
+        saturate(0.85);
 
 }
 
 
-/* -----------------------------------------------------
-   OVERLAY
------------------------------------------------------ */
+/* =====================================================
+   VIDEO OVERLAY
+===================================================== */
 
 .hero-overlay {
 
@@ -70,21 +81,28 @@
 
     inset: 0;
 
+    z-index: 1;
+
+    /*
+       Slight architectural purple tint.
+       Keeps the construction footage visible
+       while connecting the hero to the brand.
+    */
+
     background:
         linear-gradient(
             to bottom,
-            rgba(15, 10, 22, 0.38),
-            rgba(15, 10, 22, 0.10) 45%,
-            rgba(15, 10, 22, 0.58)
+            rgba(25, 13, 40, 0.35),
+            rgba(25, 13, 40, 0.08) 42%,
+            rgba(25, 13, 40, 0.58)
         );
 
-    z-index: 1;
 }
 
 
-/* -----------------------------------------------------
+/* =====================================================
    ARCHITECTURAL FRAME
------------------------------------------------------ */
+===================================================== */
 
 .hero-frame {
 
@@ -92,7 +110,7 @@
 
     z-index: 2;
 
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(50, 20, 95, 0.72);
 
     pointer-events: none;
 }
@@ -103,6 +121,7 @@
 .hero-frame-top {
 
     top: 125px;
+
     left: 40px;
     right: 40px;
 
@@ -115,6 +134,7 @@
 .hero-frame-bottom {
 
     bottom: 40px;
+
     left: 40px;
     right: 40px;
 
@@ -127,7 +147,9 @@
 .hero-frame-left {
 
     top: 125px;
+
     bottom: 40px;
+
     left: 40px;
 
     width: 1px;
@@ -139,16 +161,50 @@
 .hero-frame-right {
 
     top: 125px;
+
     bottom: 40px;
+
     right: 40px;
 
     width: 1px;
 }
 
 
-/* -----------------------------------------------------
+/* =====================================================
+   SMALL ARCHITECTURAL CORNER DETAILS
+===================================================== */
+
+.hero-frame-top::before,
+.hero-frame-top::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: -3px;
+
+    width: 7px;
+    height: 7px;
+
+    border: 1px solid var(--arconest-purple);
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+.hero-frame-top::before {
+    left: 0;
+}
+
+
+.hero-frame-top::after {
+    right: 0;
+}
+
+
+/* =====================================================
    HERO CONTENT
------------------------------------------------------ */
+===================================================== */
 
 .hero-content {
 
@@ -159,40 +215,49 @@
     top: 50%;
     left: 50%;
 
-    width: min(900px, 90%);
+    width: min(1000px, 90%);
 
-    transform: translate(-50%, -45%);
+    transform:
+        translate(-50%, -45%);
 
     text-align: center;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 
 }
 
 
-/* -----------------------------------------------------
+/* =====================================================
    LOCATION
------------------------------------------------------ */
+===================================================== */
 
 .hero-location {
 
     margin: 0 0 24px;
 
+    color: var(--arconest-purple);
+
     font-family: "Inter", sans-serif;
 
     font-size: 11px;
 
-    font-weight: 500;
+    font-weight: 600;
 
-    letter-spacing: 0.28em;
+    letter-spacing: 0.32em;
 
     text-transform: uppercase;
 
     opacity: 0;
 
-    animation: heroFadeUp 1s ease forwards;
+    text-shadow:
+        0 1px 10px rgba(255,255,255,0.45);
+
+    animation:
+        heroFadeUp 1s ease forwards;
 
     animation-delay: 0.3s;
 }
@@ -200,37 +265,44 @@
 
 .hero-location span {
 
-    margin: 0 7px;
+    margin: 0 8px;
 
-    opacity: 0.55;
+    opacity: 0.65;
 }
 
 
-/* -----------------------------------------------------
-   TITLE
------------------------------------------------------ */
+/* =====================================================
+   HERO TITLE
+===================================================== */
 
 .hero-title {
 
     margin: 0;
 
-    max-width: 900px;
+    max-width: 1000px;
+
+    color: var(--arconest-purple);
 
     font-family: "Space Grotesk", sans-serif;
 
-    font-size: clamp(48px, 7vw, 100px);
+    font-size: clamp(50px, 7.5vw, 108px);
 
     font-weight: 400;
 
-    line-height: 0.95;
+    line-height: 0.94;
 
-    letter-spacing: -0.055em;
+    letter-spacing: -0.06em;
 
     text-transform: none;
 
     opacity: 0;
 
-    animation: heroTitleReveal 1.2s
+    text-shadow:
+        0 2px 18px rgba(255,255,255,0.35);
+
+    animation:
+        heroTitleReveal
+        1.2s
         cubic-bezier(.77,0,.18,1)
         forwards;
 
@@ -242,15 +314,17 @@
 
     display: block;
 
+    color: var(--arconest-purple);
+
     font-weight: 500;
 
     font-style: normal;
 }
 
 
-/* -----------------------------------------------------
+/* =====================================================
    KNOW MORE BUTTON
------------------------------------------------------ */
+===================================================== */
 
 .hero-button {
 
@@ -268,11 +342,15 @@
 
     min-width: 155px;
 
-    padding: 15px 20px;
+    padding: 15px 22px;
 
-    border: 1px solid rgba(255,255,255,0.7);
+    border: 1px solid var(--arconest-purple);
 
-    color: #ffffff;
+    color: var(--arconest-purple);
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(3px);
 
     text-decoration: none;
 
@@ -280,7 +358,7 @@
 
     font-size: 11px;
 
-    font-weight: 500;
+    font-weight: 600;
 
     letter-spacing: 0.08em;
 
@@ -290,7 +368,8 @@
 
     opacity: 0;
 
-    animation: heroFadeUp 1s ease forwards;
+    animation:
+        heroFadeUp 1s ease forwards;
 
     animation-delay: 0.9s;
 
@@ -300,7 +379,9 @@
 }
 
 
-/* Button fill */
+/* =====================================================
+   BUTTON HOVER FILL
+===================================================== */
 
 .hero-button::before {
 
@@ -310,7 +391,7 @@
 
     inset: 0;
 
-    background: #ffffff;
+    background: var(--arconest-purple);
 
     transform: translateY(101%);
 
@@ -324,9 +405,9 @@
 
 .hero-button:hover {
 
-    color: #32145f;
+    color: #ffffff;
 
-    border-color: #ffffff;
+    border-color: var(--arconest-purple);
 }
 
 
@@ -336,7 +417,9 @@
 }
 
 
-/* Arrow */
+/* =====================================================
+   BUTTON ARROW
+===================================================== */
 
 .hero-button-arrow {
 
@@ -356,9 +439,9 @@
 }
 
 
-/* -----------------------------------------------------
+/* =====================================================
    BOTTOM INFORMATION
------------------------------------------------------ */
+===================================================== */
 
 .hero-bottom {
 
@@ -368,6 +451,7 @@
 
     left: 40px;
     right: 40px;
+
     bottom: 55px;
 
     display: flex;
@@ -375,12 +459,14 @@
     align-items: center;
 
     justify-content: space-between;
+
+    color: var(--arconest-purple);
 }
 
 
-/* -----------------------------------------------------
+/* =====================================================
    HERO INDEX
------------------------------------------------------ */
+===================================================== */
 
 .hero-index {
 
@@ -390,9 +476,13 @@
 
     gap: 12px;
 
+    color: var(--arconest-purple);
+
     font-family: "Inter", sans-serif;
 
     font-size: 9px;
+
+    font-weight: 600;
 
     letter-spacing: 0.12em;
 }
@@ -406,13 +496,13 @@
 
     height: 1px;
 
-    background: rgba(255,255,255,0.7);
+    background: var(--arconest-purple);
 }
 
 
-/* -----------------------------------------------------
+/* =====================================================
    SCROLL
------------------------------------------------------ */
+===================================================== */
 
 .hero-scroll {
 
@@ -422,15 +512,17 @@
 
     gap: 14px;
 
+    color: var(--arconest-purple);
+
     font-family: "Inter", sans-serif;
 
     font-size: 9px;
 
+    font-weight: 600;
+
     letter-spacing: 0.13em;
 
     text-transform: uppercase;
-
-    opacity: 0.8;
 }
 
 
@@ -445,18 +537,21 @@
     width: 27px;
     height: 27px;
 
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid var(--arconest-purple);
 
     border-radius: 50%;
 
-    animation: scrollBounce 1.8s
-        ease-in-out infinite;
+    animation:
+        scrollBounce
+        1.8s
+        ease-in-out
+        infinite;
 }
 
 
-/* -----------------------------------------------------
-   ANIMATIONS
------------------------------------------------------ */
+/* =====================================================
+   HERO ANIMATIONS
+===================================================== */
 
 @keyframes heroFadeUp {
 
@@ -530,9 +625,9 @@
 }
 
 
-/* -----------------------------------------------------
+/* =====================================================
    TABLET
------------------------------------------------------ */
+===================================================== */
 
 @media (max-width: 900px) {
 
@@ -588,12 +683,18 @@
         bottom: 40px;
     }
 
+
+    .hero-title {
+
+        font-size: clamp(48px, 9vw, 80px);
+    }
+
 }
 
 
-/* -----------------------------------------------------
+/* =====================================================
    MOBILE
------------------------------------------------------ */
+===================================================== */
 
 @media (max-width: 600px) {
 
@@ -619,12 +720,14 @@
         background:
             linear-gradient(
                 to bottom,
-                rgba(15,10,22,0.48),
-                rgba(15,10,22,0.18) 40%,
-                rgba(15,10,22,0.68)
+                rgba(25, 13, 40, 0.45),
+                rgba(25, 13, 40, 0.12) 40%,
+                rgba(25, 13, 40, 0.68)
             );
     }
 
+
+    /* Frame */
 
     .hero-frame-top {
 
@@ -664,6 +767,8 @@
     }
 
 
+    /* Content */
+
     .hero-content {
 
         width: calc(100% - 40px);
@@ -685,7 +790,8 @@
 
     .hero-title {
 
-        font-size: clamp(43px, 12vw, 68px);
+        font-size:
+            clamp(42px, 12vw, 68px);
 
         line-height: 0.98;
 
@@ -702,6 +808,8 @@
         padding: 14px 17px;
     }
 
+
+    /* Bottom */
 
     .hero-bottom {
 
@@ -723,12 +831,52 @@
         gap: 0;
     }
 
+
+    .scroll-arrow {
+
+        width: 25px;
+        height: 25px;
+    }
+
 }
 
 
-/* -----------------------------------------------------
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .hero-title {
+
+        font-size: 40px;
+    }
+
+
+    .hero-location {
+
+        font-size: 8px;
+    }
+
+
+    .hero-frame-top {
+
+        top: 82px;
+    }
+
+
+    .hero-frame-left,
+    .hero-frame-right {
+
+        top: 82px;
+    }
+
+}
+
+
+/* =====================================================
    REDUCED MOTION
------------------------------------------------------ */
+===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -740,7 +888,6 @@
         animation: none;
 
         opacity: 1;
-
     }
 
 }
