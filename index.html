@@ -32,25 +32,22 @@
 
 <body>
 
-  <!-- =========================
-     ARCONEST NAVBAR
-========================= -->
+ <!-- =====================================================
+     ARCONEST FLOATING GLASS NAVBAR
+===================================================== -->
 
-<header class="arconest-header">
+<header class="arconest-navbar">
 
-    <!-- Architectural hanging lines -->
-    <div class="nav-hanger nav-hanger-left"></div>
-    <div class="nav-hanger nav-hanger-right"></div>
-
-    <nav class="arconest-navbar">
+    <div class="navbar-inner">
 
         <!-- Logo -->
-        <a href="index.html" class="nav-logo">
-            <img src="assets/logo.png" alt="Arconest Consultants LLP">
+        <a href="index.html" class="navbar-logo" aria-label="Arconest Consultants Home">
+            <img src="assets/logo.png" alt="Arconest Consultants">
         </a>
 
+
         <!-- Desktop Navigation -->
-        <div class="desktop-nav">
+        <nav class="desktop-nav" aria-label="Main Navigation">
 
             <a href="index.html" class="nav-link active">
                 <span>01</span>
@@ -77,72 +74,147 @@
                 Contact Us
             </a>
 
-        </div>
+        </nav>
+
 
         <!-- Mobile Menu Button -->
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
-            <span></span>
-            <span></span>
+        <button class="menu-trigger"
+                id="menuTrigger"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+            <span class="menu-ring">
+
+                <span class="ring-line ring-line-1"></span>
+                <span class="ring-line ring-line-2"></span>
+
+                <span class="menu-dot"></span>
+
+            </span>
+
         </button>
 
-    </nav>
+    </div>
 
 </header>
 
 
-<!-- =========================
-     MOBILE FULLSCREEN MENU
-========================= -->
+<!-- =====================================================
+     FULL SCREEN MOBILE MENU
+===================================================== -->
 
 <div class="mobile-menu" id="mobileMenu">
 
+    <!-- Background architectural elements -->
+    <div class="menu-architecture">
+
+        <span class="architecture-circle circle-one"></span>
+        <span class="architecture-circle circle-two"></span>
+
+        <span class="architecture-line line-horizontal"></span>
+        <span class="architecture-line line-vertical"></span>
+
+    </div>
+
+
+    <!-- Mobile menu header -->
+
     <div class="mobile-menu-top">
 
-        <span class="mobile-menu-label">
-            NAVIGATION
-        </span>
+        <a href="index.html" class="mobile-logo">
+            <img src="assets/logo.png" alt="Arconest Consultants">
+        </a>
 
-        <button class="menu-close" id="menuClose" aria-label="Close menu">
+        <button class="menu-close"
+                id="menuClose"
+                aria-label="Close navigation">
+
             <span></span>
             <span></span>
+
         </button>
 
     </div>
 
 
-    <div class="mobile-navigation">
+    <!-- Navigation -->
 
-        <a href="index.html" class="mobile-nav-link">
+    <nav class="mobile-nav" aria-label="Mobile Navigation">
+
+        <a href="index.html" class="mobile-nav-link active">
+
             <span class="mobile-number">01</span>
-            <span>Home</span>
+
+            <span class="mobile-link-text">
+                Home
+            </span>
+
+            <span class="mobile-arrow">↗</span>
+
         </a>
+
 
         <a href="about.html" class="mobile-nav-link">
+
             <span class="mobile-number">02</span>
-            <span>About Us</span>
+
+            <span class="mobile-link-text">
+                About Us
+            </span>
+
+            <span class="mobile-arrow">↗</span>
+
         </a>
+
 
         <a href="services.html" class="mobile-nav-link">
+
             <span class="mobile-number">03</span>
-            <span>Services</span>
+
+            <span class="mobile-link-text">
+                Services
+            </span>
+
+            <span class="mobile-arrow">↗</span>
+
         </a>
+
 
         <a href="career.html" class="mobile-nav-link">
+
             <span class="mobile-number">04</span>
-            <span>Career</span>
+
+            <span class="mobile-link-text">
+                Career
+            </span>
+
+            <span class="mobile-arrow">↗</span>
+
         </a>
+
 
         <a href="contact.html" class="mobile-nav-link">
+
             <span class="mobile-number">05</span>
-            <span>Contact Us</span>
+
+            <span class="mobile-link-text">
+                Contact Us
+            </span>
+
+            <span class="mobile-arrow">↗</span>
+
         </a>
 
-    </div>
+    </nav>
 
+
+    <!-- Bottom identity -->
 
     <div class="mobile-menu-bottom">
-        <span>ARCONEST CONSULTANTS LLP</span>
-        <span>THE CONSTRUCTION CONSULTANTS</span>
+
+        <span>THE CONSTRUCTION</span>
+        <span>CONSULTANTS</span>
+
     </div>
 
 </div>
