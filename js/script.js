@@ -1,119 +1,197 @@
 /* =====================================================
    ARCONEST CONSULTANTS
-   SHARED JAVASCRIPT
+   SHARED NAVIGATION JAVASCRIPT
 ===================================================== */
 
+document.addEventListener("DOMContentLoaded", () => {
 
-/* ---------- MOBILE MENU ---------- */
+    const menuTrigger = document.getElementById("menuTrigger");
+    const menuClose = document.getElementById("menuClose");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-const menuToggle = document.getElementById("menuToggle");
-const menuClose = document.getElementById("menuClose");
-const mobileMenu = document.getElementById("mobileMenu");
-
-
-/* Open menu */
-
-if (menuToggle && mobileMenu) {
-
-    menuToggle.addEventListener("click", () => {
-
-        mobileMenu.classList.add("active");
-
-        document.body.style.overflow = "hidden";
-
-    });
-
-}
+    if (!menuTrigger || !mobileMenu) return;
 
 
-/* Close menu */
+    /* =================================================
+       OPEN MENU
+    ================================================= */
 
-if (menuClose && mobileMenu) {
+    function openMenu() {
 
-    menuClose.addEventListener("click", () => {
+        mobileMenu.classList.add("is-open");
 
-        mobileMenu.classList.remove("active");
+        menuTrigger.setAttribute("aria-expanded", "true");
 
-        document.body.style.overflow = "";
+        menuTrigger.setAttribute("aria-label", "Close navigation");
 
-    });
-
-}
-
-
-/* Close menu after clicking a link */
-
-const mobileLinks =
-    document.querySelectorAll(".mobile-nav-link");
-
-
-mobileLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        mobileMenu.classList.remove("active");
-
-        document.body.style.overflow = "";
-
-    });
-
-});
-
-
-/* ---------- NAVBAR SCROLL EFFECT ---------- */
-
-const navbar =
-    document.querySelector(".arconest-navbar");
-
-
-let lastScroll = 0;
-
-
-window.addEventListener("scroll", () => {
-
-    if (!navbar) return;
-
-    const currentScroll = window.scrollY;
-
-
-    if (currentScroll > 80) {
-
-        navbar.style.boxShadow =
-            "0 18px 45px rgba(0,0,0,0.12)";
-
-        navbar.style.transform =
-            "translateY(-4px)";
-
-    } else {
-
-        navbar.style.boxShadow =
-            "0 12px 35px rgba(0,0,0,0.08)";
-
-        navbar.style.transform =
-            "translateY(0)";
+        document.body.classList.add("menu-open");
 
     }
 
 
-    lastScroll = currentScroll;
+    /* =================================================
+       CLOSE MENU
+    ================================================= */
 
-}, { passive: true });
+    function closeMenu() {
+
+        mobileMenu.classList.remove("is-open");
+
+        menuTrigger.setAttribute("aria-expanded", "false");
+
+        menuTrigger.setAttribute("aria-label", "Open navigation");
+
+        document.body.classList.remove("menu-open");
+
+    }
 
 
-/* ---------- ESC KEY ---------- */
+    /* =================================================
+       TOGGLE
+    ================================================= */
 
-document.addEventListener("keydown", (event) => {
+    menuTrigger.addEventListener("click", () => {
 
-    if (event.key === "Escape") {
+        const isOpen =
+            mobileMenu.classList.contains("is-open");
 
-        if (mobileMenu) {
+        if (isOpen) {
 
-            mobileMenu.classList.remove("active");
+            closeMenu();
 
-            document.body.style.overflow = "";
+        } else {
+
+            openMenu();
+
+        }
+
+    });
+
+
+    /* =================================================
+       CLOSE BUTTON
+    ================================================= */
+
+    if (menuClose) {
+
+        menuClose.addEventListener("click", closeMenu);
+
+    }
+
+
+    /* =================================================
+       CLOSE AFTER CLICKING A LINK
+    ================================================= */
+
+    const mobileLinks =
+        document.querySelectorAll(".mobile-nav-link");
+
+    mobileLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            closeMenu();
+
+        });
+
+    });
+
+
+    /* =================================================
+       ESC KEY
+    ================================================= */
+
+    document.addEventListener("keydown", event => {
+
+        if (event.key === "Escape") {
+
+            closeMenu();
+
+        }
+
+    });
+
+
+    /* =================================================
+       PREVENT BODY SCROLL WHEN MENU IS OPEN
+    ================================================= */
+
+    const style = document.createElement("style");
+
+    style.textContent = `
+        body.menu-open {
+            overflow: hidden;
+        }
+    `;
+
+    document.head.appendChild(style);
+
+
+    /* =================================================
+       SMART ACTIVE PAGE
+    ================================================= */
+
+    const currentPage =
+        window.location.pathname
+            .split("/")
+            .pop() || "index.html";
+
+
+    document
+        .querySelectorAll(".nav-link, .mobile-nav-link")
+        .forEach(link => {
+
+            const linkPage =
+                link.getAttribute("href")
+                    ?.split("/")
+                    .pop();
+
+            if (linkPage === currentPage) {
+
+                link.classList.add("active");
+
+            } else {
+
+                link.classList.remove("active");
+
+            }
+
+        });
+
+
+    /* =================================================
+       NAVBAR SCROLL EFFECT
+    ================================================= */
+
+    const navbar =
+        document.querySelector(".navbar-inner");
+
+
+    function handleNavbarScroll() {
+
+        if (!navbar) return;
+
+
+        if (window.scrollY > 50) {
+
+            navbar.classList.add("navbar-scrolled");
+
+        } else {
+
+            navbar.classList.remove("navbar-scrolled");
 
         }
 
     }
+
+
+    window.addEventListener(
+        "scroll",
+        handleNavbarScroll,
+        { passive: true }
+    );
+
+
+    handleNavbarScroll();
 
 });
