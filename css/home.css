@@ -1789,3 +1789,572 @@
     }
 
 }
+/* =====================================================
+   04. JOURNEY
+===================================================== */
+
+.journey-section {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 130px 8vw 80px;
+
+    background: #f8f6f3;
+
+    color: #32145f;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.journey-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 100px;
+}
+
+
+.journey-number {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 0.18em;
+
+    opacity: 0.55;
+}
+
+
+.journey-label {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 0.25em;
+
+    font-weight: 600;
+
+    opacity: 0.65;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.journey-main {
+
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 10vw;
+
+    max-width: 1400px;
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.journey-intro {
+
+    padding-top: 40px;
+
+    max-width: 500px;
+}
+
+
+.journey-eyebrow {
+
+    margin: 0 0 25px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+
+    opacity: 0.55;
+}
+
+
+.journey-title {
+
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(55px, 6vw, 90px);
+
+    line-height: 0.9;
+
+    font-weight: 400;
+
+    letter-spacing: -0.06em;
+}
+
+
+.journey-title span {
+
+    display: block;
+
+    font-weight: 500;
+}
+
+
+.journey-description {
+
+    max-width: 420px;
+
+    margin-top: 40px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.85;
+
+    opacity: 0.7;
+}
+
+
+/* =====================================================
+   STRUCTURE
+===================================================== */
+
+.journey-structure {
+
+    position: relative;
+
+    min-height: 570px;
+
+    padding-left: 100px;
+}
+
+
+/* =====================================================
+   MAIN VERTICAL LINE
+===================================================== */
+
+.journey-line {
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: 35px;
+
+    width: 1px;
+
+    background:
+        rgba(50,20,95,0.2);
+}
+
+
+.journey-line-progress {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 1px;
+
+    height: 45%;
+
+    background: #32145f;
+}
+
+
+/* =====================================================
+   JOURNEY POINT
+===================================================== */
+
+.journey-point {
+
+    position: absolute;
+
+    left: 0;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        70px 1fr;
+
+    column-gap: 30px;
+}
+
+
+.journey-point-first {
+
+    top: 25px;
+}
+
+
+.journey-point-present {
+
+    bottom: 20px;
+}
+
+
+/* =====================================================
+   DOT
+===================================================== */
+
+.journey-dot {
+
+    position: absolute;
+
+    left: 29px;
+
+    top: 2px;
+
+    width: 13px;
+
+    height: 13px;
+
+    border: 1px solid #32145f;
+
+    background: #f8f6f3;
+
+    transform: rotate(45deg);
+
+    z-index: 3;
+}
+
+
+.journey-point-present .journey-dot {
+
+    background: #32145f;
+}
+
+
+/* =====================================================
+   YEAR
+===================================================== */
+
+.journey-year {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 0.08em;
+
+    padding-top: 1px;
+
+    opacity: 0.6;
+}
+
+
+/* =====================================================
+   INFO
+===================================================== */
+
+.journey-info {
+
+    padding-left: 10px;
+}
+
+
+.journey-info-label {
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2em;
+
+    opacity: 0.55;
+}
+
+
+.journey-info h3 {
+
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+}
+
+
+.journey-info p {
+
+    max-width: 370px;
+
+    margin: 20px 0 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    opacity: 0.65;
+}
+
+
+/* =====================================================
+   ARCHITECTURAL MARKERS
+===================================================== */
+
+.structure-marker {
+
+    position: absolute;
+
+    right: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 0.2em;
+
+    opacity: 0.45;
+}
+
+
+.marker-top {
+
+    top: 5px;
+}
+
+
+.marker-middle {
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+}
+
+
+.marker-bottom {
+
+    bottom: 5px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.journey-footer {
+
+    position: absolute;
+
+    left: 8vw;
+    right: 8vw;
+
+    bottom: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 0.18em;
+
+    opacity: 0.5;
+}
+
+
+.journey-footer-line {
+
+    width: 60px;
+
+    height: 1px;
+
+    background: #32145f;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .journey-section {
+
+        padding:
+            110px 7vw 100px;
+    }
+
+
+    .journey-main {
+
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+
+    .journey-intro {
+
+        padding-top: 0;
+
+        max-width: 650px;
+    }
+
+
+    .journey-structure {
+
+        min-height: 520px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .journey-section {
+
+        min-height: auto;
+
+        padding:
+            100px 25px 110px;
+    }
+
+
+    .journey-header {
+
+        margin-bottom: 65px;
+    }
+
+
+    .journey-main {
+
+        gap: 65px;
+    }
+
+
+    .journey-title {
+
+        font-size:
+            clamp(48px, 14vw, 65px);
+    }
+
+
+    .journey-description {
+
+        margin-top: 30px;
+
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+
+    .journey-structure {
+
+        min-height: 600px;
+
+        padding-left: 75px;
+    }
+
+
+    .journey-line {
+
+        left: 25px;
+    }
+
+
+    .journey-dot {
+
+        left: 19px;
+    }
+
+
+    .journey-point {
+
+        grid-template-columns:
+            55px 1fr;
+
+        column-gap: 15px;
+    }
+
+
+    .journey-info {
+
+        padding-left: 0;
+    }
+
+
+    .journey-info h3 {
+
+        font-size: 24px;
+
+        line-height: 1.05;
+    }
+
+
+    .journey-info p {
+
+        font-size: 11px;
+
+        line-height: 1.7;
+    }
+
+
+    .journey-footer {
+
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        margin-top: 60px;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+}
