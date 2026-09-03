@@ -1992,7 +1992,6 @@
 ===================================================== */
 
 .journey-point {
-
     position: absolute;
 
     left: 0;
@@ -2001,8 +2000,7 @@
 
     display: grid;
 
-    grid-template-columns:
-        70px 1fr;
+    grid-template-columns: 105px 1fr;
 
     column-gap: 30px;
 }
@@ -2057,7 +2055,6 @@
 ===================================================== */
 
 .journey-year {
-
     font-family: "Space Grotesk", sans-serif;
 
     font-size: 12px;
@@ -2067,6 +2064,10 @@
     padding-top: 1px;
 
     opacity: 0.6;
+
+    text-align: right;
+
+    padding-right: 12px;
 }
 
 
@@ -2311,14 +2312,17 @@
     }
 
 
-    .journey-point {
+  .journey-point {
+    grid-template-columns:
+        65px 1fr;
 
-        grid-template-columns:
-            55px 1fr;
+    column-gap: 15px;
+}
 
-        column-gap: 15px;
-    }
-
+.journey-year {
+    padding-right: 8px;
+    text-align: right;
+}
 
     .journey-info {
 
