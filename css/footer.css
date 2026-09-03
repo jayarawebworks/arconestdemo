@@ -1,0 +1,511 @@
+/* =====================================================
+   06. FOOTER
+===================================================== */
+
+.site-footer {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 90vh;
+
+    overflow: hidden;
+
+    background: #160b27;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.footer-video {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+}
+
+
+.footer-video video {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.55;
+
+    filter: grayscale(100%);
+
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.footer-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(20, 8, 35, 0.72);
+}
+
+
+/* =====================================================
+   ARCHITECTURAL FRAME
+===================================================== */
+
+.footer-frame {
+
+    position: absolute;
+
+    inset: 30px;
+
+    border: 1px solid
+        rgba(255,255,255,0.25);
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   TOP
+===================================================== */
+
+.footer-top {
+
+    position: absolute;
+
+    top: 55px;
+
+    left: 55px;
+    right: 55px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    z-index: 2;
+}
+
+
+.footer-number,
+.footer-label {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 0.22em;
+
+    opacity: 0.65;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.footer-main {
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: 50%;
+    left: 8vw;
+
+    transform:
+        translateY(-50%);
+}
+
+
+.footer-eyebrow {
+
+    margin: 0 0 25px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 0.25em;
+
+    opacity: 0.65;
+}
+
+
+.footer-title {
+
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(55px, 7vw, 105px);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+}
+
+
+.footer-title span {
+
+    display: block;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   CONTACT BUTTON
+===================================================== */
+
+.footer-contact {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 45px;
+
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid
+        rgba(255,255,255,0.7);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    transition:
+        gap 0.4s ease;
+}
+
+
+.footer-contact:hover {
+
+    gap: 30px;
+}
+
+
+.footer-contact span {
+
+    font-size: 16px;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.footer-contact:hover span {
+
+    transform:
+        translate(4px,-4px);
+}
+
+
+/* =====================================================
+   BOTTOM INFORMATION
+===================================================== */
+
+.footer-bottom {
+
+    position: absolute;
+
+    z-index: 2;
+
+    left: 55px;
+    right: 55px;
+
+    bottom: 75px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr 2fr 1.5fr 0.5fr;
+
+    gap: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid
+        rgba(255,255,255,0.3);
+}
+
+
+/* Company */
+
+.footer-company {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    font-family: "Inter", sans-serif;
+}
+
+
+.footer-company strong {
+
+    font-size: 13px;
+
+    letter-spacing: 0.15em;
+}
+
+
+.footer-company span {
+
+    font-size: 8px;
+
+    letter-spacing: 0.15em;
+
+    opacity: 0.55;
+}
+
+
+/* Address */
+
+.footer-address,
+.footer-contact-info,
+.footer-location {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.04em;
+
+    opacity: 0.65;
+}
+
+
+/* Contact */
+
+.footer-contact-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.footer-contact-info a {
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+.footer-contact-info a:hover {
+
+    opacity: 1;
+}
+
+
+/* Location */
+
+.footer-location {
+
+    text-align: right;
+
+    letter-spacing: 0.18em;
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.footer-copyright {
+
+    position: absolute;
+
+    z-index: 2;
+
+    left: 55px;
+    right: 55px;
+
+    bottom: 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: 0.15em;
+
+    opacity: 0.45;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .footer-main {
+
+        left: 7vw;
+    }
+
+
+    .footer-bottom {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        row-gap: 25px;
+    }
+
+
+    .footer-location {
+
+        text-align: left;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .site-footer {
+
+        min-height: 100svh;
+    }
+
+
+    .footer-frame {
+
+        inset: 20px;
+    }
+
+
+    .footer-top {
+
+        top: 40px;
+
+        left: 40px;
+        right: 40px;
+    }
+
+
+    .footer-main {
+
+        top: 43%;
+
+        left: 30px;
+        right: 30px;
+
+        transform:
+            translateY(-50%);
+    }
+
+
+    .footer-eyebrow {
+
+        font-size: 7px;
+
+        line-height: 1.6;
+    }
+
+
+    .footer-title {
+
+        font-size:
+            clamp(45px, 13vw, 65px);
+
+        line-height: 0.94;
+    }
+
+
+    .footer-contact {
+
+        margin-top: 35px;
+    }
+
+
+    .footer-bottom {
+
+        left: 40px;
+        right: 40px;
+
+        bottom: 75px;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 25px 15px;
+
+        padding-top: 20px;
+    }
+
+
+    .footer-address,
+    .footer-contact-info,
+    .footer-location {
+
+        font-size: 8px;
+    }
+
+
+    .footer-location {
+
+        text-align: left;
+    }
+
+
+    .footer-copyright {
+
+        left: 40px;
+        right: 40px;
+
+        bottom: 35px;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+        font-size: 6px;
+    }
+
+}
