@@ -735,3 +735,654 @@
     }
 
 }
+
+/* =====================================================
+   VISION SECTION
+===================================================== */
+
+.vision-section {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 150px 8vw 120px;
+
+    background: #f8f6f3;
+
+    color: #32145f;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 7vw;
+}
+
+
+/* =====================================================
+   SECTION NUMBER
+===================================================== */
+
+.vision-section-number {
+
+    position: absolute;
+
+    top: 140px;
+    right: 8vw;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 0.15em;
+
+    opacity: 0.55;
+}
+
+
+/* =====================================================
+   SIDE LABEL
+===================================================== */
+
+.vision-side-label {
+
+    position: absolute;
+
+    left: 30px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%)
+        rotate(-90deg);
+
+    transform-origin: center;
+
+    display: flex;
+
+    gap: 18px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 0.25em;
+
+    color: #32145f;
+
+    opacity: 0.55;
+}
+
+
+.vision-side-label span:first-child {
+
+    opacity: 0.45;
+}
+
+
+/* =====================================================
+   ARCHITECTURAL DRAWING
+===================================================== */
+
+.vision-drawing {
+
+    position: relative;
+
+    width: min(520px, 42vw);
+
+    aspect-ratio: 1;
+
+    margin: auto;
+
+    border: 1px solid rgba(50,20,95,0.2);
+
+    border-radius: 50%;
+
+    animation:
+        drawingFloat 8s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   CIRCLES
+===================================================== */
+
+.drawing-circle {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border: 1px solid
+        rgba(50,20,95,0.25);
+
+    border-radius: 50%;
+}
+
+
+.drawing-circle-outer {
+
+    width: 86%;
+    height: 86%;
+}
+
+
+.drawing-circle-middle {
+
+    width: 63%;
+    height: 63%;
+
+    border-style: dashed;
+}
+
+
+.drawing-circle-inner {
+
+    width: 35%;
+    height: 35%;
+
+    border-color:
+        rgba(50,20,95,0.45);
+}
+
+
+/* =====================================================
+   AXIS
+===================================================== */
+
+.drawing-axis {
+
+    position: absolute;
+
+    background:
+        rgba(50,20,95,0.2);
+}
+
+
+.vertical-axis {
+
+    top: 6%;
+    bottom: 6%;
+
+    left: 50%;
+
+    width: 1px;
+}
+
+
+.horizontal-axis {
+
+    left: 6%;
+    right: 6%;
+
+    top: 50%;
+
+    height: 1px;
+}
+
+
+/* =====================================================
+   ARCH
+===================================================== */
+
+.drawing-arch {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 18%;
+
+    width: 42%;
+    height: 46%;
+
+    transform:
+        translateX(-50%);
+
+    border: 1px solid
+        rgba(50,20,95,0.7);
+
+    border-bottom: 0;
+
+    border-radius:
+        180px 180px 0 0;
+}
+
+
+.arch-inner {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    width: 67%;
+    height: 72%;
+
+    transform:
+        translateX(-50%);
+
+    border: 1px solid
+        rgba(50,20,95,0.4);
+
+    border-bottom: 0;
+
+    border-radius:
+        150px 150px 0 0;
+}
+
+
+/* =====================================================
+   CENTER MARK
+===================================================== */
+
+.drawing-center {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 12px;
+    height: 12px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border: 1px solid #32145f;
+
+    background: #f8f6f3;
+}
+
+
+.drawing-center span {
+
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    background: #32145f;
+}
+
+
+/* =====================================================
+   DRAWING LABELS
+===================================================== */
+
+.drawing-label {
+
+    position: absolute;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 0.15em;
+
+    color: #32145f;
+
+    opacity: 0.55;
+}
+
+
+.drawing-label-top {
+
+    top: 7%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+}
+
+
+.drawing-label-right {
+
+    top: 50%;
+
+    right: 5%;
+
+    transform:
+        translateY(-50%);
+}
+
+
+.drawing-label-bottom {
+
+    bottom: 7%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+}
+
+
+/* =====================================================
+   VISION CONTENT
+===================================================== */
+
+.vision-content {
+
+    max-width: 600px;
+
+    padding-right: 4vw;
+}
+
+
+/* Eyebrow */
+
+.vision-eyebrow {
+
+    margin: 0 0 28px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+
+    color: #32145f;
+
+    opacity: 0.6;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.vision-title {
+
+    margin: 0;
+
+    max-width: 650px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(50px, 5.5vw, 85px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.06em;
+
+    color: #32145f;
+}
+
+
+.vision-title span {
+
+    display: block;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.vision-description {
+
+    max-width: 520px;
+
+    margin: 42px 0 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #32145f;
+
+    opacity: 0.72;
+}
+
+
+/* =====================================================
+   BOTTOM INFORMATION
+===================================================== */
+
+.vision-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 55px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 0.16em;
+
+    color: #32145f;
+
+    opacity: 0.55;
+}
+
+
+.vision-line {
+
+    width: 45px;
+
+    height: 1px;
+
+    background: #32145f;
+}
+
+
+/* =====================================================
+   BOTTOM ARCHITECTURAL LINE
+===================================================== */
+
+.vision-bottom-line {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 8vw;
+    right: 8vw;
+
+    height: 1px;
+
+    background:
+        rgba(50,20,95,0.22);
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes drawingFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px)
+            rotate(1deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .vision-section {
+
+        padding:
+            130px 8vw
+            100px;
+
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+
+    .vision-drawing {
+
+        width: min(500px, 70vw);
+
+        order: 1;
+    }
+
+
+    .vision-content {
+
+        order: 2;
+
+        max-width: 700px;
+
+        padding-right: 0;
+    }
+
+
+    .vision-title {
+
+        font-size:
+            clamp(48px, 8vw, 72px);
+    }
+
+
+    .vision-side-label {
+
+        display: none;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .vision-section {
+
+        min-height: auto;
+
+        padding:
+            110px 25px
+            100px;
+
+        gap: 55px;
+    }
+
+
+    .vision-section-number {
+
+        top: 100px;
+
+        right: 25px;
+    }
+
+
+    .vision-drawing {
+
+        width: min(390px, 82vw);
+    }
+
+
+    .vision-content {
+
+        width: 100%;
+    }
+
+
+    .vision-eyebrow {
+
+        margin-bottom: 20px;
+
+        font-size: 9px;
+    }
+
+
+    .vision-title {
+
+        font-size:
+            clamp(42px, 13vw, 62px);
+
+        line-height: 0.98;
+    }
+
+
+    .vision-description {
+
+        margin-top: 30px;
+
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+
+    .vision-bottom {
+
+        margin-top: 40px;
+
+        gap: 10px;
+
+        font-size: 7px;
+    }
+
+
+    .vision-line {
+
+        width: 30px;
+    }
+
+
+    .vision-bottom-line {
+
+        bottom: 22px;
+
+        left: 25px;
+        right: 25px;
+    }
+
+}
