@@ -4226,3 +4226,599 @@
         gap: 10px;
     }
 }
+
+/* =====================================================
+   06. WHO WE WORK WITH
+===================================================== */
+
+.about-network {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    overflow: hidden;
+
+    background: #32145f;
+    color: #fff;
+}
+
+
+/* =====================================================
+   BLUEPRINT GRID
+===================================================== */
+
+.network-grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(255,255,255,.055) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,.055) 1px,
+            transparent 1px
+        );
+
+    background-size: 90px 90px;
+
+    opacity: .55;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   SECTION MARK
+===================================================== */
+
+.network-section-mark {
+    position: absolute;
+
+    top: 55px;
+    left: 55px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+
+    letter-spacing: .2em;
+
+    z-index: 10;
+}
+
+.network-section-mark span:first-child {
+    opacity: .4;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.network-heading {
+    position: relative;
+
+    width: min(1200px, 84%);
+
+    margin: 0 auto;
+
+    padding-top: 145px;
+
+    z-index: 5;
+}
+
+.network-heading p {
+    margin: 0 0 20px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+
+    letter-spacing: .22em;
+
+    opacity: .5;
+}
+
+.network-heading h2 {
+    margin: 0;
+
+    max-width: 760px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(50px, 6vw, 84px);
+
+    font-weight: 400;
+
+    line-height: .9;
+
+    letter-spacing: -.06em;
+}
+
+.network-heading h2 span {
+    display: block;
+
+    margin-left: 9vw;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.network-intro {
+    position: absolute;
+
+    top: 160px;
+    right: 8%;
+
+    width: 230px;
+
+    z-index: 5;
+}
+
+.network-intro::before {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+    height: 1px;
+
+    margin-bottom: 15px;
+
+    background: rgba(255,255,255,.5);
+}
+
+.network-intro p {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+
+    opacity: .58;
+}
+
+
+/* =====================================================
+   DISCIPLINE MAP
+===================================================== */
+
+.network-map {
+    position: absolute;
+
+    left: 7%;
+    right: 7%;
+
+    top: 55%;
+
+    height: 180px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    z-index: 5;
+}
+
+
+/* Connecting line */
+
+.network-line {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: 10px;
+
+    height: 1px;
+
+    background:
+        repeating-linear-gradient(
+            to right,
+            rgba(255,255,255,.45) 0,
+            rgba(255,255,255,.45) 5px,
+            transparent 5px,
+            transparent 12px
+        );
+}
+
+
+/* =====================================================
+   NETWORK ITEMS
+===================================================== */
+
+.network-item {
+    position: relative;
+
+    width: 18%;
+
+    padding-top: 35px;
+
+    transition:
+        transform .4s ease,
+        opacity .4s ease;
+}
+
+.network-item:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Dot */
+
+.network-dot {
+    position: absolute;
+
+    top: 4px;
+    left: 0;
+
+    width: 13px;
+    height: 13px;
+
+    border: 1px solid rgba(255,255,255,.8);
+
+    border-radius: 50%;
+
+    background: #32145f;
+
+    transition:
+        transform .4s ease,
+        background .4s ease;
+}
+
+.network-dot::after {
+    content: "";
+
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #fff;
+}
+
+
+/* Active dot */
+
+.network-item.active .network-dot {
+    transform: scale(1.35);
+
+    background: #fff;
+}
+
+.network-item.active .network-dot::after {
+    background: #32145f;
+}
+
+
+/* Number */
+
+.network-number {
+    display: block;
+
+    margin-bottom: 13px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .16em;
+
+    opacity: .45;
+}
+
+
+/* Name */
+
+.network-item h3 {
+    margin: 0 0 13px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(17px, 1.7vw, 24px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    letter-spacing: -.035em;
+}
+
+
+/* Category */
+
+.network-type {
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .18em;
+
+    opacity: .42;
+}
+
+
+/* =====================================================
+   STATEMENT
+===================================================== */
+
+.network-statement {
+    position: absolute;
+
+    left: 7%;
+    bottom: 125px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    z-index: 5;
+}
+
+.statement-line {
+    width: 55px;
+    height: 1px;
+
+    background: rgba(255,255,255,.45);
+}
+
+.network-statement p {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 300;
+
+    letter-spacing: -.02em;
+
+    opacity: .7;
+}
+
+.network-statement strong {
+    font-weight: 500;
+
+    color: #fff;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.network-bottom {
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+    bottom: 40px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(255,255,255,.2);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .16em;
+
+    opacity: .45;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .network-intro {
+        right: 5%;
+        width: 190px;
+    }
+
+    .network-map {
+        left: 5%;
+        right: 5%;
+    }
+
+    .network-item h3 {
+        font-size: 16px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .about-network {
+        min-height: auto;
+
+        padding-bottom: 90px;
+    }
+
+    .network-section-mark {
+        top: 40px;
+        left: 25px;
+    }
+
+
+    /* Heading */
+
+    .network-heading {
+        width: calc(100% - 50px);
+
+        padding-top: 100px;
+    }
+
+    .network-heading h2 {
+        font-size: clamp(47px, 13vw, 68px);
+    }
+
+    .network-heading h2 span {
+        margin-left: 9vw;
+    }
+
+
+    /* Intro */
+
+    .network-intro {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        width: calc(100% - 50px);
+
+        margin: 55px auto 0;
+    }
+
+
+    /* Vertical discipline map */
+
+    .network-map {
+        position: relative;
+
+        top: auto;
+        left: auto;
+        right: auto;
+
+        width: calc(100% - 50px);
+
+        height: auto;
+
+        margin: 75px auto 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 45px;
+
+        padding-left: 40px;
+    }
+
+
+    /* Vertical line */
+
+    .network-line {
+        left: 6px;
+        top: 8px;
+        bottom: 8px;
+
+        width: 1px;
+        height: auto;
+
+        background:
+            repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,.45) 0,
+                rgba(255,255,255,.45) 5px,
+                transparent 5px,
+                transparent 12px
+            );
+    }
+
+
+    .network-item {
+        width: 100%;
+
+        padding-top: 0;
+
+        min-height: 75px;
+    }
+
+    .network-item:hover {
+        transform: translateX(6px);
+    }
+
+
+    .network-dot {
+        left: -40px;
+        top: 2px;
+    }
+
+
+    .network-number {
+        margin-bottom: 7px;
+    }
+
+    .network-item h3 {
+        font-size: 22px;
+
+        margin-bottom: 8px;
+    }
+
+
+    /* Statement */
+
+    .network-statement {
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        width: calc(100% - 50px);
+
+        margin: 60px auto 0;
+    }
+
+    .network-statement p {
+        font-size: 15px;
+    }
+
+
+    /* Bottom */
+
+    .network-bottom {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        width: calc(100% - 50px);
+
+        margin: 50px auto 0;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+        font-size: 6px;
+    }
+}
