@@ -4822,3 +4822,518 @@
         font-size: 6px;
     }
 }
+
+
+/* =====================================================
+   07. ABOUT CTA
+===================================================== */
+
+.about-cta {
+    position: relative;
+
+    width: 100%;
+    min-height: 75svh;
+
+    overflow: hidden;
+
+    background: #160b27;
+    color: #fff;
+}
+
+
+/* =====================================================
+   BLUEPRINT GRID
+===================================================== */
+
+.about-cta-grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(255,255,255,.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 90px 90px;
+
+    opacity: .55;
+}
+
+
+/* =====================================================
+   CENTRAL AXIS
+===================================================== */
+
+.about-cta-axis {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: 50%;
+
+    width: 1px;
+
+    background: rgba(255,255,255,.09);
+}
+
+
+/* =====================================================
+   SECTION MARK
+===================================================== */
+
+.about-cta-mark {
+    position: absolute;
+
+    top: 55px;
+    left: 55px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .2em;
+
+    z-index: 5;
+}
+
+.about-cta-mark span:first-child {
+    opacity: .4;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.about-cta-content {
+    position: relative;
+
+    width: min(1200px,84%);
+
+    margin: 0 auto;
+
+    padding-top: 150px;
+
+    z-index: 5;
+}
+
+
+.about-cta-eyebrow {
+    margin: 0 0 25px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .22em;
+
+    opacity: .5;
+}
+
+
+.about-cta-content h2 {
+    margin: 0;
+
+    max-width: 800px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(65px,9vw,125px);
+
+    font-weight: 400;
+
+    line-height: .84;
+
+    letter-spacing: -.07em;
+}
+
+
+.about-cta-content h2 span {
+    display: block;
+
+    margin-left: 10vw;
+
+    font-weight: 500;
+
+    color: #fff;
+}
+
+
+.about-cta-text {
+    max-width: 390px;
+
+    margin: 45px 0 35px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    opacity: .55;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.about-cta-button {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 17px 22px;
+
+    border: 1px solid rgba(255,255,255,.35);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+
+    transition:
+        background .4s ease,
+        color .4s ease,
+        transform .4s ease;
+}
+
+
+.about-cta-button:hover {
+    background: #fff;
+
+    color: #32145f;
+
+    transform: translateY(-4px);
+}
+
+
+.cta-arrow {
+    font-size: 15px;
+
+    line-height: 1;
+
+    transition: transform .4s ease;
+}
+
+
+.about-cta-button:hover .cta-arrow {
+    transform: translate(4px,-4px);
+}
+
+
+/* =====================================================
+   GEOMETRY
+===================================================== */
+
+.about-cta-geometry {
+    position: absolute;
+
+    right: 10%;
+
+    top: 50%;
+
+    width: 330px;
+    height: 330px;
+
+    transform: translateY(-50%);
+
+    opacity: .8;
+}
+
+
+/* Circles */
+
+.cta-circle {
+    position: absolute;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    border-radius: 50%;
+}
+
+
+.cta-circle-one {
+    inset: 0;
+}
+
+
+.cta-circle-two {
+    inset: 55px;
+
+    border-style: dashed;
+
+    animation: ctaRotate 20s linear infinite;
+}
+
+
+@keyframes ctaRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* Architectural arch */
+
+.cta-arch {
+    position: absolute;
+
+    left: 50%;
+    bottom: 65px;
+
+    width: 125px;
+    height: 175px;
+
+    transform: translateX(-50%);
+
+    border: 1px solid rgba(255,255,255,.45);
+
+    border-bottom: 0;
+
+    border-radius: 75px 75px 0 0;
+}
+
+
+/* Crosshair */
+
+.cta-axis {
+    position: absolute;
+
+    background: rgba(255,255,255,.18);
+}
+
+
+.cta-axis.horizontal {
+    left: -35px;
+    right: -35px;
+
+    top: 50%;
+
+    height: 1px;
+}
+
+
+.cta-axis.vertical {
+    top: -35px;
+    bottom: -35px;
+
+    left: 50%;
+
+    width: 1px;
+}
+
+
+/* Center point */
+
+.cta-point {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 13px;
+    height: 13px;
+
+    transform: translate(-50%,-50%);
+
+    background: #fff;
+
+    border-radius: 50%;
+}
+
+
+.cta-point::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 4px;
+
+    background: #32145f;
+
+    border-radius: 50%;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.about-cta-bottom {
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+    bottom: 40px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(255,255,255,.18);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .16em;
+
+    opacity: .45;
+
+    z-index: 5;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .about-cta-geometry {
+        right: 3%;
+
+        width: 270px;
+        height: 270px;
+
+        opacity: .55;
+    }
+
+    .about-cta-content h2 {
+        font-size: clamp(60px,8vw,95px);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .about-cta {
+        min-height: 760px;
+    }
+
+
+    .about-cta-mark {
+        top: 40px;
+        left: 25px;
+    }
+
+
+    .about-cta-axis {
+        left: 25px;
+    }
+
+
+    .about-cta-content {
+        width: calc(100% - 50px);
+
+        padding-top: 105px;
+    }
+
+
+    .about-cta-eyebrow {
+        margin-bottom: 20px;
+    }
+
+
+    .about-cta-content h2 {
+        font-size: clamp(58px,16vw,82px);
+
+        line-height: .86;
+    }
+
+
+    .about-cta-content h2 span {
+        margin-left: 8vw;
+    }
+
+
+    .about-cta-text {
+        max-width: 280px;
+
+        margin-top: 40px;
+
+        font-size: 9px;
+    }
+
+
+    .about-cta-button {
+        padding: 16px 18px;
+
+        gap: 25px;
+    }
+
+
+    /* Geometry moves behind content */
+
+    .about-cta-geometry {
+        top: auto;
+        bottom: 100px;
+
+        right: -65px;
+
+        width: 230px;
+        height: 230px;
+
+        opacity: .3;
+    }
+
+
+    .cta-arch {
+        width: 85px;
+        height: 120px;
+
+        bottom: 45px;
+    }
+
+
+    .about-cta-bottom {
+        left: 25px;
+        right: 25px;
+        bottom: 30px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+        font-size: 6px;
+    }
+}
