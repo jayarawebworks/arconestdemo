@@ -4620,3 +4620,71 @@
         margin-top: 55px;
     }
 }
+
+
+/* =====================================================
+   FIX — SECTION 02 HEIGHT / NO OVERLAP
+===================================================== */
+
+.about-intro-v2 {
+    position: relative;
+    min-height: 100svh;
+    height: auto;
+    padding-bottom: 110px;
+}
+
+
+/* Keep the bottom identity INSIDE the section */
+.intro-v2-bottom {
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    bottom: 35px;
+}
+
+
+/* Data strip must remain in normal document flow */
+.intro-v2-data {
+    position: relative;
+    z-index: 10;
+}
+
+
+/* =====================================================
+   DESKTOP
+===================================================== */
+
+@media (min-width: 1001px) {
+
+    .about-intro-v2 {
+        min-height: 1050px;
+        padding-bottom: 110px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .about-intro-v2 {
+        min-height: auto;
+        height: auto;
+        padding-bottom: 70px;
+    }
+
+    .intro-v2-bottom {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        width: calc(100% - 50px);
+
+        margin: 45px auto 0;
+    }
+
+}
