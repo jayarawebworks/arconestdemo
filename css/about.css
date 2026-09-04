@@ -4421,7 +4421,7 @@
 
     z-index: -1;
 }
-}
+
 /* =====================================================
    ABOUT PAGE — FIX FLOATING NAVBAR OVERLAP
 ===================================================== */
@@ -4687,4 +4687,60 @@
         margin: 45px auto 0;
     }
 
+}
+
+/* =====================================================
+   FINAL AXIS ISOLATION
+   Prevent architectural center lines from escaping
+   their own sections.
+===================================================== */
+
+.about-intro-v2,
+.about-purpose,
+.about-story,
+.about-principles,
+.about-network,
+.about-cta {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+
+/* Section 02 axis */
+.about-intro-v2 .intro-v2-axis {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    height: auto !important;
+}
+
+
+/* Section 03 axis */
+.about-story .story-axis-v {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    height: auto !important;
+}
+
+
+/* Section 04 axis */
+.about-purpose .purpose-axis {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    height: auto !important;
+}
+
+
+/* Remove accidental page-level pseudo lines */
+html::before,
+html::after,
+body::before,
+body::after,
+main::before,
+main::after {
+    content: none !important;
+    display: none !important;
 }
