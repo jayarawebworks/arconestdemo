@@ -2582,28 +2582,23 @@
         gap: 10px;
     }
 }
-
 /* =====================================================
    05. WHAT WE STAND FOR
-   ARCONEST PRINCIPLES ORBIT
 ===================================================== */
 
 .about-principles {
     position: relative;
     width: 100%;
     min-height: 100svh;
-    height: 1000px;
     overflow: hidden;
 
-    background: #fff;
+    background: #ffffff;
     color: #160b27;
-
-    isolation: isolate;
 }
 
 
 /* =====================================================
-   GRID
+   BLUEPRINT GRID
 ===================================================== */
 
 .principles-grid {
@@ -2627,8 +2622,6 @@
     opacity: .7;
 
     pointer-events: none;
-
-    z-index: -1;
 }
 
 
@@ -2644,18 +2637,24 @@
 
     display: flex;
     align-items: center;
+
     gap: 15px;
+
+    z-index: 20;
 
     font-family: "Inter", sans-serif;
     font-size: 8px;
 
     letter-spacing: .2em;
-
-    z-index: 10;
 }
 
 .principles-section-mark span:first-child {
-    opacity: .4;
+    color: #32145f;
+    opacity: .35;
+}
+
+.principles-section-mark span:last-child {
+    color: #32145f;
 }
 
 
@@ -2672,7 +2671,7 @@
 
     padding-top: 145px;
 
-    z-index: 5;
+    z-index: 10;
 }
 
 .principles-heading p {
@@ -2683,6 +2682,8 @@
     font-size: 8px;
 
     letter-spacing: .22em;
+
+    color: #32145f;
 
     opacity: .45;
 }
@@ -2701,6 +2702,8 @@
     line-height: .9;
 
     letter-spacing: -.06em;
+
+    color: #160b27;
 }
 
 .principles-heading h2 span {
@@ -2715,40 +2718,22 @@
 
 
 /* =====================================================
-   MAIN ORBIT LAYOUT
+   MAIN ORBIT SYSTEM
 ===================================================== */
 
-.principles-layout {
-    position: relative;
+.principles-orbit {
 
-    width: min(1200px, 88%);
-
-    height: 560px;
-
-    margin: 45px auto 0;
-
-    z-index: 5;
-}
-
-
-/* =====================================================
-   LARGE CENTRAL ORBIT
-===================================================== */
-
-.principles-center {
     position: absolute;
 
-    left: 50%;
-    top: 50%;
+    width: min(650px, 48vw);
+    aspect-ratio: 1 / 1;
 
-    width: 430px;
-    height: 430px;
+    right: 9%;
+    top: 53%;
 
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    z-index: 5;
 }
 
 
@@ -2756,7 +2741,7 @@
    ORBIT RINGS
 ===================================================== */
 
-.center-ring {
+.orbit-ring {
     position: absolute;
 
     left: 50%;
@@ -2764,39 +2749,35 @@
 
     transform: translate(-50%, -50%);
 
-    border: 1px solid rgba(50,20,95,.24);
-
     border-radius: 50%;
 
     pointer-events: none;
 }
 
+.orbit-ring-outer {
 
-/* Main large circle */
+    width: 100%;
+    height: 100%;
 
-.ring-one {
-    width: 430px;
-    height: 430px;
+    border: 1px solid rgba(50,20,95,.22);
 }
 
+.orbit-ring-middle {
 
-/* Technical dashed circle */
+    width: 76%;
+    height: 76%;
 
-.ring-two {
-    width: 330px;
-    height: 330px;
+    border: 1px dashed rgba(50,20,95,.18);
 
-    border-style: dashed;
-
-    animation: principleOrbit 22s linear infinite;
+    animation: ringRotate 25s linear infinite;
 }
 
+.orbit-ring-inner {
 
-/* Inner circle */
+    width: 48%;
+    height: 48%;
 
-.ring-three {
-    width: 170px;
-    height: 170px;
+    border: 1px solid rgba(50,20,95,.22);
 }
 
 
@@ -2804,88 +2785,465 @@
    CROSSHAIR
 ===================================================== */
 
-.center-cross {
+.orbit-line {
     position: absolute;
 
-    left: 50%;
-    top: 50%;
-
-    background: rgba(50,20,95,.20);
+    background: rgba(50,20,95,.15);
 
     pointer-events: none;
 }
 
-.center-cross.horizontal {
-    width: 540px;
+.orbit-line-horizontal {
+
+    width: 116%;
+
     height: 1px;
 
-    transform: translate(-50%, -50%);
+    left: -8%;
+    top: 50%;
 }
 
-.center-cross.vertical {
+.orbit-line-vertical {
+
+    height: 116%;
+
     width: 1px;
-    height: 540px;
 
-    transform: translate(-50%, -50%);
+    top: -8%;
+    left: 50%;
 }
 
 
 /* =====================================================
-   CENTER POINT
+   ROTATING TRACK
 ===================================================== */
 
-.center-point {
-    position: relative;
-
-    width: 24px;
-    height: 24px;
-
-    background: #32145f;
-
-    border-radius: 50%;
-
-    z-index: 5;
-}
-
-.center-point::after {
-    content: "";
+.orbit-track {
 
     position: absolute;
 
-    inset: 7px;
+    inset: 0;
 
-    background: #fff;
+    animation:
+        orbitRotation 28s linear infinite;
+}
 
-    border-radius: 50%;
+
+/* Pause on hover */
+
+.principles-orbit:hover .orbit-track {
+    animation-play-state: paused;
 }
 
 
 /* =====================================================
-   CENTER LABEL
+   ORBIT NODES
 ===================================================== */
 
-.center-label {
+.orbit-node {
+
     position: absolute;
 
-    bottom: -42px;
+    width: 180px;
+
+    z-index: 10;
+}
+
+
+/* Node positions */
+
+.orbit-node-01 {
+    left: 50%;
+    top: -35px;
+
+    transform: translateX(-50%);
+}
+
+.orbit-node-02 {
+    right: -45px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.orbit-node-03 {
+    left: 50%;
+    bottom: -35px;
+
+    transform: translateX(-50%);
+}
+
+.orbit-node-04 {
+    left: -45px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* =====================================================
+   COUNTER ROTATE CONTENT
+===================================================== */
+
+.orbit-node-content {
+
+    padding: 15px 18px;
+
+    background: rgba(255,255,255,.94);
+
+    border: 1px solid rgba(50,20,95,.15);
+
+    box-shadow:
+        0 12px 35px rgba(22,11,39,.06);
+
+    animation:
+        counterRotation 28s linear infinite;
+
+    transition:
+        border-color .35s ease,
+        box-shadow .35s ease,
+        transform .35s ease;
+}
+
+
+/* Keep content readable */
+
+.principles-orbit:hover .orbit-node-content {
+    animation-play-state: paused;
+}
+
+
+/* Number */
+
+.orbit-node-content > span {
+
+    display: block;
+
+    margin-bottom: 7px;
 
     font-family: "Inter", sans-serif;
 
     font-size: 7px;
 
-    letter-spacing: .2em;
+    letter-spacing: .16em;
 
     color: #32145f;
 
-    opacity: .5;
+    opacity: .45;
+}
+
+
+/* Title */
+
+.orbit-node-content strong {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    letter-spacing: -.03em;
+
+    color: #32145f;
+}
+
+
+/* Description */
+
+.orbit-node-content p {
+
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    line-height: 1.65;
+
+    color: #160b27;
+
+    opacity: .55;
 }
 
 
 /* =====================================================
-   RING ROTATION
+   NODE DOT
 ===================================================== */
 
-@keyframes principleOrbit {
+.orbit-node-dot {
+
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    border: 1px solid #32145f;
+
+    z-index: 15;
+}
+
+.orbit-node-dot::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #32145f;
+}
+
+
+/* Dot positions */
+
+.orbit-node-01 .orbit-node-dot {
+
+    left: 50%;
+    bottom: -21px;
+
+    transform: translateX(-50%);
+}
+
+.orbit-node-02 .orbit-node-dot {
+
+    left: -21px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.orbit-node-03 .orbit-node-dot {
+
+    left: 50%;
+    top: -21px;
+
+    transform: translateX(-50%);
+}
+
+.orbit-node-04 .orbit-node-dot {
+
+    right: -21px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.orbit-node:hover .orbit-node-content {
+
+    border-color: rgba(50,20,95,.45);
+
+    box-shadow:
+        0 18px 45px rgba(22,11,39,.12);
+
+    transform: scale(1.04);
+}
+
+.orbit-node:hover .orbit-node-dot {
+
+    background: #32145f;
+}
+
+.orbit-node:hover .orbit-node-dot::after {
+
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   CENTER
+===================================================== */
+
+.orbit-center {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 170px;
+    height: 170px;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 8;
+}
+
+
+/* Inner center circle */
+
+.orbit-center::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 92px;
+    height: 92px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(50,20,95,.3);
+}
+
+
+/* Center crosshair */
+
+.center-crosshair {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+}
+
+.center-crosshair::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+    height: 130%;
+
+    left: 50%;
+    top: -15%;
+
+    background: rgba(50,20,95,.14);
+}
+
+.center-crosshair::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 130%;
+    height: 1px;
+
+    left: -15%;
+    top: 50%;
+
+    background: rgba(50,20,95,.14);
+}
+
+
+/* Core */
+
+.center-core {
+
+    position: relative;
+
+    width: 62px;
+    height: 62px;
+
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #32145f;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    z-index: 5;
+}
+
+.center-core span {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 5px;
+
+    letter-spacing: .18em;
+
+    opacity: .6;
+}
+
+.center-core strong {
+
+    margin: 3px 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+}
+
+.center-core small {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 5px;
+
+    letter-spacing: .12em;
+
+    opacity: .6;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes orbitRotation {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes counterRotation {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+
+}
+
+@keyframes ringRotate {
 
     from {
         transform:
@@ -2903,201 +3261,16 @@
 
 
 /* =====================================================
-   PRINCIPLE ITEMS
-===================================================== */
-
-.principle {
-    position: absolute;
-
-    width: auto;
-
-    padding: 0;
-
-    border: none;
-
-    background: transparent;
-
-    z-index: 10;
-
-    transition:
-        transform .45s ease,
-        opacity .45s ease;
-}
-
-
-/* Remove old card appearance */
-
-.principle:hover {
-    transform: none;
-
-    background: transparent;
-
-    border-color: transparent;
-}
-
-
-/* =====================================================
-   PRINCIPLE POSITIONS
-===================================================== */
-
-.principle-01 {
-    left: 50%;
-    top: -15px;
-
-    transform: translateX(-50%);
-}
-
-.principle-02 {
-    right: -35px;
-    top: 50%;
-
-    transform: translateY(-50%);
-}
-
-.principle-03 {
-    left: 50%;
-    bottom: -15px;
-
-    transform: translateX(-50%);
-}
-
-.principle-04 {
-    left: -35px;
-    top: 50%;
-
-    transform: translateY(-50%);
-}
-
-
-/* =====================================================
-   PRINCIPLE NUMBER
-===================================================== */
-
-.principle-number {
-    display: block;
-
-    margin-bottom: 7px;
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 7px;
-
-    letter-spacing: .18em;
-
-    color: #32145f;
-
-    opacity: .4;
-
-    text-align: center;
-}
-
-
-/* =====================================================
-   REMOVE OLD ICON
-===================================================== */
-
-.principle-icon {
-    display: none;
-}
-
-
-/* =====================================================
-   PRINCIPLE TITLE
-===================================================== */
-
-.principle h3 {
-    margin: 0;
-
-    font-family: "Space Grotesk", sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 500;
-
-    letter-spacing: .08em;
-
-    text-transform: uppercase;
-
-    color: #32145f;
-
-    white-space: nowrap;
-
-    text-align: center;
-}
-
-
-/* =====================================================
-   DESCRIPTION
-===================================================== */
-
-.principle p {
-    display: none;
-}
-
-
-/* =====================================================
-   COORDINATE
-===================================================== */
-
-.principle-coordinate {
-    display: none;
-}
-
-
-/* =====================================================
-   MOVING ORBIT DOT
-===================================================== */
-
-.principle::before {
-    content: "";
-
-    position: absolute;
-
-    width: 13px;
-    height: 13px;
-
-    border: 1px solid #32145f;
-
-    border-radius: 50%;
-
-    background: #fff;
-
-    left: 50%;
-    top: -27px;
-
-    transform: translateX(-50%);
-
-    box-sizing: border-box;
-}
-
-.principle::after {
-    content: "";
-
-    position: absolute;
-
-    width: 4px;
-    height: 4px;
-
-    border-radius: 50%;
-
-    background: #32145f;
-
-    left: 50%;
-    top: -23px;
-
-    transform: translateX(-50%);
-}
-
-
-/* =====================================================
-   BOTTOM INFORMATION
+   BOTTOM LINE
 ===================================================== */
 
 .principles-bottom {
+
     position: absolute;
 
     left: 8%;
     right: 8%;
+
     bottom: 40px;
 
     padding-top: 15px;
@@ -3105,6 +3278,7 @@
     border-top: 1px solid rgba(50,20,95,.16);
 
     display: flex;
+
     justify-content: space-between;
 
     font-family: "Inter", sans-serif;
@@ -3113,7 +3287,9 @@
 
     letter-spacing: .16em;
 
-    opacity: .45;
+    color: #32145f;
+
+    opacity: .5;
 
     z-index: 10;
 }
@@ -3123,47 +3299,25 @@
    TABLET
 ===================================================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
 
-    .principles-layout {
-        width: 90%;
+    .principles-orbit {
+
+        width: 520px;
+
+        right: 3%;
     }
 
-    .principles-center {
-        width: 350px;
-        height: 350px;
+    .orbit-node {
+
+        width: 155px;
     }
 
-    .ring-one {
-        width: 350px;
-        height: 350px;
+    .orbit-node-content p {
+
+        font-size: 7px;
     }
 
-    .ring-two {
-        width: 270px;
-        height: 270px;
-    }
-
-    .ring-three {
-        width: 140px;
-        height: 140px;
-    }
-
-    .center-cross.horizontal {
-        width: 440px;
-    }
-
-    .center-cross.vertical {
-        height: 440px;
-    }
-
-    .principle-02 {
-        right: 0;
-    }
-
-    .principle-04 {
-        left: 0;
-    }
 }
 
 
@@ -3174,126 +3328,151 @@
 @media (max-width: 700px) {
 
     .about-principles {
-        height: auto;
-        min-height: 1050px;
 
-        padding-bottom: 80px;
+        min-height: auto;
+
+        padding-bottom: 100px;
     }
 
 
-    .principles-grid {
-        background-size: 55px 55px;
-    }
-
+    /* Section marker */
 
     .principles-section-mark {
+
         top: 40px;
         left: 25px;
     }
 
 
+    /* Heading */
+
     .principles-heading {
+
         width: calc(100% - 50px);
 
-        padding-top: 100px;
+        padding-top: 105px;
     }
 
+    .principles-heading p {
+
+        font-size: 7px;
+    }
 
     .principles-heading h2 {
+
         font-size: clamp(48px, 13vw, 68px);
+
+        max-width: 400px;
     }
 
-
     .principles-heading h2 span {
+
         margin-left: 9vw;
     }
 
 
     /* Orbit */
 
-    .principles-layout {
+    .principles-orbit {
+
+        position: relative;
+
+        width: calc(100% - 50px);
+
+        max-width: 420px;
+
+        height: 420px;
+
+        aspect-ratio: auto;
+
+        right: auto;
+        top: auto;
+
+        margin: 100px auto 0;
+
+        transform: none;
+    }
+
+
+    /* Keep rings */
+
+    .orbit-ring-outer {
+
         width: 100%;
+        height: 100%;
+    }
 
-        height: 560px;
+    .orbit-ring-middle {
 
-        margin-top: 55px;
+        width: 74%;
+        height: 74%;
+    }
+
+    .orbit-ring-inner {
+
+        width: 45%;
+        height: 45%;
     }
 
 
-    .principles-center {
+    /* Crosshair */
 
-        width: 300px;
-        height: 300px;
+    .orbit-line-horizontal {
+
+        width: 115%;
+        left: -7.5%;
+    }
+
+    .orbit-line-vertical {
+
+        height: 115%;
+        top: -7.5%;
     }
 
 
-    .ring-one {
-        width: 300px;
-        height: 300px;
+    /* Nodes */
+
+    .orbit-node {
+
+        width: 135px;
+    }
+
+    .orbit-node-content {
+
+        padding: 12px 14px;
+    }
+
+    .orbit-node-content strong {
+
+        font-size: 14px;
+    }
+
+    .orbit-node-content p {
+
+        font-size: 6.5px;
+
+        line-height: 1.55;
     }
 
 
-    .ring-two {
-        width: 225px;
-        height: 225px;
+    /* Center */
+
+    .orbit-center {
+
+        width: 130px;
+        height: 130px;
     }
 
+    .orbit-center::before {
 
-    .ring-three {
-        width: 115px;
-        height: 115px;
+        width: 70px;
+        height: 70px;
     }
 
+    .center-core {
 
-    .center-cross.horizontal {
-        width: 350px;
-    }
-
-    .center-cross.vertical {
-        height: 350px;
-    }
-
-
-    .center-point {
-        width: 18px;
-        height: 18px;
-    }
-
-
-    .center-point::after {
-        inset: 5px;
-    }
-
-
-    /* Node positions */
-
-    .principle-01 {
-        top: 5px;
-    }
-
-
-    .principle-02 {
-        right: 8px;
-    }
-
-
-    .principle-03 {
-        bottom: 5px;
-    }
-
-
-    .principle-04 {
-        left: 8px;
-    }
-
-
-    .principle h3 {
-        font-size: 10px;
-    }
-
-
-    .principle-number {
-        font-size: 6px;
+        width: 50px;
+        height: 50px;
     }
 
 
@@ -3309,7 +3488,7 @@
 
         width: calc(100% - 50px);
 
-        margin: 30px auto 0;
+        margin: 65px auto 0;
 
         display: grid;
 
@@ -3318,6 +3497,53 @@
         gap: 12px;
 
         font-size: 6px;
+    }
+
+    .principles-bottom span:last-child {
+
+        text-align: right;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .principles-orbit {
+
+        width: calc(100% - 30px);
+
+        height: 350px;
+    }
+
+    .orbit-node {
+
+        width: 115px;
+    }
+
+    .orbit-node-content {
+
+        padding: 10px;
+    }
+
+    .orbit-node-content strong {
+
+        font-size: 12px;
+    }
+
+    .orbit-node-content p {
+
+        font-size: 6px;
+    }
+
+    .orbit-center {
+
+        width: 105px;
+        height: 105px;
     }
 
 }
