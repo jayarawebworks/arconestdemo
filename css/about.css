@@ -5456,3 +5456,90 @@
 
     z-index: -1;
 }
+}
+/* =====================================================
+   ABOUT PAGE — FIX FLOATING NAVBAR OVERLAP
+===================================================== */
+
+/*
+   The floating navbar is fixed and therefore doesn't
+   occupy document space. Give the first visible content
+   enough breathing room.
+*/
+
+.about-intro {
+    padding-top: 150px;
+}
+
+
+/* Move the section marker down with the content */
+
+.intro-section-mark {
+    top: 150px;
+}
+
+
+/* Keep heading safely below the navbar */
+
+.intro-heading {
+    padding-top: 35px;
+}
+
+
+/* =====================================================
+   DESKTOP
+===================================================== */
+
+@media (min-width: 1001px) {
+
+    .about-intro {
+        min-height: 950px;
+    }
+
+    .intro-section-mark {
+        top: 150px;
+    }
+
+    .intro-heading {
+        padding-top: 35px;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .about-intro {
+        padding-top: 130px;
+    }
+
+    .intro-section-mark {
+        top: 130px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .about-intro {
+        padding-top: 110px;
+    }
+
+    .intro-section-mark {
+        top: 100px;
+    }
+
+    .intro-heading {
+        padding-top: 20px;
+    }
+
+}
