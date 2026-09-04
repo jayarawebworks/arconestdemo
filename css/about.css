@@ -742,117 +742,86 @@
 
 }
 
+
+
 /* =====================================================
-   02. WHO WE ARE
+   02 — WHO WE ARE / ARCHITECTURAL INTRO
 ===================================================== */
 
-.about-intro {
-
+.about-intro-v2 {
     position: relative;
 
     width: 100%;
-
     min-height: 100svh;
 
     overflow: hidden;
 
-    background: #ffffff;
+    background: #f8f7f9;
 
-    color: var(--about-purple);
-
+    color: #32145f;
 }
 
 
 /* =====================================================
-   GRID
+   BLUEPRINT GRID
 ===================================================== */
 
-.intro-grid {
-
+.intro-v2-grid {
     position: absolute;
 
     inset: 0;
 
     background-image:
-
         linear-gradient(
             to right,
-            rgba(50, 20, 95, 0.075) 1px,
+            rgba(50,20,95,.055) 1px,
             transparent 1px
         ),
-
         linear-gradient(
             to bottom,
-            rgba(50, 20, 95, 0.075) 1px,
+            rgba(50,20,95,.055) 1px,
             transparent 1px
         );
 
-    background-size:
-        80px 80px;
-
-    opacity: 0.45;
+    background-size: 74px 74px;
 
     pointer-events: none;
-
 }
 
 
 /* =====================================================
-   AXIS LINES
+   CENTRAL AXIS
 ===================================================== */
 
-.intro-axis {
-
+.intro-v2-axis {
     position: absolute;
 
-    background:
-        rgba(50, 20, 95, 0.13);
+    top: 0;
+    bottom: 0;
 
-    pointer-events: none;
-
-}
-
-
-.intro-axis-v {
+    left: 51.5%;
 
     width: 1px;
 
-    height: 100%;
+    background: rgba(50,20,95,.13);
 
-    left: 50%;
-
-    top: 0;
-
-}
-
-
-.intro-axis-h {
-
-    width: 100%;
-
-    height: 1px;
-
-    left: 0;
-
-    top: 57%;
-
+    pointer-events: none;
 }
 
 
 /* =====================================================
-   SECTION MARK
+   SECTION LABEL
 ===================================================== */
 
-.intro-section-mark {
-
+.intro-v2-label {
     position: absolute;
 
-    top: 75px;
-
+    top: 34px;
     left: 55px;
 
-    display: flex;
+    z-index: 20;
 
+    display: flex;
     align-items: center;
 
     gap: 15px;
@@ -861,1011 +830,356 @@
 
     font-size: 8px;
 
-    letter-spacing: 0.20em;
+    letter-spacing: .2em;
 
-    z-index: 2;
-
+    text-transform: uppercase;
 }
 
-
-.intro-section-mark span:first-child {
-
-    opacity: 0.4;
-
+.intro-v2-label span:first-child {
+    opacity: .35;
 }
 
 
 /* =====================================================
-   HEADING
+   TOP RIGHT ID
 ===================================================== */
 
-.intro-heading {
+.intro-v2-id {
+    position: absolute;
 
+    top: 34px;
+    right: 55px;
+
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 5px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .18em;
+
+    opacity: .45;
+}
+
+
+/* =====================================================
+   MAIN HEADING
+===================================================== */
+
+.intro-v2-heading {
     position: relative;
 
-    z-index: 2;
+    z-index: 5;
 
     width: min(1200px, 84%);
 
     margin: 0 auto;
 
-    padding-top: 145px;
-
+    padding-top: 115px;
 }
 
 
-.intro-kicker {
-
-    margin: 0 0 22px;
+.intro-v2-heading p {
+    margin: 0 0 20px;
 
     font-family: "Inter", sans-serif;
 
     font-size: 8px;
 
-    font-weight: 500;
+    letter-spacing: .22em;
 
-    letter-spacing: 0.22em;
-
-    opacity: 0.5;
-
+    opacity: .55;
 }
 
 
-.intro-heading h2 {
-
+.intro-v2-heading h2 {
     margin: 0;
 
-    max-width: 800px;
+    max-width: 850px;
 
     font-family: "Space Grotesk", sans-serif;
 
-    font-size:
-        clamp(55px, 7.2vw, 105px);
+    font-size: clamp(60px, 7vw, 100px);
 
     font-weight: 400;
 
-    line-height: 0.9;
+    line-height: .88;
 
-    letter-spacing: -0.065em;
-
+    letter-spacing: -.065em;
 }
 
 
-.intro-heading h2 span {
-
+.intro-v2-heading h2 span {
     display: block;
 
-    margin-left: 10vw;
+    margin-left: 7vw;
 
     font-weight: 500;
-
 }
 
 
 /* =====================================================
-   COMPOSITION
+   MAIN COMPOSITION
 ===================================================== */
 
-.intro-composition {
-
+.intro-v2-composition {
     position: relative;
 
-    z-index: 3;
+    z-index: 10;
 
     width: min(1200px, 84%);
 
-    margin: 75px auto 0;
+    margin: 55px auto 0;
 
     display: grid;
 
     grid-template-columns:
         1fr
-        1.35fr
-        0.65fr;
+        70px
+        1.15fr;
 
-    align-items: start;
-
-    gap: 45px;
-
+    min-height: 315px;
 }
 
 
 /* =====================================================
-   LEFT COPY
+   LEFT INFORMATION
 ===================================================== */
 
-.intro-copy {
+.intro-v2-info {
+    padding-right: 55px;
 
-    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
 
+    justify-content: space-between;
 }
 
 
-.intro-copy-number {
+.intro-v2-info-top {
+    display: flex;
 
-    margin-bottom: 22px;
+    justify-content: space-between;
+
+    padding-bottom: 13px;
+
+    border-bottom: 1px solid rgba(50,20,95,.18);
 
     font-family: "Inter", sans-serif;
 
-    font-size: 8px;
+    font-size: 7px;
 
-    letter-spacing: 0.15em;
+    letter-spacing: .16em;
 
-    opacity: 0.45;
-
+    opacity: .45;
 }
 
 
-.intro-copy p {
+.intro-v2-copy {
+    max-width: 390px;
 
-    max-width: 290px;
+    padding-top: 25px;
+}
 
-    margin: 0 0 20px;
+
+.intro-v2-copy p {
+    margin: 0 0 18px;
 
     font-family: "Inter", sans-serif;
 
-    font-size: 10px;
+    font-size: 9px;
 
     line-height: 1.75;
 
-    letter-spacing: 0.01em;
+    color: #32145f;
 
-    color: rgba(22, 11, 39, 0.72);
-
+    opacity: .68;
 }
 
 
 /* =====================================================
-   IMAGE
+   SPECS
 ===================================================== */
 
-.intro-image-wrap {
+.intro-v2-specs {
+    display: flex;
 
-    position: relative;
+    gap: 35px;
 
-    padding: 0 15px 15px 0;
+    padding-top: 15px;
 
+    border-top: 1px solid rgba(50,20,95,.14);
 }
 
 
-.intro-image-frame {
+.intro-v2-spec {
+    display: flex;
 
-    position: relative;
+    flex-direction: column;
 
-    width: 100%;
-
-    height: 310px;
-
-    overflow: hidden;
-
-    background: #e9e7e4;
-
+    gap: 7px;
 }
 
 
-.intro-image-frame::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    border: 1px solid
-        rgba(255,255,255,0.5);
-
-    z-index: 2;
-
-    pointer-events: none;
-
-}
-
-
-.intro-image-frame img {
-
-    width: 100%;
-
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    filter: saturate(0.75);
-
-    transition:
-        transform 0.9s
-        cubic-bezier(0.22, 1, 0.36, 1);
-
-}
-
-
-.intro-image-frame:hover img {
-
-    transform: scale(1.045);
-
-}
-
-
-/* Architectural offset frame */
-
-.intro-image-wrap::after {
-
-    content: "";
-
-    position: absolute;
-
-    left: 15px;
-
-    right: 0;
-
-    top: 15px;
-
-    bottom: 0;
-
-    border: 1px solid
-        rgba(50, 20, 95, 0.25);
-
-    z-index: -1;
-
-}
-
-
-/* =====================================================
-   IMAGE COORDINATES
-===================================================== */
-
-.image-coordinate {
-
-    position: absolute;
-
+.intro-v2-spec span {
     font-family: "Inter", sans-serif;
 
     font-size: 6px;
 
-    letter-spacing: 0.15em;
+    letter-spacing: .15em;
 
-    opacity: 0.55;
-
+    opacity: .4;
 }
 
 
-.image-coordinate-top {
-
-    top: -17px;
-
-    left: 0;
-
-}
-
-
-.image-coordinate-bottom {
-
-    bottom: -13px;
-
-    right: 0;
-
-}
-
-
-/* =====================================================
-   RIGHT DATA
-===================================================== */
-
-.intro-data {
-
-    display: flex;
-
-    flex-direction: column;
-
-    border-left: 1px solid
-        rgba(50, 20, 95, 0.16);
-
-}
-
-
-.intro-data-item {
-
-    min-height: 70px;
-
-    padding: 0 0 15px 20px;
-
-    margin-bottom: 15px;
-
-    border-bottom: 1px solid
-        rgba(50, 20, 95, 0.13);
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-
-    gap: 10px;
-
-}
-
-
-.intro-data-item span {
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 7px;
-
-    letter-spacing: 0.18em;
-
-    opacity: 0.45;
-
-}
-
-
-.intro-data-item strong {
-
+.intro-v2-spec strong {
     font-family: "Space Grotesk", sans-serif;
 
-    font-size: 12px;
-
-    line-height: 1.15;
+    font-size: 10px;
 
     font-weight: 500;
 
-    letter-spacing: -0.02em;
-
+    letter-spacing: .03em;
 }
 
 
 /* =====================================================
-   BOTTOM LINE
+   CENTER AXIS
 ===================================================== */
 
-.intro-bottom-line {
-
-    position: absolute;
-
-    z-index: 3;
-
-    left: 8%;
-
-    right: 8%;
-
-    bottom: 42px;
-
-    padding-top: 16px;
-
-    border-top: 1px solid
-        rgba(50, 20, 95, 0.20);
-
-    display: flex;
-
-    justify-content: space-between;
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 7px;
-
-    letter-spacing: 0.16em;
-
-    opacity: 0.55;
-
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 1000px) {
-
-    .intro-heading {
-
-        padding-top: 135px;
-
-    }
-
-
-    .intro-composition {
-
-        width: 86%;
-
-        grid-template-columns:
-            0.9fr
-            1.4fr;
-
-        gap: 35px;
-
-    }
-
-
-    .intro-data {
-
-        grid-column: 1 / -1;
-
-        display: grid;
-
-        grid-template-columns:
-            repeat(4, 1fr);
-
-        border-left: 0;
-
-        border-top: 1px solid
-            rgba(50, 20, 95, 0.16);
-
-        padding-top: 18px;
-
-    }
-
-
-    .intro-data-item {
-
-        min-height: 55px;
-
-        margin: 0;
-
-        border-bottom: 0;
-
-        border-right: 1px solid
-            rgba(50, 20, 95, 0.13);
-
-    }
-
-
-    .intro-data-item:last-child {
-
-        border-right: 0;
-
-    }
-
-
-    .intro-bottom-line {
-
-        display: none;
-
-    }
-
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 700px) {
-
-    .about-intro {
-
-        min-height: auto;
-
-        padding-bottom: 45px;
-
-    }
-
-
-    .intro-grid {
-
-        background-size: 55px 55px;
-
-        opacity: 0.3;
-
-    }
-
-
-    .intro-axis-v {
-
-        left: 82%;
-
-    }
-
-
-    .intro-axis-h {
-
-        top: 45%;
-
-    }
-
-
-    .intro-section-mark {
-
-        top: 45px;
-
-        left: 25px;
-
-        font-size: 7px;
-
-    }
-
-
-    .intro-heading {
-
-        width: calc(100% - 50px);
-
-        padding-top: 105px;
-
-    }
-
-
-    .intro-kicker {
-
-        font-size: 7px;
-
-        line-height: 1.5;
-
-        max-width: 230px;
-
-    }
-
-
-    .intro-heading h2 {
-
-        font-size:
-            clamp(50px, 15vw, 72px);
-
-        line-height: 0.91;
-
-    }
-
-
-    .intro-heading h2 span {
-
-        margin-left: 10vw;
-
-    }
-
-
-    .intro-composition {
-
-        width: calc(100% - 50px);
-
-        margin-top: 55px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 40px;
-
-    }
-
-
-    /* Image comes first visually */
-
-    .intro-image-wrap {
-
-        order: 1;
-
-        width: 100%;
-
-        padding-right: 10px;
-
-        padding-bottom: 10px;
-
-    }
-
-
-    .intro-image-frame {
-
-        height: 280px;
-
-    }
-
-
-    /* Copy */
-
-    .intro-copy {
-
-        order: 2;
-
-        padding-top: 0;
-
-    }
-
-
-    .intro-copy p {
-
-        max-width: 100%;
-
-        font-size: 9px;
-
-        line-height: 1.75;
-
-    }
-
-
-    /* Data */
-
-    .intro-data {
-
-        order: 3;
-
-        width: 100%;
-
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        border-left: 0;
-
-        border-top: 1px solid
-            rgba(50, 20, 95, 0.16);
-
-        padding-top: 20px;
-
-        gap: 20px 0;
-
-    }
-
-
-    .intro-data-item {
-
-        min-height: 65px;
-
-        padding-left: 0;
-
-        padding-right: 15px;
-
-        margin: 0;
-
-        border-right: 1px solid
-            rgba(50, 20, 95, 0.13);
-
-    }
-
-
-    .intro-data-item:nth-child(2n) {
-
-        padding-left: 15px;
-
-        border-right: 0;
-
-    }
-
-
-    .intro-data-item:nth-child(3),
-    .intro-data-item:nth-child(4) {
-
-        padding-top: 15px;
-
-        border-top: 1px solid
-            rgba(50, 20, 95, 0.13);
-
-    }
-
-
-    .intro-data-item strong {
-
-        font-size: 11px;
-
-    }
-
-
-    .intro-bottom-line {
-
-        position: relative;
-
-        left: auto;
-
-        right: auto;
-
-        bottom: auto;
-
-        width: calc(100% - 50px);
-
-        margin: 45px auto 0;
-
-        padding-top: 15px;
-
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 10px;
-
-        font-size: 6px;
-
-        line-height: 1.5;
-
-    }
-
-}
-
-
-/* =====================================================
-   SMALL PHONES
-===================================================== */
-
-@media (max-width: 400px) {
-
-    .intro-heading h2 {
-
-        font-size: 49px;
-
-    }
-
-
-    .intro-image-frame {
-
-        height: 240px;
-
-    }
-
-
-    .intro-composition {
-
-        gap: 35px;
-
-    }
-
-}
-
-/* =====================================================
-   02. WHO WE ARE
-===================================================== */
-
-.about-intro {
-
+.intro-v2-center {
     position: relative;
 
-    width: 100%;
-
-    min-height: 100svh;
-
-    overflow: hidden;
-
-    background: #ffffff;
-
-    color: var(--about-purple);
-
-}
-
-
-/* =====================================================
-   GRID
-===================================================== */
-
-.intro-grid {
-
-    position: absolute;
-
-    inset: 0;
-
-    background-image:
-
-        linear-gradient(
-            to right,
-            rgba(50, 20, 95, 0.075) 1px,
-            transparent 1px
-        ),
-
-        linear-gradient(
-            to bottom,
-            rgba(50, 20, 95, 0.075) 1px,
-            transparent 1px
-        );
-
-    background-size:
-        80px 80px;
-
-    opacity: 0.45;
-
-    pointer-events: none;
-
-}
-
-
-/* =====================================================
-   AXIS LINES
-===================================================== */
-
-.intro-axis {
-
-    position: absolute;
-
-    background:
-        rgba(50, 20, 95, 0.13);
-
-    pointer-events: none;
-
-}
-
-
-.intro-axis-v {
-
-    width: 1px;
-
     height: 100%;
+}
+
+
+.intro-v2-center::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
 
     left: 50%;
 
-    top: 0;
+    width: 1px;
 
+    background: rgba(50,20,95,.15);
 }
 
 
-.intro-axis-h {
+.intro-v2-crosshair {
+    position: absolute;
 
-    width: 100%;
+    top: 50%;
+    left: 50%;
+
+    width: 55px;
+    height: 55px;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* Crosshair lines */
+
+.crosshair-horizontal {
+    position: absolute;
+
+    left: -25px;
+    right: -25px;
+
+    top: 50%;
 
     height: 1px;
 
-    left: 0;
-
-    top: 57%;
-
+    background: rgba(50,20,95,.3);
 }
 
 
-/* =====================================================
-   SECTION MARK
-===================================================== */
+.crosshair-vertical {
+    position: absolute;
 
-.intro-section-mark {
+    top: -25px;
+    bottom: -25px;
+
+    left: 50%;
+
+    width: 1px;
+
+    background: rgba(50,20,95,.3);
+}
+
+
+/* Ring */
+
+.crosshair-ring {
+    position: absolute;
+
+    inset: 10px;
+
+    border: 1px solid rgba(50,20,95,.3);
+
+    border-radius: 50%;
+}
+
+
+/* Center */
+
+.crosshair-dot {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 9px;
+    height: 9px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #32145f;
+}
+
+
+.crosshair-dot::after {
+    content: "";
 
     position: absolute;
 
-    top: 75px;
+    inset: 3px;
 
-    left: 55px;
+    border-radius: 50%;
 
-    display: flex;
+    background: #f8f7f9;
+}
 
-    align-items: center;
 
-    gap: 15px;
+.axis-number {
+    position: absolute;
+
+    bottom: 8px;
+    left: 50%;
+
+    transform: translateX(-50%);
 
     font-family: "Inter", sans-serif;
 
-    font-size: 8px;
+    font-size: 6px;
 
-    letter-spacing: 0.20em;
+    letter-spacing: .15em;
 
-    z-index: 2;
-
-}
-
-
-.intro-section-mark span:first-child {
-
-    opacity: 0.4;
-
-}
-
-
-/* =====================================================
-   HEADING
-===================================================== */
-
-.intro-heading {
-
-    position: relative;
-
-    z-index: 2;
-
-    width: min(1200px, 84%);
-
-    margin: 0 auto;
-
-    padding-top: 145px;
-
-}
-
-
-.intro-kicker {
-
-    margin: 0 0 22px;
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 8px;
-
-    font-weight: 500;
-
-    letter-spacing: 0.22em;
-
-    opacity: 0.5;
-
-}
-
-
-.intro-heading h2 {
-
-    margin: 0;
-
-    max-width: 800px;
-
-    font-family: "Space Grotesk", sans-serif;
-
-    font-size:
-        clamp(55px, 7.2vw, 105px);
-
-    font-weight: 400;
-
-    line-height: 0.9;
-
-    letter-spacing: -0.065em;
-
-}
-
-
-.intro-heading h2 span {
-
-    display: block;
-
-    margin-left: 10vw;
-
-    font-weight: 500;
-
-}
-
-
-/* =====================================================
-   COMPOSITION
-===================================================== */
-
-.intro-composition {
-
-    position: relative;
-
-    z-index: 3;
-
-    width: min(1200px, 84%);
-
-    margin: 75px auto 0;
-
-    display: grid;
-
-    grid-template-columns:
-        1fr
-        1.35fr
-        0.65fr;
-
-    align-items: start;
-
-    gap: 45px;
-
-}
-
-
-/* =====================================================
-   LEFT COPY
-===================================================== */
-
-.intro-copy {
-
-    padding-top: 15px;
-
-}
-
-
-.intro-copy-number {
-
-    margin-bottom: 22px;
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 8px;
-
-    letter-spacing: 0.15em;
-
-    opacity: 0.45;
-
-}
-
-
-.intro-copy p {
-
-    max-width: 290px;
-
-    margin: 0 0 20px;
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 10px;
-
-    line-height: 1.75;
-
-    letter-spacing: 0.01em;
-
-    color: rgba(22, 11, 39, 0.72);
-
+    opacity: .4;
 }
 
 
@@ -1873,95 +1187,97 @@
    IMAGE
 ===================================================== */
 
-.intro-image-wrap {
-
+.intro-v2-visual {
     position: relative;
 
-    padding: 0 15px 15px 0;
-
+    padding-left: 0;
 }
 
 
-.intro-image-frame {
-
+.intro-v2-image {
     position: relative;
 
     width: 100%;
-
-    height: 310px;
+    height: 315px;
 
     overflow: hidden;
 
-    background: #e9e7e4;
+    border: 1px solid rgba(50,20,95,.22);
 
+    background: #eee;
 }
 
 
-.intro-image-frame::before {
+.intro-v2-image img {
+    width: 100%;
+    height: 100%;
 
-    content: "";
+    object-fit: cover;
 
+    display: block;
+
+    filter: saturate(.8);
+
+    transition:
+        transform 1s cubic-bezier(.2,.7,.2,1),
+        filter .6s ease;
+}
+
+
+.intro-v2-image:hover img {
+    transform: scale(1.045);
+
+    filter: saturate(1);
+}
+
+
+/* Image overlay */
+
+.image-overlay {
     position: absolute;
 
     inset: 0;
 
-    border: 1px solid
-        rgba(255,255,255,0.5);
-
-    z-index: 2;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(50,20,95,.12),
+            transparent 45%
+        );
 
     pointer-events: none;
-
 }
 
 
-.intro-image-frame img {
+/* =====================================================
+   IMAGE CORNERS
+===================================================== */
 
-    width: 100%;
-
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    filter: saturate(0.75);
-
-    transition:
-        transform 0.9s
-        cubic-bezier(0.22, 1, 0.36, 1);
-
-}
-
-
-.intro-image-frame:hover img {
-
-    transform: scale(1.045);
-
-}
-
-
-/* Architectural offset frame */
-
-.intro-image-wrap::after {
-
-    content: "";
-
+.image-corner {
     position: absolute;
 
-    left: 15px;
+    width: 28px;
+    height: 28px;
 
-    right: 0;
+    pointer-events: none;
+}
 
-    top: 15px;
 
-    bottom: 0;
+.image-corner-tl {
+    top: -1px;
+    left: -1px;
 
-    border: 1px solid
-        rgba(50, 20, 95, 0.25);
+    border-top: 2px solid #32145f;
+    border-left: 2px solid #32145f;
+}
 
-    z-index: -1;
 
+.image-corner-br {
+    right: -1px;
+    bottom: -1px;
+
+    border-right: 2px solid #32145f;
+    border-bottom: 2px solid #32145f;
 }
 
 
@@ -1969,102 +1285,103 @@
    IMAGE COORDINATES
 ===================================================== */
 
-.image-coordinate {
-
+.visual-coordinate {
     position: absolute;
 
     font-family: "Inter", sans-serif;
 
     font-size: 6px;
 
-    letter-spacing: 0.15em;
+    letter-spacing: .15em;
 
-    opacity: 0.55;
-
+    opacity: .45;
 }
 
 
-.image-coordinate-top {
-
+.visual-coordinate-top {
     top: -17px;
-
-    left: 0;
-
-}
-
-
-.image-coordinate-bottom {
-
-    bottom: -13px;
-
     right: 0;
-
 }
 
 
 /* =====================================================
-   RIGHT DATA
+   IMAGE CAPTION
 ===================================================== */
 
-.intro-data {
-
+.visual-caption {
     display: flex;
-
-    flex-direction: column;
-
-    border-left: 1px solid
-        rgba(50, 20, 95, 0.16);
-
-}
-
-
-.intro-data-item {
-
-    min-height: 70px;
-
-    padding: 0 0 15px 20px;
-
-    margin-bottom: 15px;
-
-    border-bottom: 1px solid
-        rgba(50, 20, 95, 0.13);
-
-    display: flex;
-
-    flex-direction: column;
 
     justify-content: space-between;
 
-    gap: 10px;
-
-}
-
-
-.intro-data-item span {
+    padding-top: 9px;
 
     font-family: "Inter", sans-serif;
 
-    font-size: 7px;
+    font-size: 6px;
 
-    letter-spacing: 0.18em;
+    letter-spacing: .15em;
 
-    opacity: 0.45;
-
+    opacity: .42;
 }
 
 
-.intro-data-item strong {
+/* =====================================================
+   DATA STRIP
+===================================================== */
 
+.intro-v2-data {
+    position: relative;
+
+    z-index: 10;
+
+    width: min(1200px, 84%);
+
+    margin: 38px auto 0;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(50,20,95,.18);
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1.3fr
+        1.2fr;
+
+    gap: 30px;
+}
+
+
+.intro-v2-data div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.intro-v2-data span {
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .18em;
+
+    opacity: .4;
+}
+
+
+.intro-v2-data strong {
     font-family: "Space Grotesk", sans-serif;
 
-    font-size: 12px;
+    font-size: 11px;
 
-    line-height: 1.15;
+    font-weight: 400;
 
-    font-weight: 500;
-
-    letter-spacing: -0.02em;
-
+    letter-spacing: -.01em;
 }
 
 
@@ -2072,22 +1389,19 @@
    BOTTOM LINE
 ===================================================== */
 
-.intro-bottom-line {
-
+.intro-v2-bottom {
     position: absolute;
 
-    z-index: 3;
-
     left: 8%;
-
     right: 8%;
 
-    bottom: 42px;
+    bottom: 32px;
 
-    padding-top: 16px;
+    z-index: 20;
 
-    border-top: 1px solid
-        rgba(50, 20, 95, 0.20);
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(50,20,95,.18);
 
     display: flex;
 
@@ -2095,361 +1409,12 @@
 
     font-family: "Inter", sans-serif;
 
-    font-size: 7px;
+    font-size: 6px;
 
-    letter-spacing: 0.16em;
+    letter-spacing: .16em;
 
-    opacity: 0.55;
-
+    opacity: .45;
 }
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 1000px) {
-
-    .intro-heading {
-
-        padding-top: 135px;
-
-    }
-
-
-    .intro-composition {
-
-        width: 86%;
-
-        grid-template-columns:
-            0.9fr
-            1.4fr;
-
-        gap: 35px;
-
-    }
-
-
-    .intro-data {
-
-        grid-column: 1 / -1;
-
-        display: grid;
-
-        grid-template-columns:
-            repeat(4, 1fr);
-
-        border-left: 0;
-
-        border-top: 1px solid
-            rgba(50, 20, 95, 0.16);
-
-        padding-top: 18px;
-
-    }
-
-
-    .intro-data-item {
-
-        min-height: 55px;
-
-        margin: 0;
-
-        border-bottom: 0;
-
-        border-right: 1px solid
-            rgba(50, 20, 95, 0.13);
-
-    }
-
-
-    .intro-data-item:last-child {
-
-        border-right: 0;
-
-    }
-
-
-    .intro-bottom-line {
-
-        display: none;
-
-    }
-
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 700px) {
-
-    .about-intro {
-
-        min-height: auto;
-
-        padding-bottom: 45px;
-
-    }
-
-
-    .intro-grid {
-
-        background-size: 55px 55px;
-
-        opacity: 0.3;
-
-    }
-
-
-    .intro-axis-v {
-
-        left: 82%;
-
-    }
-
-
-    .intro-axis-h {
-
-        top: 45%;
-
-    }
-
-
-    .intro-section-mark {
-
-        top: 45px;
-
-        left: 25px;
-
-        font-size: 7px;
-
-    }
-
-
-    .intro-heading {
-
-        width: calc(100% - 50px);
-
-        padding-top: 105px;
-
-    }
-
-
-    .intro-kicker {
-
-        font-size: 7px;
-
-        line-height: 1.5;
-
-        max-width: 230px;
-
-    }
-
-
-    .intro-heading h2 {
-
-        font-size:
-            clamp(50px, 15vw, 72px);
-
-        line-height: 0.91;
-
-    }
-
-
-    .intro-heading h2 span {
-
-        margin-left: 10vw;
-
-    }
-
-
-    .intro-composition {
-
-        width: calc(100% - 50px);
-
-        margin-top: 55px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 40px;
-
-    }
-
-
-    /* Image comes first visually */
-
-    .intro-image-wrap {
-
-        order: 1;
-
-        width: 100%;
-
-        padding-right: 10px;
-
-        padding-bottom: 10px;
-
-    }
-
-
-    .intro-image-frame {
-
-        height: 280px;
-
-    }
-
-
-    /* Copy */
-
-    .intro-copy {
-
-        order: 2;
-
-        padding-top: 0;
-
-    }
-
-
-    .intro-copy p {
-
-        max-width: 100%;
-
-        font-size: 9px;
-
-        line-height: 1.75;
-
-    }
-
-
-    /* Data */
-
-    .intro-data {
-
-        order: 3;
-
-        width: 100%;
-
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        border-left: 0;
-
-        border-top: 1px solid
-            rgba(50, 20, 95, 0.16);
-
-        padding-top: 20px;
-
-        gap: 20px 0;
-
-    }
-
-
-    .intro-data-item {
-
-        min-height: 65px;
-
-        padding-left: 0;
-
-        padding-right: 15px;
-
-        margin: 0;
-
-        border-right: 1px solid
-            rgba(50, 20, 95, 0.13);
-
-    }
-
-
-    .intro-data-item:nth-child(2n) {
-
-        padding-left: 15px;
-
-        border-right: 0;
-
-    }
-
-
-    .intro-data-item:nth-child(3),
-    .intro-data-item:nth-child(4) {
-
-        padding-top: 15px;
-
-        border-top: 1px solid
-            rgba(50, 20, 95, 0.13);
-
-    }
-
-
-    .intro-data-item strong {
-
-        font-size: 11px;
-
-    }
-
-
-    .intro-bottom-line {
-
-        position: relative;
-
-        left: auto;
-
-        right: auto;
-
-        bottom: auto;
-
-        width: calc(100% - 50px);
-
-        margin: 45px auto 0;
-
-        padding-top: 15px;
-
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 10px;
-
-        font-size: 6px;
-
-        line-height: 1.5;
-
-    }
-
-}
-
-
-/* =====================================================
-   SMALL PHONES
-===================================================== */
-
-@media (max-width: 400px) {
-
-    .intro-heading h2 {
-
-        font-size: 49px;
-
-    }
-
-
-    .intro-image-frame {
-
-        height: 240px;
-
-    }
-
-
-    .intro-composition {
-
-        gap: 35px;
-
-    }
-
-}
-
 /* =====================================================
    03. OUR STORY — CONNECTING DOT JOURNEY
 ===================================================== */
