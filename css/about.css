@@ -1595,3 +1595,857 @@
     }
 
 }
+
+/* =====================================================
+   02. WHO WE ARE
+===================================================== */
+
+.about-intro {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100svh;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    color: var(--about-purple);
+
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.intro-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            to right,
+            rgba(50, 20, 95, 0.075) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            to bottom,
+            rgba(50, 20, 95, 0.075) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        80px 80px;
+
+    opacity: 0.45;
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   AXIS LINES
+===================================================== */
+
+.intro-axis {
+
+    position: absolute;
+
+    background:
+        rgba(50, 20, 95, 0.13);
+
+    pointer-events: none;
+
+}
+
+
+.intro-axis-v {
+
+    width: 1px;
+
+    height: 100%;
+
+    left: 50%;
+
+    top: 0;
+
+}
+
+
+.intro-axis-h {
+
+    width: 100%;
+
+    height: 1px;
+
+    left: 0;
+
+    top: 57%;
+
+}
+
+
+/* =====================================================
+   SECTION MARK
+===================================================== */
+
+.intro-section-mark {
+
+    position: absolute;
+
+    top: 75px;
+
+    left: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 0.20em;
+
+    z-index: 2;
+
+}
+
+
+.intro-section-mark span:first-child {
+
+    opacity: 0.4;
+
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.intro-heading {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1200px, 84%);
+
+    margin: 0 auto;
+
+    padding-top: 145px;
+
+}
+
+
+.intro-kicker {
+
+    margin: 0 0 22px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.22em;
+
+    opacity: 0.5;
+
+}
+
+
+.intro-heading h2 {
+
+    margin: 0;
+
+    max-width: 800px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size:
+        clamp(55px, 7.2vw, 105px);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.065em;
+
+}
+
+
+.intro-heading h2 span {
+
+    display: block;
+
+    margin-left: 10vw;
+
+    font-weight: 500;
+
+}
+
+
+/* =====================================================
+   COMPOSITION
+===================================================== */
+
+.intro-composition {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(1200px, 84%);
+
+    margin: 75px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.35fr
+        0.65fr;
+
+    align-items: start;
+
+    gap: 45px;
+
+}
+
+
+/* =====================================================
+   LEFT COPY
+===================================================== */
+
+.intro-copy {
+
+    padding-top: 15px;
+
+}
+
+
+.intro-copy-number {
+
+    margin-bottom: 22px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 0.15em;
+
+    opacity: 0.45;
+
+}
+
+
+.intro-copy p {
+
+    max-width: 290px;
+
+    margin: 0 0 20px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.75;
+
+    letter-spacing: 0.01em;
+
+    color: rgba(22, 11, 39, 0.72);
+
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.intro-image-wrap {
+
+    position: relative;
+
+    padding: 0 15px 15px 0;
+
+}
+
+
+.intro-image-frame {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 310px;
+
+    overflow: hidden;
+
+    background: #e9e7e4;
+
+}
+
+
+.intro-image-frame::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border: 1px solid
+        rgba(255,255,255,0.5);
+
+    z-index: 2;
+
+    pointer-events: none;
+
+}
+
+
+.intro-image-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    filter: saturate(0.75);
+
+    transition:
+        transform 0.9s
+        cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+
+.intro-image-frame:hover img {
+
+    transform: scale(1.045);
+
+}
+
+
+/* Architectural offset frame */
+
+.intro-image-wrap::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 15px;
+
+    right: 0;
+
+    top: 15px;
+
+    bottom: 0;
+
+    border: 1px solid
+        rgba(50, 20, 95, 0.25);
+
+    z-index: -1;
+
+}
+
+
+/* =====================================================
+   IMAGE COORDINATES
+===================================================== */
+
+.image-coordinate {
+
+    position: absolute;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: 0.15em;
+
+    opacity: 0.55;
+
+}
+
+
+.image-coordinate-top {
+
+    top: -17px;
+
+    left: 0;
+
+}
+
+
+.image-coordinate-bottom {
+
+    bottom: -13px;
+
+    right: 0;
+
+}
+
+
+/* =====================================================
+   RIGHT DATA
+===================================================== */
+
+.intro-data {
+
+    display: flex;
+
+    flex-direction: column;
+
+    border-left: 1px solid
+        rgba(50, 20, 95, 0.16);
+
+}
+
+
+.intro-data-item {
+
+    min-height: 70px;
+
+    padding: 0 0 15px 20px;
+
+    margin-bottom: 15px;
+
+    border-bottom: 1px solid
+        rgba(50, 20, 95, 0.13);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+}
+
+
+.intro-data-item span {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: 0.18em;
+
+    opacity: 0.45;
+
+}
+
+
+.intro-data-item strong {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.15;
+
+    font-weight: 500;
+
+    letter-spacing: -0.02em;
+
+}
+
+
+/* =====================================================
+   BOTTOM LINE
+===================================================== */
+
+.intro-bottom-line {
+
+    position: absolute;
+
+    z-index: 3;
+
+    left: 8%;
+
+    right: 8%;
+
+    bottom: 42px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid
+        rgba(50, 20, 95, 0.20);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: 0.16em;
+
+    opacity: 0.55;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .intro-heading {
+
+        padding-top: 135px;
+
+    }
+
+
+    .intro-composition {
+
+        width: 86%;
+
+        grid-template-columns:
+            0.9fr
+            1.4fr;
+
+        gap: 35px;
+
+    }
+
+
+    .intro-data {
+
+        grid-column: 1 / -1;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        border-left: 0;
+
+        border-top: 1px solid
+            rgba(50, 20, 95, 0.16);
+
+        padding-top: 18px;
+
+    }
+
+
+    .intro-data-item {
+
+        min-height: 55px;
+
+        margin: 0;
+
+        border-bottom: 0;
+
+        border-right: 1px solid
+            rgba(50, 20, 95, 0.13);
+
+    }
+
+
+    .intro-data-item:last-child {
+
+        border-right: 0;
+
+    }
+
+
+    .intro-bottom-line {
+
+        display: none;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .about-intro {
+
+        min-height: auto;
+
+        padding-bottom: 45px;
+
+    }
+
+
+    .intro-grid {
+
+        background-size: 55px 55px;
+
+        opacity: 0.3;
+
+    }
+
+
+    .intro-axis-v {
+
+        left: 82%;
+
+    }
+
+
+    .intro-axis-h {
+
+        top: 45%;
+
+    }
+
+
+    .intro-section-mark {
+
+        top: 45px;
+
+        left: 25px;
+
+        font-size: 7px;
+
+    }
+
+
+    .intro-heading {
+
+        width: calc(100% - 50px);
+
+        padding-top: 105px;
+
+    }
+
+
+    .intro-kicker {
+
+        font-size: 7px;
+
+        line-height: 1.5;
+
+        max-width: 230px;
+
+    }
+
+
+    .intro-heading h2 {
+
+        font-size:
+            clamp(50px, 15vw, 72px);
+
+        line-height: 0.91;
+
+    }
+
+
+    .intro-heading h2 span {
+
+        margin-left: 10vw;
+
+    }
+
+
+    .intro-composition {
+
+        width: calc(100% - 50px);
+
+        margin-top: 55px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 40px;
+
+    }
+
+
+    /* Image comes first visually */
+
+    .intro-image-wrap {
+
+        order: 1;
+
+        width: 100%;
+
+        padding-right: 10px;
+
+        padding-bottom: 10px;
+
+    }
+
+
+    .intro-image-frame {
+
+        height: 280px;
+
+    }
+
+
+    /* Copy */
+
+    .intro-copy {
+
+        order: 2;
+
+        padding-top: 0;
+
+    }
+
+
+    .intro-copy p {
+
+        max-width: 100%;
+
+        font-size: 9px;
+
+        line-height: 1.75;
+
+    }
+
+
+    /* Data */
+
+    .intro-data {
+
+        order: 3;
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        border-left: 0;
+
+        border-top: 1px solid
+            rgba(50, 20, 95, 0.16);
+
+        padding-top: 20px;
+
+        gap: 20px 0;
+
+    }
+
+
+    .intro-data-item {
+
+        min-height: 65px;
+
+        padding-left: 0;
+
+        padding-right: 15px;
+
+        margin: 0;
+
+        border-right: 1px solid
+            rgba(50, 20, 95, 0.13);
+
+    }
+
+
+    .intro-data-item:nth-child(2n) {
+
+        padding-left: 15px;
+
+        border-right: 0;
+
+    }
+
+
+    .intro-data-item:nth-child(3),
+    .intro-data-item:nth-child(4) {
+
+        padding-top: 15px;
+
+        border-top: 1px solid
+            rgba(50, 20, 95, 0.13);
+
+    }
+
+
+    .intro-data-item strong {
+
+        font-size: 11px;
+
+    }
+
+
+    .intro-bottom-line {
+
+        position: relative;
+
+        left: auto;
+
+        right: auto;
+
+        bottom: auto;
+
+        width: calc(100% - 50px);
+
+        margin: 45px auto 0;
+
+        padding-top: 15px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+        font-size: 6px;
+
+        line-height: 1.5;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .intro-heading h2 {
+
+        font-size: 49px;
+
+    }
+
+
+    .intro-image-frame {
+
+        height: 240px;
+
+    }
+
+
+    .intro-composition {
+
+        gap: 35px;
+
+    }
+
+}
