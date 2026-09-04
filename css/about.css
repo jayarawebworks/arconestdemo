@@ -5390,3 +5390,69 @@
 
     transform: translateY(-1px);
 }
+
+/* =====================================================
+   VISION / MISSION — OVERLAP FIX
+===================================================== */
+
+.about-purpose {
+    min-height: 900px;
+}
+
+
+/* Give the cards a proper contained area */
+
+.purpose-layout {
+    height: 390px;
+    margin-top: 90px;
+}
+
+
+/* Keep the bottom information completely separate */
+
+.purpose-bottom {
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+    bottom: 35px;
+
+    z-index: 20;
+
+    height: 28px;
+
+    box-sizing: border-box;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(50,20,95,.18);
+
+    display: flex;
+    justify-content: space-between;
+
+    background: #f7f5f8;
+}
+
+
+/*
+   Mask anything behind the metadata line.
+   This prevents card borders/text from visually
+   crossing into the bottom information zone.
+*/
+
+.purpose-bottom::before {
+    content: "";
+
+    position: absolute;
+
+    left: -5px;
+    right: -5px;
+
+    top: -8px;
+
+    height: 9px;
+
+    background: #f7f5f8;
+
+    z-index: -1;
+}
