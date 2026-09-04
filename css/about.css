@@ -2584,24 +2584,21 @@
 }
 /* =====================================================
    05. WHAT WE STAND FOR
-   ARCHITECTURAL ORBIT SYSTEM
 ===================================================== */
 
 .about-principles {
     position: relative;
     width: 100%;
-    min-height: 1050px;
-    padding: 0 0 120px;
+    min-height: 100svh;
     overflow: hidden;
 
-    background: #fff;
+    background: #ffffff;
     color: #160b27;
-    box-sizing: border-box;
 }
 
 
 /* =====================================================
-   GRID
+   BLUEPRINT GRID
 ===================================================== */
 
 .principles-grid {
@@ -2621,6 +2618,7 @@
         );
 
     background-size: 90px 90px;
+
     opacity: .7;
 
     pointer-events: none;
@@ -2628,27 +2626,35 @@
 
 
 /* =====================================================
-   SECTION LABEL
+   SECTION MARK
 ===================================================== */
 
 .principles-section-mark {
     position: absolute;
+
     top: 55px;
     left: 55px;
 
     display: flex;
     align-items: center;
+
     gap: 15px;
+
+    z-index: 20;
 
     font-family: "Inter", sans-serif;
     font-size: 8px;
-    letter-spacing: .2em;
 
-    z-index: 10;
+    letter-spacing: .2em;
 }
 
 .principles-section-mark span:first-child {
-    opacity: .4;
+    color: #32145f;
+    opacity: .35;
+}
+
+.principles-section-mark span:last-child {
+    color: #32145f;
 }
 
 
@@ -2658,22 +2664,27 @@
 
 .principles-heading {
     position: relative;
-    z-index: 5;
 
     width: min(1200px, 84%);
+
     margin: 0 auto;
 
     padding-top: 145px;
+
+    z-index: 10;
 }
 
 .principles-heading p {
     margin: 0 0 20px;
 
     font-family: "Inter", sans-serif;
+
     font-size: 8px;
+
     letter-spacing: .22em;
 
     color: #32145f;
+
     opacity: .45;
 }
 
@@ -2683,11 +2694,16 @@
     max-width: 700px;
 
     font-family: "Space Grotesk", sans-serif;
+
     font-size: clamp(52px, 6vw, 84px);
+
     font-weight: 400;
 
     line-height: .9;
+
     letter-spacing: -.06em;
+
+    color: #160b27;
 }
 
 .principles-heading h2 span {
@@ -2696,89 +2712,72 @@
     margin-left: 9vw;
 
     color: #32145f;
+
     font-weight: 500;
 }
 
 
 /* =====================================================
-   ORBIT AREA
+   MAIN ORBIT SYSTEM
 ===================================================== */
 
-.principles-layout {
-    position: relative;
+.principles-orbit {
 
-    width: min(1050px, 88%);
-    height: 610px;
+    position: absolute;
 
-    margin: 70px auto 0;
+    width: min(650px, 48vw);
+    aspect-ratio: 1 / 1;
+
+    right: 9%;
+    top: 53%;
+
+    transform: translateY(-50%);
 
     z-index: 5;
 }
 
 
 /* =====================================================
-   LARGE ARCHITECTURAL ORBIT
+   ORBIT RINGS
 ===================================================== */
 
-.principles-center {
+.orbit-ring {
     position: absolute;
 
     left: 50%;
     top: 50%;
 
-    width: 430px;
-    height: 430px;
-
     transform: translate(-50%, -50%);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 50%;
 
-    z-index: 1;
+    pointer-events: none;
 }
 
+.orbit-ring-outer {
 
-/* Outer ring */
-
-.ring-one {
-    position: absolute;
-
-    width: 430px;
-    height: 430px;
+    width: 100%;
+    height: 100%;
 
     border: 1px solid rgba(50,20,95,.22);
-    border-radius: 50%;
 }
 
+.orbit-ring-middle {
 
-/* Middle ring */
+    width: 76%;
+    height: 76%;
 
-.ring-two {
-    position: absolute;
+    border: 1px dashed rgba(50,20,95,.18);
 
-    width: 320px;
-    height: 320px;
-
-    border: 1px dashed rgba(50,20,95,.20);
-    border-radius: 50%;
-
-    animation: orbitRotate 28s linear infinite;
+    animation: ringRotate 25s linear infinite;
 }
 
+.orbit-ring-inner {
 
-/* Inner ring */
+    width: 48%;
+    height: 48%;
 
-.principles-center::before {
-    content: "";
-
-    position: absolute;
-
-    width: 150px;
-    height: 150px;
-
-    border: 1px solid rgba(50,20,95,.25);
-    border-radius: 50%;
+    border: 1px solid rgba(50,20,95,.22);
 }
 
 
@@ -2786,62 +2785,220 @@
    CROSSHAIR
 ===================================================== */
 
-.center-cross {
+.orbit-line {
     position: absolute;
 
-    background: rgba(50,20,95,.16);
+    background: rgba(50,20,95,.15);
 
     pointer-events: none;
 }
 
-.center-cross.horizontal {
-    width: 600px;
+.orbit-line-horizontal {
+
+    width: 116%;
+
     height: 1px;
+
+    left: -8%;
+    top: 50%;
 }
 
-.center-cross.vertical {
+.orbit-line-vertical {
+
+    height: 116%;
+
     width: 1px;
-    height: 600px;
+
+    top: -8%;
+    left: 50%;
 }
 
 
 /* =====================================================
-   CENTER CORE
+   ROTATING TRACK
 ===================================================== */
 
-.center-point {
-    position: relative;
+.orbit-track {
 
-    width: 34px;
-    height: 34px;
+    position: absolute;
+
+    inset: 0;
+
+    animation:
+        orbitRotation 28s linear infinite;
+}
+
+
+/* Pause on hover */
+
+.principles-orbit:hover .orbit-track {
+    animation-play-state: paused;
+}
+
+
+/* =====================================================
+   ORBIT NODES
+===================================================== */
+
+.orbit-node {
+
+    position: absolute;
+
+    width: 180px;
+
+    z-index: 10;
+}
+
+
+/* Node positions */
+
+.orbit-node-01 {
+    left: 50%;
+    top: -35px;
+
+    transform: translateX(-50%);
+}
+
+.orbit-node-02 {
+    right: -45px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.orbit-node-03 {
+    left: 50%;
+    bottom: -35px;
+
+    transform: translateX(-50%);
+}
+
+.orbit-node-04 {
+    left: -45px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* =====================================================
+   COUNTER ROTATE CONTENT
+===================================================== */
+
+.orbit-node-content {
+
+    padding: 15px 18px;
+
+    background: rgba(255,255,255,.94);
+
+    border: 1px solid rgba(50,20,95,.15);
+
+    box-shadow:
+        0 12px 35px rgba(22,11,39,.06);
+
+    animation:
+        counterRotation 28s linear infinite;
+
+    transition:
+        border-color .35s ease,
+        box-shadow .35s ease,
+        transform .35s ease;
+}
+
+
+/* Keep content readable */
+
+.principles-orbit:hover .orbit-node-content {
+    animation-play-state: paused;
+}
+
+
+/* Number */
+
+.orbit-node-content > span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .16em;
+
+    color: #32145f;
+
+    opacity: .45;
+}
+
+
+/* Title */
+
+.orbit-node-content strong {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    letter-spacing: -.03em;
+
+    color: #32145f;
+}
+
+
+/* Description */
+
+.orbit-node-content p {
+
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    line-height: 1.65;
+
+    color: #160b27;
+
+    opacity: .55;
+}
+
+
+/* =====================================================
+   NODE DOT
+===================================================== */
+
+.orbit-node-dot {
+
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
 
     border: 1px solid #32145f;
-    border-radius: 50%;
 
-    background: #fff;
-
-    z-index: 5;
+    z-index: 15;
 }
 
-.center-point::before {
+.orbit-node-dot::after {
+
     content: "";
 
     position: absolute;
 
-    inset: 8px;
-
-    border-radius: 50%;
-
-    background: #32145f;
-}
-
-.center-point::after {
-    content: "";
-
-    position: absolute;
-
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
 
     left: 50%;
     top: 50%;
@@ -2850,36 +3007,219 @@
 
     border-radius: 50%;
 
-    background: #fff;
+    background: #32145f;
+}
 
-    z-index: 2;
+
+/* Dot positions */
+
+.orbit-node-01 .orbit-node-dot {
+
+    left: 50%;
+    bottom: -21px;
+
+    transform: translateX(-50%);
+}
+
+.orbit-node-02 .orbit-node-dot {
+
+    left: -21px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.orbit-node-03 .orbit-node-dot {
+
+    left: 50%;
+    top: -21px;
+
+    transform: translateX(-50%);
+}
+
+.orbit-node-04 .orbit-node-dot {
+
+    right: -21px;
+    top: 50%;
+
+    transform: translateY(-50%);
 }
 
 
 /* =====================================================
-   CENTER LABEL
+   HOVER
 ===================================================== */
 
-.center-label {
+.orbit-node:hover .orbit-node-content {
+
+    border-color: rgba(50,20,95,.45);
+
+    box-shadow:
+        0 18px 45px rgba(22,11,39,.12);
+
+    transform: scale(1.04);
+}
+
+.orbit-node:hover .orbit-node-dot {
+
+    background: #32145f;
+}
+
+.orbit-node:hover .orbit-node-dot::after {
+
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   CENTER
+===================================================== */
+
+.orbit-center {
+
     position: absolute;
 
-    bottom: -65px;
+    left: 50%;
+    top: 50%;
+
+    width: 170px;
+    height: 170px;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 8;
+}
+
+
+/* Inner center circle */
+
+.orbit-center::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 92px;
+    height: 92px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(50,20,95,.3);
+}
+
+
+/* Center crosshair */
+
+.center-crosshair {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+}
+
+.center-crosshair::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+    height: 130%;
+
+    left: 50%;
+    top: -15%;
+
+    background: rgba(50,20,95,.14);
+}
+
+.center-crosshair::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 130%;
+    height: 1px;
+
+    left: -15%;
+    top: 50%;
+
+    background: rgba(50,20,95,.14);
+}
+
+
+/* Core */
+
+.center-core {
+
+    position: relative;
+
+    width: 62px;
+    height: 62px;
+
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #32145f;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    z-index: 5;
+}
+
+.center-core span {
 
     font-family: "Inter", sans-serif;
-    font-size: 7px;
 
-    letter-spacing: .2em;
+    font-size: 5px;
 
-    color: #32145f;
-    opacity: .5;
+    letter-spacing: .18em;
+
+    opacity: .6;
+}
+
+.center-core strong {
+
+    margin: 3px 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+}
+
+.center-core small {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 5px;
+
+    letter-spacing: .12em;
+
+    opacity: .6;
 }
 
 
 /* =====================================================
-   ORBIT ANIMATION
+   ANIMATIONS
 ===================================================== */
 
-@keyframes orbitRotate {
+@keyframes orbitRotation {
 
     from {
         transform: rotate(0deg);
@@ -2891,286 +3231,65 @@
 
 }
 
+@keyframes counterRotation {
 
-/* =====================================================
-   PRINCIPLE ITEMS
-===================================================== */
+    from {
+        transform: rotate(0deg);
+    }
 
-.principle {
-    position: absolute;
+    to {
+        transform: rotate(-360deg);
+    }
 
-    width: 190px;
+}
 
-    padding: 0;
+@keyframes ringRotate {
 
-    border: 0;
+    from {
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+    }
 
-    background: transparent;
+    to {
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+    }
 
-    box-sizing: border-box;
-
-    z-index: 8;
-
-    transition:
-        transform .4s ease,
-        opacity .4s ease;
 }
 
 
 /* =====================================================
-   POSITIONS
-===================================================== */
-
-.principle-01 {
-    left: 4%;
-    top: 70px;
-}
-
-.principle-02 {
-    right: 4%;
-    top: 70px;
-}
-
-.principle-03 {
-    left: 4%;
-    bottom: 65px;
-}
-
-.principle-04 {
-    right: 4%;
-    bottom: 65px;
-}
-
-
-/* =====================================================
-   ORBIT CONNECTOR
-===================================================== */
-
-.principle::before {
-    content: "";
-
-    position: absolute;
-
-    width: 52px;
-    height: 1px;
-
-    top: 18px;
-
-    background: rgba(50,20,95,.25);
-}
-
-.principle-01::before,
-.principle-03::before {
-    right: -55px;
-}
-
-.principle-02::before,
-.principle-04::before {
-    left: -55px;
-}
-
-
-/* =====================================================
-   ORBIT DOT
-===================================================== */
-
-.principle::after {
-    content: "";
-
-    position: absolute;
-
-    width: 9px;
-    height: 9px;
-
-    top: 14px;
-
-    border: 1px solid #32145f;
-
-    background: #fff;
-
-    border-radius: 50%;
-
-    box-sizing: border-box;
-}
-
-.principle-01::after,
-.principle-03::after {
-    right: -64px;
-}
-
-.principle-02::after,
-.principle-04::after {
-    left: -64px;
-}
-
-
-/* =====================================================
-   NUMBER
-===================================================== */
-
-.principle-number {
-    display: block;
-
-    margin-bottom: 18px;
-
-    font-family: "Inter", sans-serif;
-    font-size: 7px;
-
-    letter-spacing: .18em;
-
-    color: #32145f;
-
-    opacity: .45;
-}
-
-
-/* =====================================================
-   ICON
-===================================================== */
-
-.principle-icon {
-    position: relative;
-
-    width: 38px;
-    height: 38px;
-
-    margin-bottom: 18px;
-
-    border: 1px solid rgba(50,20,95,.3);
-    border-radius: 50%;
-}
-
-.principle-icon::before {
-    content: "";
-
-    position: absolute;
-
-    left: 8px;
-    right: 8px;
-
-    top: 18px;
-
-    height: 1px;
-
-    background: #32145f;
-}
-
-.principle-icon span {
-    position: absolute;
-
-    width: 9px;
-    height: 9px;
-
-    left: 14px;
-    top: 13px;
-
-    border: 1px solid #32145f;
-
-    transform: rotate(45deg);
-}
-
-
-/* =====================================================
-   TITLE
-===================================================== */
-
-.principle h3 {
-    margin: 0 0 10px;
-
-    font-family: "Space Grotesk", sans-serif;
-
-    font-size: 27px;
-    font-weight: 500;
-
-    line-height: 1;
-
-    letter-spacing: -.04em;
-
-    color: #160b27;
-}
-
-
-/* =====================================================
-   TEXT
-===================================================== */
-
-.principle p {
-    max-width: 190px;
-
-    margin: 0;
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 9px;
-    line-height: 1.7;
-
-    color: #160b27;
-
-    opacity: .55;
-}
-
-
-/* =====================================================
-   COORDINATE
-===================================================== */
-
-.principle-coordinate {
-    display: block;
-
-    margin-top: 16px;
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 6px;
-
-    letter-spacing: .18em;
-
-    color: #32145f;
-
-    opacity: .5;
-}
-
-
-/* =====================================================
-   HOVER
-===================================================== */
-
-.principle:hover {
-    transform: translateY(-6px);
-}
-
-.principle:hover::after {
-    background: #32145f;
-    box-shadow: 0 0 0 5px rgba(50,20,95,.08);
-}
-
-
-/* =====================================================
-   BOTTOM INFORMATION
+   BOTTOM LINE
 ===================================================== */
 
 .principles-bottom {
+
     position: absolute;
 
     left: 8%;
     right: 8%;
-    bottom: 45px;
+
+    bottom: 40px;
 
     padding-top: 15px;
 
     border-top: 1px solid rgba(50,20,95,.16);
 
     display: flex;
+
     justify-content: space-between;
 
     font-family: "Inter", sans-serif;
+
     font-size: 7px;
 
     letter-spacing: .16em;
 
     color: #32145f;
 
-    opacity: .45;
+    opacity: .5;
 
     z-index: 10;
 }
@@ -3180,55 +3299,25 @@
    TABLET
 ===================================================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
 
-    .about-principles {
-        min-height: 1000px;
+    .principles-orbit {
+
+        width: 520px;
+
+        right: 3%;
     }
 
-    .principles-layout {
-        width: 94%;
+    .orbit-node {
+
+        width: 155px;
     }
 
-    .principles-center {
-        width: 350px;
-        height: 350px;
+    .orbit-node-content p {
+
+        font-size: 7px;
     }
 
-    .ring-one {
-        width: 350px;
-        height: 350px;
-    }
-
-    .ring-two {
-        width: 260px;
-        height: 260px;
-    }
-
-    .principles-center::before {
-        width: 120px;
-        height: 120px;
-    }
-
-    .principle {
-        width: 165px;
-    }
-
-    .principle h3 {
-        font-size: 23px;
-    }
-
-    .principle p {
-        font-size: 8px;
-    }
-
-    .center-cross.horizontal {
-        width: 500px;
-    }
-
-    .center-cross.vertical {
-        height: 500px;
-    }
 }
 
 
@@ -3239,14 +3328,17 @@
 @media (max-width: 700px) {
 
     .about-principles {
+
         min-height: auto;
-        padding-bottom: 70px;
+
+        padding-bottom: 100px;
     }
 
 
-    /* Section label */
+    /* Section marker */
 
     .principles-section-mark {
+
         top: 40px;
         left: 25px;
     }
@@ -3255,126 +3347,139 @@
     /* Heading */
 
     .principles-heading {
+
         width: calc(100% - 50px);
-        padding-top: 100px;
+
+        padding-top: 105px;
+    }
+
+    .principles-heading p {
+
+        font-size: 7px;
     }
 
     .principles-heading h2 {
+
         font-size: clamp(48px, 13vw, 68px);
+
+        max-width: 400px;
     }
 
     .principles-heading h2 span {
+
         margin-left: 9vw;
     }
 
 
-    /* Layout */
+    /* Orbit */
 
-    .principles-layout {
+    .principles-orbit {
+
+        position: relative;
+
         width: calc(100% - 50px);
 
-        height: auto;
+        max-width: 420px;
 
-        margin: 80px auto 0;
+        height: 420px;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        aspect-ratio: auto;
 
-        gap: 55px;
+        right: auto;
+        top: auto;
+
+        margin: 100px auto 0;
+
+        transform: none;
+    }
+
+
+    /* Keep rings */
+
+    .orbit-ring-outer {
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .orbit-ring-middle {
+
+        width: 74%;
+        height: 74%;
+    }
+
+    .orbit-ring-inner {
+
+        width: 45%;
+        height: 45%;
+    }
+
+
+    /* Crosshair */
+
+    .orbit-line-horizontal {
+
+        width: 115%;
+        left: -7.5%;
+    }
+
+    .orbit-line-vertical {
+
+        height: 115%;
+        top: -7.5%;
+    }
+
+
+    /* Nodes */
+
+    .orbit-node {
+
+        width: 135px;
+    }
+
+    .orbit-node-content {
+
+        padding: 12px 14px;
+    }
+
+    .orbit-node-content strong {
+
+        font-size: 14px;
+    }
+
+    .orbit-node-content p {
+
+        font-size: 6.5px;
+
+        line-height: 1.55;
     }
 
 
     /* Center */
 
-    .principles-center {
-        position: relative;
+    .orbit-center {
 
-        left: auto;
-        top: auto;
-
-        width: 250px;
-        height: 250px;
-
-        transform: none;
-
-        margin: 0 auto 30px;
+        width: 130px;
+        height: 130px;
     }
 
-    .ring-one {
-        width: 250px;
-        height: 250px;
+    .orbit-center::before {
+
+        width: 70px;
+        height: 70px;
     }
 
-    .ring-two {
-        width: 185px;
-        height: 185px;
-    }
+    .center-core {
 
-    .principles-center::before {
-        width: 90px;
-        height: 90px;
-    }
-
-    .center-cross.horizontal {
-        width: 300px;
-    }
-
-    .center-cross.vertical {
-        height: 300px;
-    }
-
-    .center-label {
-        bottom: -45px;
-    }
-
-
-    /* Principles */
-
-    .principle {
-        position: relative;
-
-        left: auto !important;
-        right: auto !important;
-        top: auto !important;
-        bottom: auto !important;
-
-        width: 100%;
-        max-width: 330px;
-
-        padding-left: 25px;
-
-        border-left: 1px solid rgba(50,20,95,.22);
-    }
-
-
-    /* Remove horizontal connectors */
-
-    .principle::before {
-        display: none;
-    }
-
-    .principle::after {
-        left: -5px !important;
-        right: auto !important;
-
-        top: 14px;
-    }
-
-
-    .principle h3 {
-        font-size: 25px;
-    }
-
-    .principle p {
-        max-width: 100%;
-        font-size: 9px;
+        width: 50px;
+        height: 50px;
     }
 
 
     /* Bottom */
 
     .principles-bottom {
+
         position: relative;
 
         left: auto;
@@ -3391,8 +3496,56 @@
 
         gap: 12px;
 
-        line-height: 1.5;
+        font-size: 6px;
     }
+
+    .principles-bottom span:last-child {
+
+        text-align: right;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .principles-orbit {
+
+        width: calc(100% - 30px);
+
+        height: 350px;
+    }
+
+    .orbit-node {
+
+        width: 115px;
+    }
+
+    .orbit-node-content {
+
+        padding: 10px;
+    }
+
+    .orbit-node-content strong {
+
+        font-size: 12px;
+    }
+
+    .orbit-node-content p {
+
+        font-size: 6px;
+    }
+
+    .orbit-center {
+
+        width: 105px;
+        height: 105px;
+    }
+
 }
 /* =====================================================
    06. WHO WE WORK WITH
