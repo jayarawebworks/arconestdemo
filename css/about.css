@@ -5543,3 +5543,115 @@
     }
 
 }
+
+/* =====================================================
+   02 — WHO WE ARE
+   CLEAN LAYOUT / NO OVERLAP
+===================================================== */
+
+.about-intro {
+    position: relative;
+    min-height: 100svh;
+    padding-top: 0;
+}
+
+
+/* ---------------------------------------------
+   SECTION LABEL
+--------------------------------------------- */
+
+.intro-section-mark {
+    position: absolute;
+
+    top: 38px;
+    left: 55px;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+    letter-spacing: .2em;
+}
+
+
+/* ---------------------------------------------
+   MAIN HEADING
+   Start BELOW the section label
+--------------------------------------------- */
+
+.intro-heading {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1200px, 84%);
+
+    margin: 0 auto;
+
+    padding-top: 125px;
+}
+
+
+/* Kicker */
+
+.intro-kicker {
+    margin: 0 0 24px;
+}
+
+
+/* Heading */
+
+.intro-heading h2 {
+    margin: 0;
+
+    max-width: 850px;
+}
+
+
+/* ---------------------------------------------
+   COMPOSITION
+--------------------------------------------- */
+
+.intro-composition {
+    position: relative;
+
+    z-index: 5;
+
+    margin-top: 80px;
+}
+
+
+/* ---------------------------------------------
+   MOBILE
+--------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .about-intro {
+        min-height: auto;
+        padding-bottom: 80px;
+    }
+
+    .intro-section-mark {
+        top: 30px;
+        left: 25px;
+    }
+
+    .intro-heading {
+        width: calc(100% - 50px);
+
+        padding-top: 100px;
+    }
+
+    .intro-heading h2 {
+        font-size: clamp(48px, 13vw, 68px);
+    }
+
+    .intro-composition {
+        margin-top: 55px;
+    }
+}
