@@ -2451,123 +2451,79 @@
 }
 
 /* =====================================================
-   03. OUR STORY — CONNECTING DOTS
+   03. OUR STORY — CONNECTING DOT JOURNEY
 ===================================================== */
 
 .about-story {
-
     position: relative;
-
     width: 100%;
-
-    min-height: 100svh;
-
+    min-height: 1050px;
     overflow: hidden;
-
     background: #160b27;
-
-    color: #ffffff;
+    color: #fff;
 }
 
-
-/* =====================================================
-   BACKGROUND GRID
-===================================================== */
-
+/* Blueprint grid */
 .story-grid {
-
     position: absolute;
-
     inset: 0;
-
     background-image:
-
         linear-gradient(
             to right,
-            rgba(255,255,255,0.045) 1px,
+            rgba(255,255,255,.045) 1px,
             transparent 1px
         ),
-
         linear-gradient(
             to bottom,
-            rgba(255,255,255,0.045) 1px,
+            rgba(255,255,255,.045) 1px,
             transparent 1px
         );
-
     background-size: 90px 90px;
-
-    opacity: 0.5;
-
+    opacity: .5;
     pointer-events: none;
 }
 
-
-/* =====================================================
-   AXIS
-===================================================== */
-
+/* Construction axis */
 .story-axis {
-
     position: absolute;
-
-    background:
-        rgba(255,255,255,0.10);
-
+    background: rgba(255,255,255,.10);
     pointer-events: none;
 }
-
 
 .story-axis-v {
-
     width: 1px;
-
     height: 100%;
-
     left: 50%;
 }
 
-
 .story-axis-h {
-
     width: 100%;
-
     height: 1px;
-
-    top: 52%;
+    top: 62%;
 }
 
 
 /* =====================================================
-   SECTION MARK
+   SECTION LABEL
 ===================================================== */
 
 .story-section-mark {
-
     position: absolute;
-
     top: 55px;
-
     left: 55px;
-
-    z-index: 5;
+    z-index: 10;
 
     display: flex;
-
     align-items: center;
-
     gap: 15px;
 
     font-family: "Inter", sans-serif;
-
     font-size: 8px;
-
-    letter-spacing: 0.20em;
+    letter-spacing: .20em;
 }
 
-
 .story-section-mark span:first-child {
-
-    opacity: 0.4;
+    opacity: .4;
 }
 
 
@@ -2576,177 +2532,135 @@
 ===================================================== */
 
 .story-heading {
-
     position: relative;
-
-    z-index: 4;
+    z-index: 10;
 
     width: min(1200px, 84%);
-
     margin: 0 auto;
-
     padding-top: 145px;
 }
 
-
 .story-heading p {
-
     margin: 0 0 22px;
 
     font-family: "Inter", sans-serif;
-
     font-size: 8px;
-
-    letter-spacing: 0.22em;
-
-    opacity: 0.5;
+    letter-spacing: .22em;
+    opacity: .5;
 }
-
 
 .story-heading h2 {
-
     margin: 0;
 
-    max-width: 750px;
+    max-width: 720px;
 
     font-family: "Space Grotesk", sans-serif;
-
-    font-size:
-        clamp(52px, 6.5vw, 92px);
-
+    font-size: clamp(52px, 6.5vw, 92px);
     font-weight: 400;
-
-    line-height: 0.9;
-
-    letter-spacing: -0.065em;
+    line-height: .9;
+    letter-spacing: -.065em;
 }
 
-
 .story-heading h2 span {
-
     display: block;
-
     margin-left: 9vw;
-
     font-weight: 500;
 }
 
 
 /* =====================================================
-   STORY NETWORK
+   NETWORK AREA
 ===================================================== */
 
 .story-network {
-
     position: absolute;
 
-    z-index: 3;
-
+    /*
+       IMPORTANT:
+       Push the network below the heading.
+    */
+    top: 520px;
     left: 5%;
-
     right: 5%;
 
-    top: 43%;
+    height: 330px;
 
-    height: 390px;
+    z-index: 5;
 }
 
 
-/* =====================================================
-   CONNECTING SVG
-===================================================== */
-
+/* Connecting SVG */
 .story-connection {
-
     position: absolute;
-
     inset: 0;
 
     width: 100%;
-
     height: 100%;
 
     overflow: visible;
-
     pointer-events: none;
 }
 
-
 .story-connection path {
-
     fill: none;
 
-    stroke:
-        rgba(255,255,255,0.42);
-
+    stroke: rgba(255,255,255,.42);
     stroke-width: 1;
-
-    vector-effect: non-scaling-stroke;
 
     stroke-dasharray: 5 7;
 
+    vector-effect: non-scaling-stroke;
 }
 
 
 /* =====================================================
-   STORY NODE
+   NODES
 ===================================================== */
 
 .story-node {
-
     position: absolute;
 
-    width: 180px;
+    width: 190px;
 
+    z-index: 8;
 }
 
 
-/* =====================================================
-   NODE DOT
-===================================================== */
-
+/* Dot */
 .node-dot {
-
     position: absolute;
 
     width: 13px;
-
     height: 13px;
 
-    border: 1px solid
-        rgba(255,255,255,0.8);
-
+    border: 1px solid rgba(255,255,255,.8);
     border-radius: 50%;
 
     background: #160b27;
 
-    z-index: 5;
+    z-index: 10;
 
     transition:
-        transform 0.4s ease,
-        background 0.4s ease;
+        transform .4s ease,
+        background .4s ease;
 }
 
-
 .node-dot::after {
-
     content: "";
 
     position: absolute;
 
     width: 4px;
-
     height: 4px;
 
     left: 50%;
-
     top: 50%;
 
     transform: translate(-50%, -50%);
 
     border-radius: 50%;
 
-    background: #ffffff;
+    background: #fff;
 }
 
 
@@ -2754,191 +2668,139 @@
    NODE POSITIONS
 ===================================================== */
 
+/*
+   All dots are now at the top of their content.
+   This prevents the text from reaching into the heading.
+*/
+
 .node-01 {
-
-    left: 6%;
-
-    top: 285px;
+    left: 4%;
+    top: 205px;
 }
 
-
 .node-02 {
-
     left: 25%;
-
     top: 45px;
 }
 
-
 .node-03 {
-
     left: 46%;
-
-    top: 315px;
+    top: 235px;
 }
 
-
 .node-04 {
-
     left: 67%;
-
     top: 35px;
 }
 
-
 .node-05 {
-
-    right: 2%;
-
-    top: 275px;
+    right: 1%;
+    top: 195px;
 }
 
 
-/* =====================================================
-   DOT POSITIONS
-===================================================== */
-
+/* Every dot sits above its content */
 .node-01 .node-dot,
-.node-03 .node-dot,
-.node-05 .node-dot {
-
-    top: -6px;
-
-    left: 0;
-}
-
-
 .node-02 .node-dot,
-.node-04 .node-dot {
-
-    bottom: -20px;
-
+.node-03 .node-dot,
+.node-04 .node-dot,
+.node-05 .node-dot {
     left: 0;
+    top: -7px;
 }
 
 
-/* =====================================================
-   NODE CONTENT
-===================================================== */
-
+/* Content */
 .node-content {
-
     padding-left: 25px;
+    padding-top: 12px;
 }
-
 
 .node-number {
-
     display: block;
 
     margin-bottom: 5px;
 
     font-family: "Inter", sans-serif;
-
     font-size: 7px;
+    letter-spacing: .15em;
 
-    letter-spacing: 0.15em;
-
-    opacity: 0.45;
+    opacity: .45;
 }
-
 
 .node-year {
-
     display: block;
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 
     font-family: "Space Grotesk", sans-serif;
-
     font-size: 12px;
 
-    letter-spacing: 0.02em;
-
-    opacity: 0.8;
+    letter-spacing: .02em;
+    opacity: .8;
 }
 
-
 .node-content h3 {
-
     margin: 0 0 10px;
 
     font-family: "Space Grotesk", sans-serif;
-
     font-size: 18px;
-
     font-weight: 500;
 
-    letter-spacing: -0.025em;
+    line-height: 1.1;
+    letter-spacing: -.025em;
 }
 
-
 .node-content p {
-
     max-width: 175px;
 
     margin: 0;
 
     font-family: "Inter", sans-serif;
-
     font-size: 8px;
-
     line-height: 1.7;
 
-    opacity: 0.58;
+    opacity: .58;
 }
 
 
-/* =====================================================
-   HOVER
-===================================================== */
-
+/* Hover */
 .story-node:hover .node-dot {
-
     transform: scale(1.6);
-
-    background: #ffffff;
+    background: #fff;
 }
-
 
 .story-node:hover .node-dot::after {
-
     background: #32145f;
 }
 
 
 /* =====================================================
-   BOTTOM
+   BOTTOM INFORMATION
 ===================================================== */
 
 .story-bottom {
-
     position: absolute;
 
     left: 8%;
-
     right: 8%;
+    bottom: 45px;
 
-    bottom: 40px;
-
-    z-index: 4;
+    z-index: 10;
 
     padding-top: 15px;
 
-    border-top: 1px solid
-        rgba(255,255,255,0.20);
+    border-top: 1px solid rgba(255,255,255,.20);
 
     display: flex;
-
     justify-content: space-between;
 
     font-family: "Inter", sans-serif;
-
     font-size: 7px;
 
-    letter-spacing: 0.16em;
+    letter-spacing: .16em;
 
-    opacity: 0.5;
+    opacity: .5;
 }
 
 
@@ -2948,30 +2810,31 @@
 
 @media (max-width: 1000px) {
 
-    .story-network {
-
-        left: 3%;
-
-        right: 3%;
+    .about-story {
+        min-height: 1000px;
     }
 
+    .story-network {
+        left: 3%;
+        right: 3%;
+        top: 520px;
+    }
+
+    .story-node {
+        width: 165px;
+    }
 
     .node-content h3 {
-
         font-size: 15px;
     }
 
-
     .node-content p {
-
         max-width: 145px;
-
         font-size: 7px;
     }
 
-
     .node-01 {
-        left: 3%;
+        left: 2%;
     }
 
     .node-02 {
@@ -2989,7 +2852,6 @@
     .node-05 {
         right: 0;
     }
-
 }
 
 
@@ -3000,137 +2862,94 @@
 @media (max-width: 700px) {
 
     .about-story {
-
         min-height: auto;
-
         padding-bottom: 80px;
-
     }
-
 
     .story-grid {
-
         background-size: 55px 55px;
-
     }
-
 
     .story-axis-v {
-
         left: 25px;
-
     }
-
 
     .story-axis-h {
-
         top: 50%;
-
     }
-
 
     .story-section-mark {
-
         top: 40px;
-
         left: 25px;
-
     }
 
 
+    /* Heading */
     .story-heading {
-
         width: calc(100% - 50px);
-
         padding-top: 100px;
-
     }
-
 
     .story-heading p {
-
         font-size: 7px;
-
     }
-
 
     .story-heading h2 {
-
-        font-size:
-            clamp(48px, 14vw, 68px);
-
+        font-size: clamp(48px, 14vw, 68px);
+        line-height: .9;
     }
 
-
     .story-heading h2 span {
-
         margin-left: 9vw;
-
     }
 
 
     /* Network becomes vertical */
-
     .story-network {
-
         position: relative;
 
-        left: auto;
-
-        right: auto;
-
         top: auto;
+        left: auto;
+        right: auto;
 
         width: calc(100% - 50px);
 
         height: auto;
 
-        margin: 75px auto 0;
+        margin: 90px auto 0;
 
         padding-left: 45px;
-
     }
 
 
-    /* Hide desktop SVG */
-
+    /* Hide desktop curved line */
     .story-connection {
-
         display: none;
-
     }
 
 
     /* Vertical connecting line */
-
     .story-network::before {
-
         content: "";
 
         position: absolute;
 
         left: 5px;
-
         top: 5px;
-
         bottom: 5px;
 
         width: 1px;
 
-        background:
-            rgba(255,255,255,0.35);
-
+        background: rgba(255,255,255,.35);
     }
 
 
+    /* Nodes */
     .story-node {
-
         position: relative;
 
         left: auto !important;
-
         right: auto !important;
-
         top: auto !important;
 
         width: 100%;
@@ -3138,12 +2957,10 @@
         min-height: 145px;
 
         margin-bottom: 10px;
-
     }
 
 
-    /* Dot */
-
+    /* Mobile dots */
     .node-01 .node-dot,
     .node-02 .node-dot,
     .node-03 .node-dot,
@@ -3151,65 +2968,42 @@
     .node-05 .node-dot {
 
         left: -46px;
-
         top: 2px;
-
-        bottom: auto;
-
     }
 
 
     .node-content {
-
         padding-left: 0;
-
+        padding-top: 0;
     }
-
 
     .node-number {
-
         margin-bottom: 7px;
-
     }
-
 
     .node-year {
-
         margin-bottom: 8px;
-
         font-size: 11px;
-
     }
-
 
     .node-content h3 {
-
         font-size: 20px;
-
         margin-bottom: 8px;
-
     }
-
 
     .node-content p {
-
         max-width: 280px;
-
         font-size: 9px;
-
         line-height: 1.7;
-
     }
 
 
+    /* Bottom */
     .story-bottom {
-
         position: relative;
 
         left: auto;
-
         right: auto;
-
         bottom: auto;
 
         width: calc(100% - 50px);
@@ -3217,15 +3011,11 @@
         margin: 25px auto 0;
 
         display: grid;
-
         grid-template-columns: 1fr 1fr;
 
         gap: 10px;
 
         font-size: 6px;
-
         line-height: 1.5;
-
     }
-
 }
