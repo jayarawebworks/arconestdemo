@@ -2585,16 +2585,20 @@
 
 /* =====================================================
    05. WHAT WE STAND FOR
+   ARCONEST PRINCIPLES ORBIT
 ===================================================== */
 
 .about-principles {
     position: relative;
     width: 100%;
     min-height: 100svh;
+    height: 1000px;
     overflow: hidden;
 
     background: #fff;
     color: #160b27;
+
+    isolation: isolate;
 }
 
 
@@ -2623,6 +2627,8 @@
     opacity: .7;
 
     pointer-events: none;
+
+    z-index: -1;
 }
 
 
@@ -2673,6 +2679,7 @@
     margin: 0 0 20px;
 
     font-family: "Inter", sans-serif;
+
     font-size: 8px;
 
     letter-spacing: .22em;
@@ -2708,24 +2715,24 @@
 
 
 /* =====================================================
-   MAIN LAYOUT
+   MAIN ORBIT LAYOUT
 ===================================================== */
 
 .principles-layout {
     position: relative;
 
-    width: min(1100px, 82%);
+    width: min(1200px, 88%);
 
-    height: 500px;
+    height: 560px;
 
-    margin: 35px auto 0;
+    margin: 45px auto 0;
 
     z-index: 5;
 }
 
 
 /* =====================================================
-   CENTER ARCHITECTURAL MARK
+   LARGE CENTRAL ORBIT
 ===================================================== */
 
 .principles-center {
@@ -2734,8 +2741,8 @@
     left: 50%;
     top: 50%;
 
-    width: 170px;
-    height: 170px;
+    width: 430px;
+    height: 430px;
 
     transform: translate(-50%, -50%);
 
@@ -2745,63 +2752,99 @@
 }
 
 
-/* Rings */
+/* =====================================================
+   ORBIT RINGS
+===================================================== */
 
 .center-ring {
     position: absolute;
 
-    border: 1px solid rgba(50,20,95,.22);
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(50,20,95,.24);
 
     border-radius: 50%;
+
+    pointer-events: none;
 }
 
+
+/* Main large circle */
+
 .ring-one {
+    width: 430px;
+    height: 430px;
+}
+
+
+/* Technical dashed circle */
+
+.ring-two {
+    width: 330px;
+    height: 330px;
+
+    border-style: dashed;
+
+    animation: principleOrbit 22s linear infinite;
+}
+
+
+/* Inner circle */
+
+.ring-three {
     width: 170px;
     height: 170px;
 }
 
-.ring-two {
-    width: 115px;
-    height: 115px;
 
-    border-style: dashed;
-
-    animation: principleOrbit 16s linear infinite;
-}
-
-
-/* Crosshair */
+/* =====================================================
+   CROSSHAIR
+===================================================== */
 
 .center-cross {
     position: absolute;
 
-    background: rgba(50,20,95,.25);
+    left: 50%;
+    top: 50%;
+
+    background: rgba(50,20,95,.20);
+
+    pointer-events: none;
 }
 
 .center-cross.horizontal {
-    width: 230px;
+    width: 540px;
     height: 1px;
+
+    transform: translate(-50%, -50%);
 }
 
 .center-cross.vertical {
     width: 1px;
-    height: 230px;
+    height: 540px;
+
+    transform: translate(-50%, -50%);
 }
 
 
-/* Center point */
+/* =====================================================
+   CENTER POINT
+===================================================== */
 
 .center-point {
     position: relative;
 
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
 
     background: #32145f;
 
     border-radius: 50%;
 
-    z-index: 3;
+    z-index: 5;
 }
 
 .center-point::after {
@@ -2809,7 +2852,7 @@
 
     position: absolute;
 
-    inset: 6px;
+    inset: 7px;
 
     background: #fff;
 
@@ -2817,12 +2860,14 @@
 }
 
 
-/* Label */
+/* =====================================================
+   CENTER LABEL
+===================================================== */
 
 .center-label {
     position: absolute;
 
-    bottom: -35px;
+    bottom: -42px;
 
     font-family: "Inter", sans-serif;
 
@@ -2830,18 +2875,28 @@
 
     letter-spacing: .2em;
 
-    opacity: .45;
+    color: #32145f;
+
+    opacity: .5;
 }
 
+
+/* =====================================================
+   RING ROTATION
+===================================================== */
 
 @keyframes principleOrbit {
 
     from {
-        transform: rotate(0deg);
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
     }
 
     to {
-        transform: rotate(360deg);
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
     }
 
 }
@@ -2854,169 +2909,188 @@
 .principle {
     position: absolute;
 
-    width: 245px;
+    width: auto;
 
-    padding: 25px;
+    padding: 0;
 
-    border: 1px solid rgba(50,20,95,.16);
+    border: none;
 
-    background: rgba(255,255,255,.72);
+    background: transparent;
+
+    z-index: 10;
 
     transition:
         transform .45s ease,
-        background .45s ease,
-        border-color .45s ease;
-
-    z-index: 3;
+        opacity .45s ease;
 }
+
+
+/* Remove old card appearance */
 
 .principle:hover {
-    transform: translateY(-8px);
+    transform: none;
 
-    background: #fff;
+    background: transparent;
 
-    border-color: rgba(50,20,95,.35);
+    border-color: transparent;
 }
 
 
-/* Positions */
+/* =====================================================
+   PRINCIPLE POSITIONS
+===================================================== */
 
 .principle-01 {
-    left: 0;
-    top: 20px;
+    left: 50%;
+    top: -15px;
+
+    transform: translateX(-50%);
 }
 
 .principle-02 {
-    right: 0;
-    top: 20px;
+    right: -35px;
+    top: 50%;
+
+    transform: translateY(-50%);
 }
 
 .principle-03 {
-    left: 0;
-    bottom: 20px;
+    left: 50%;
+    bottom: -15px;
+
+    transform: translateX(-50%);
 }
 
 .principle-04 {
-    right: 0;
-    bottom: 20px;
+    left: -35px;
+    top: 50%;
+
+    transform: translateY(-50%);
 }
 
 
-/* Number */
+/* =====================================================
+   PRINCIPLE NUMBER
+===================================================== */
 
 .principle-number {
     display: block;
 
-    margin-bottom: 22px;
+    margin-bottom: 7px;
 
     font-family: "Inter", sans-serif;
 
     font-size: 7px;
 
-    letter-spacing: .16em;
-
-    opacity: .4;
-}
-
-
-/* Small architectural icon */
-
-.principle-icon {
-    position: relative;
-
-    width: 32px;
-    height: 32px;
-
-    margin-bottom: 20px;
-
-    border: 1px solid rgba(50,20,95,.25);
-
-    border-radius: 50%;
-}
-
-.principle-icon::before {
-    content: "";
-
-    position: absolute;
-
-    left: 7px;
-    right: 7px;
-
-    top: 15px;
-
-    height: 1px;
-
-    background: #32145f;
-}
-
-.principle-icon span {
-    position: absolute;
-
-    width: 8px;
-    height: 8px;
-
-    top: 11px;
-    left: 11px;
-
-    border: 1px solid #32145f;
-
-    transform: rotate(45deg);
-}
-
-
-/* Heading */
-
-.principle h3 {
-    margin: 0 0 12px;
-
-    font-family: "Space Grotesk", sans-serif;
-
-    font-size: 25px;
-
-    font-weight: 500;
-
-    letter-spacing: -.04em;
-}
-
-
-/* Text */
-
-.principle p {
-    max-width: 205px;
-
-    margin: 0;
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 9px;
-
-    line-height: 1.75;
-
-    opacity: .58;
-}
-
-
-/* Coordinate */
-
-.principle-coordinate {
-    display: block;
-
-    margin-top: 22px;
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 6px;
-
     letter-spacing: .18em;
 
     color: #32145f;
 
-    opacity: .55;
+    opacity: .4;
+
+    text-align: center;
 }
 
 
 /* =====================================================
-   BOTTOM
+   REMOVE OLD ICON
+===================================================== */
+
+.principle-icon {
+    display: none;
+}
+
+
+/* =====================================================
+   PRINCIPLE TITLE
+===================================================== */
+
+.principle h3 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+
+    color: #32145f;
+
+    white-space: nowrap;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.principle p {
+    display: none;
+}
+
+
+/* =====================================================
+   COORDINATE
+===================================================== */
+
+.principle-coordinate {
+    display: none;
+}
+
+
+/* =====================================================
+   MOVING ORBIT DOT
+===================================================== */
+
+.principle::before {
+    content: "";
+
+    position: absolute;
+
+    width: 13px;
+    height: 13px;
+
+    border: 1px solid #32145f;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    left: 50%;
+    top: -27px;
+
+    transform: translateX(-50%);
+
+    box-sizing: border-box;
+}
+
+.principle::after {
+    content: "";
+
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #32145f;
+
+    left: 50%;
+    top: -23px;
+
+    transform: translateX(-50%);
+}
+
+
+/* =====================================================
+   BOTTOM INFORMATION
 ===================================================== */
 
 .principles-bottom {
@@ -3040,6 +3114,8 @@
     letter-spacing: .16em;
 
     opacity: .45;
+
+    z-index: 10;
 }
 
 
@@ -3053,12 +3129,40 @@
         width: 90%;
     }
 
-    .principle {
-        width: 210px;
+    .principles-center {
+        width: 350px;
+        height: 350px;
     }
 
-    .principles-center {
-        transform: translate(-50%, -50%) scale(.8);
+    .ring-one {
+        width: 350px;
+        height: 350px;
+    }
+
+    .ring-two {
+        width: 270px;
+        height: 270px;
+    }
+
+    .ring-three {
+        width: 140px;
+        height: 140px;
+    }
+
+    .center-cross.horizontal {
+        width: 440px;
+    }
+
+    .center-cross.vertical {
+        height: 440px;
+    }
+
+    .principle-02 {
+        right: 0;
+    }
+
+    .principle-04 {
+        left: 0;
     }
 }
 
@@ -3070,15 +3174,23 @@
 @media (max-width: 700px) {
 
     .about-principles {
-        min-height: auto;
+        height: auto;
+        min-height: 1050px;
 
         padding-bottom: 80px;
     }
+
+
+    .principles-grid {
+        background-size: 55px 55px;
+    }
+
 
     .principles-section-mark {
         top: 40px;
         left: 25px;
     }
+
 
     .principles-heading {
         width: calc(100% - 50px);
@@ -3086,94 +3198,109 @@
         padding-top: 100px;
     }
 
+
     .principles-heading h2 {
         font-size: clamp(48px, 13vw, 68px);
     }
+
 
     .principles-heading h2 span {
         margin-left: 9vw;
     }
 
 
-    /* Mobile layout */
+    /* Orbit */
 
     .principles-layout {
-        width: calc(100% - 50px);
+        width: 100%;
 
-        height: auto;
+        height: 560px;
 
-        margin-top: 65px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 18px;
+        margin-top: 55px;
     }
 
-
-    /* Center first */
 
     .principles-center {
-        position: relative;
 
-        left: auto;
-        top: auto;
-
-        width: 110px;
-        height: 110px;
-
-        margin: 0 auto 35px;
-
-        transform: none;
+        width: 300px;
+        height: 300px;
     }
+
 
     .ring-one {
-        width: 110px;
-        height: 110px;
+        width: 300px;
+        height: 300px;
     }
+
 
     .ring-two {
-        width: 75px;
-        height: 75px;
+        width: 225px;
+        height: 225px;
     }
 
+
+    .ring-three {
+        width: 115px;
+        height: 115px;
+    }
+
+
     .center-cross.horizontal {
-        width: 160px;
+        width: 350px;
     }
 
     .center-cross.vertical {
-        height: 160px;
+        height: 350px;
     }
 
 
-    /* Cards */
-
-    .principle {
-        position: relative;
-
-        left: auto !important;
-        right: auto !important;
-        top: auto !important;
-        bottom: auto !important;
-
-        width: 100%;
-
-        box-sizing: border-box;
-
-        padding: 25px;
-
-        min-height: 230px;
+    .center-point {
+        width: 18px;
+        height: 18px;
     }
 
-    .principle p {
-        max-width: 100%;
+
+    .center-point::after {
+        inset: 5px;
+    }
+
+
+    /* Node positions */
+
+    .principle-01 {
+        top: 5px;
+    }
+
+
+    .principle-02 {
+        right: 8px;
+    }
+
+
+    .principle-03 {
+        bottom: 5px;
+    }
+
+
+    .principle-04 {
+        left: 8px;
+    }
+
+
+    .principle h3 {
+        font-size: 10px;
+    }
+
+
+    .principle-number {
+        font-size: 6px;
     }
 
 
     /* Bottom */
 
     .principles-bottom {
+
         position: relative;
 
         left: auto;
@@ -3182,16 +3309,18 @@
 
         width: calc(100% - 50px);
 
-        margin: 35px auto 0;
+        margin: 30px auto 0;
 
         display: grid;
 
         grid-template-columns: 1fr 1fr;
 
-        gap: 10px;
-    }
-}
+        gap: 12px;
 
+        font-size: 6px;
+    }
+
+}
 /* =====================================================
    06. WHO WE WORK WITH
 ===================================================== */
