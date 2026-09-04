@@ -5337,3 +5337,56 @@
         font-size: 6px;
     }
 }
+
+/* =====================================================
+   CTA OVERLAP FIX
+===================================================== */
+
+.about-cta {
+    min-height: 760px;
+}
+
+
+/* Keep main content safely above bottom information */
+
+.about-cta-content {
+    padding-top: 150px;
+    padding-bottom: 170px;
+}
+
+
+/* Button must stay inside content zone */
+
+.about-cta-button {
+    position: relative;
+    z-index: 20;
+}
+
+
+/* Bottom information gets its own clear zone */
+
+.about-cta-bottom {
+    bottom: 35px;
+    z-index: 30;
+    background: #160b27;
+}
+
+
+/* Keep horizontal divider behind bottom information */
+
+.about-cta-bottom::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: 0;
+
+    height: 1px;
+
+    background: #160b27;
+
+    transform: translateY(-1px);
+}
