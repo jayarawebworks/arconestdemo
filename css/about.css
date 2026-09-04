@@ -3019,3 +3019,601 @@
         line-height: 1.5;
     }
 }
+
+
+/* =====================================================
+   04. VISION & MISSION
+===================================================== */
+
+.about-purpose {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    overflow: hidden;
+    background: #f7f5f8;
+    color: #160b27;
+}
+
+
+/* Blueprint grid */
+
+.purpose-grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(50,20,95,.055) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(50,20,95,.055) 1px,
+            transparent 1px
+        );
+
+    background-size: 90px 90px;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   SECTION LABEL
+===================================================== */
+
+.purpose-section-mark {
+    position: absolute;
+
+    top: 55px;
+    left: 55px;
+
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+    letter-spacing: .2em;
+
+    z-index: 10;
+}
+
+.purpose-section-mark span:first-child {
+    opacity: .4;
+}
+
+
+/* =====================================================
+   CENTRAL AXIS
+===================================================== */
+
+.purpose-axis {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 1px;
+
+    background: rgba(50,20,95,.13);
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.purpose-intro {
+    position: relative;
+
+    width: min(1200px,84%);
+
+    margin: 0 auto;
+
+    padding-top: 145px;
+
+    z-index: 5;
+}
+
+.purpose-intro p {
+    margin: 0 0 20px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+    letter-spacing: .22em;
+
+    opacity: .5;
+}
+
+.purpose-intro h2 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(48px,6vw,82px);
+
+    font-weight: 400;
+
+    line-height: .9;
+
+    letter-spacing: -.06em;
+}
+
+.purpose-intro h2 span {
+    display: block;
+
+    margin-left: 9vw;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   MAIN LAYOUT
+===================================================== */
+
+.purpose-layout {
+    position: relative;
+
+    width: min(1200px,84%);
+
+    margin: 90px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 100px 1fr;
+
+    align-items: center;
+
+    z-index: 5;
+}
+
+
+/* =====================================================
+   PURPOSE BLOCKS
+===================================================== */
+
+.purpose-block {
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 35px;
+
+    border: 1px solid rgba(50,20,95,.18);
+
+    background: rgba(255,255,255,.35);
+
+    transition:
+        background .4s ease,
+        transform .4s ease;
+}
+
+.purpose-block:hover {
+    background: rgba(255,255,255,.7);
+
+    transform: translateY(-6px);
+}
+
+
+/* Number */
+
+.purpose-number {
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .16em;
+
+    opacity: .4;
+
+    margin-bottom: 45px;
+}
+
+
+/* Label */
+
+.purpose-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .18em;
+
+    opacity: .55;
+
+    margin-bottom: 28px;
+}
+
+.purpose-label span {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(50,20,95,.3);
+
+    border-radius: 50%;
+
+    font-size: 8px;
+
+    opacity: 1;
+}
+
+
+/* Heading */
+
+.purpose-block h3 {
+    margin: 0 0 30px;
+
+    max-width: 400px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(34px,3.4vw,52px);
+
+    font-weight: 400;
+
+    line-height: .95;
+
+    letter-spacing: -.055em;
+}
+
+.purpose-block h3 span {
+    display: block;
+
+    margin-left: 35px;
+
+    font-weight: 500;
+
+    color: #32145f;
+}
+
+
+/* Paragraph */
+
+.purpose-block p {
+    max-width: 390px;
+
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    opacity: .62;
+}
+
+
+/* =====================================================
+   CORNER ARCHITECTURAL MARK
+===================================================== */
+
+.purpose-corner {
+    position: absolute;
+
+    right: 18px;
+    bottom: 18px;
+
+    width: 35px;
+    height: 35px;
+}
+
+.purpose-corner span:first-child {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 20px;
+    height: 20px;
+
+    border-right: 1px solid #32145f;
+    border-bottom: 1px solid #32145f;
+}
+
+.purpose-corner span:last-child {
+    position: absolute;
+
+    right: 8px;
+    bottom: 8px;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(50,20,95,.35);
+}
+
+
+/* =====================================================
+   CENTER
+===================================================== */
+
+.purpose-center {
+    position: relative;
+
+    height: 390px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.purpose-center::before {
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+    height: 100%;
+
+    background: rgba(50,20,95,.18);
+}
+
+
+.purpose-orbit {
+    position: absolute;
+
+    width: 72px;
+    height: 72px;
+
+    border: 1px dashed rgba(50,20,95,.35);
+
+    border-radius: 50%;
+
+    animation: purposeRotate 18s linear infinite;
+}
+
+.purpose-orbit::before {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    top: -4px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #32145f;
+}
+
+
+.purpose-center-dot {
+    position: relative;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: #32145f;
+
+    z-index: 2;
+}
+
+.purpose-center-dot::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 5px;
+
+    background: #fff;
+
+    border-radius: 50%;
+}
+
+
+.purpose-center span {
+    position: absolute;
+
+    bottom: 30px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .2em;
+
+    opacity: .4;
+}
+
+
+@keyframes purposeRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.purpose-bottom {
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+    bottom: 40px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(50,20,95,.18);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .16em;
+
+    opacity: .45;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .purpose-layout {
+        grid-template-columns: 1fr 50px 1fr;
+    }
+
+    .purpose-block {
+        padding: 25px;
+    }
+
+    .purpose-block h3 {
+        font-size: 32px;
+    }
+
+    .purpose-block p {
+        font-size: 9px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .about-purpose {
+        min-height: auto;
+        padding-bottom: 90px;
+    }
+
+    .purpose-section-mark {
+        top: 40px;
+        left: 25px;
+    }
+
+    .purpose-axis {
+        left: 25px;
+    }
+
+    .purpose-intro {
+        width: calc(100% - 50px);
+
+        padding-top: 100px;
+    }
+
+    .purpose-intro h2 {
+        font-size: clamp(45px,13vw,65px);
+    }
+
+    .purpose-intro h2 span {
+        margin-left: 9vw;
+    }
+
+
+    /* Stack blocks */
+
+    .purpose-layout {
+        width: calc(100% - 50px);
+
+        margin-top: 70px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+
+    .purpose-block {
+        width: 100%;
+
+        min-height: 360px;
+
+        padding: 25px;
+
+        box-sizing: border-box;
+    }
+
+
+    .purpose-block h3 {
+        font-size: 34px;
+    }
+
+    .purpose-block p {
+        max-width: 100%;
+
+        font-size: 9px;
+    }
+
+
+    /* Center becomes connector */
+
+    .purpose-center {
+        width: 100%;
+        height: 70px;
+    }
+
+    .purpose-center::before {
+        width: 100%;
+        height: 1px;
+    }
+
+    .purpose-orbit {
+        width: 45px;
+        height: 45px;
+    }
+
+    .purpose-center span {
+        bottom: -5px;
+    }
+
+
+    .purpose-bottom {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        width: calc(100% - 50px);
+
+        margin: 40px auto 0;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+}
