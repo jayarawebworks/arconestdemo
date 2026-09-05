@@ -6492,3 +6492,287 @@ main::after {
     }
 
 }
+
+
+/* =====================================================
+   04. VISION / MISSION — MOBILE FIX
+   IMPORTANT: Keep this at the END of about.css
+===================================================== */
+
+@media (max-width: 700px) {
+
+    /* Section itself */
+    .about-direction,
+    .about-vision,
+    .vision-mission {
+        position: relative;
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        overflow: hidden;
+    }
+
+
+    /* Main heading */
+    .direction-heading,
+    .vision-heading {
+        position: relative;
+        width: calc(100% - 50px);
+        margin: 0 auto;
+        padding-top: 105px;
+    }
+
+    .direction-heading h2,
+    .vision-heading h2 {
+        font-size: clamp(45px, 13vw, 68px);
+        line-height: .92;
+        letter-spacing: -.055em;
+        max-width: 100%;
+    }
+
+
+    /* =================================================
+       VISION / MISSION CONTAINER
+    ================================================= */
+
+    .direction-layout,
+    .vision-layout,
+    .vision-mission-layout {
+        position: relative !important;
+
+        width: calc(100% - 30px) !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        margin: 55px auto 80px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        gap: 0 !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+    }
+
+
+    /* =================================================
+       VISION CARD
+    ================================================= */
+
+    .direction-card,
+    .vision-card {
+        position: relative !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 430px;
+
+        margin: 0 !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        box-sizing: border-box;
+
+        padding: 32px 25px !important;
+    }
+
+
+    /* =================================================
+       CENTER ARCHITECTURAL CIRCLE
+    ================================================= */
+
+    .direction-center,
+    .vision-center,
+    .vision-mission-center {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        width: 120px !important;
+        height: 120px !important;
+
+        margin: -1px auto !important;
+
+        transform: none !important;
+
+        flex-shrink: 0;
+
+        z-index: 5;
+    }
+
+
+    /* Keep circle ABOVE the cards */
+    .direction-center *,
+    .vision-center *,
+    .vision-mission-center * {
+        box-sizing: border-box;
+    }
+
+
+    /* =================================================
+       MISSION CARD
+    ================================================= */
+
+    .direction-card-02,
+    .vision-card-02,
+    .mission-card {
+        position: relative !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 430px;
+
+        margin: 0 !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        box-sizing: border-box;
+
+        padding: 32px 25px !important;
+
+        /* CRITICAL */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+    }
+
+
+    /* =================================================
+       MISSION CONTENT
+    ================================================= */
+
+    .direction-card-02 h3,
+    .vision-card-02 h3,
+    .mission-card h3 {
+        position: relative !important;
+
+        margin: 45px 0 25px !important;
+
+        transform: none !important;
+
+        top: auto !important;
+        bottom: auto !important;
+
+        font-size: clamp(42px, 11vw, 58px);
+
+        line-height: .92;
+
+        max-width: 100%;
+    }
+
+
+    .direction-card-02 p,
+    .vision-card-02 p,
+    .mission-card p {
+        position: relative !important;
+
+        margin: 0 !important;
+
+        transform: none !important;
+
+        top: auto !important;
+        bottom: auto !important;
+
+        max-width: 100%;
+
+        font-size: 10px;
+
+        line-height: 1.75;
+    }
+
+
+    /* =================================================
+       CARD LABEL
+    ================================================= */
+
+    .direction-card-number,
+    .vision-card-number,
+    .card-number {
+        position: relative !important;
+
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        margin-bottom: 35px;
+
+        transform: none !important;
+    }
+
+
+    /* V / M circle label */
+    .direction-card-label,
+    .vision-card-label,
+    .card-label {
+        position: relative !important;
+
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+    }
+
+
+    /* =================================================
+       REMOVE DESKTOP CROSS-AXIS OVERFLOW
+    ================================================= */
+
+    .direction-axis,
+    .vision-axis,
+    .vision-mission-axis {
+        pointer-events: none;
+    }
+
+
+    /* =================================================
+       BOTTOM META
+    ================================================= */
+
+    .direction-bottom,
+    .vision-bottom {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: calc(100% - 50px);
+
+        margin: 0 auto 45px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 15px;
+
+        transform: none !important;
+    }
+}
