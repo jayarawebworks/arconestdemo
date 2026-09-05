@@ -1416,6 +1416,508 @@
     opacity: .45;
 }
 /* =====================================================
+   02 — WHO WE ARE / MOBILE FIX
+   Completely rebuilds the desktop composition for mobile
+===================================================== */
+
+@media (max-width: 700px) {
+
+    /* -------------------------------------------------
+       SECTION
+    ------------------------------------------------- */
+
+    .about-intro-v2 {
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        height: auto;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .about-intro-v2 *,
+    .about-intro-v2 *::before,
+    .about-intro-v2 *::after {
+        box-sizing: border-box;
+    }
+
+
+    /* -------------------------------------------------
+       GRID
+    ------------------------------------------------- */
+
+    .intro-v2-grid {
+        background-size: 52px 52px;
+        opacity: .55;
+    }
+
+
+    /* -------------------------------------------------
+       REMOVE DESKTOP CENTRAL AXIS
+    ------------------------------------------------- */
+
+    .intro-v2-axis {
+        display: none;
+    }
+
+
+    /* -------------------------------------------------
+       SECTION LABEL
+    ------------------------------------------------- */
+
+    .intro-v2-label {
+        position: absolute;
+
+        top: 38px;
+        left: 24px;
+
+        width: auto;
+        max-width: calc(100% - 48px);
+
+        font-size: 7px;
+        letter-spacing: .18em;
+
+        white-space: nowrap;
+    }
+
+
+    /* -------------------------------------------------
+       TOP RIGHT ID
+    ------------------------------------------------- */
+
+    .intro-v2-id {
+        display: none;
+    }
+
+
+    /* -------------------------------------------------
+       HEADING
+    ------------------------------------------------- */
+
+    .intro-v2-heading {
+
+        width: calc(100% - 48px);
+        max-width: none;
+
+        margin: 0 auto;
+
+        padding-top: 105px;
+
+        box-sizing: border-box;
+    }
+
+    .intro-v2-heading p {
+        margin-bottom: 18px;
+
+        font-size: 7px;
+        line-height: 1.5;
+
+        letter-spacing: .18em;
+    }
+
+    .intro-v2-heading h2 {
+
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
+        font-size: clamp(43px, 13vw, 64px);
+
+        line-height: .92;
+
+        letter-spacing: -.065em;
+
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .intro-v2-heading h2 span {
+        margin-left: 9vw;
+    }
+
+
+    /* -------------------------------------------------
+       MAIN COMPOSITION
+       DESKTOP GRID → MOBILE STACK
+    ------------------------------------------------- */
+
+    .intro-v2-composition {
+
+        width: calc(100% - 48px);
+        max-width: none;
+
+        margin: 58px auto 0;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 0;
+
+        min-height: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    /* -------------------------------------------------
+       LEFT INFORMATION
+    ------------------------------------------------- */
+
+    .intro-v2-info {
+
+        width: 100%;
+        max-width: 100%;
+
+        padding: 0;
+
+        display: block;
+
+        box-sizing: border-box;
+    }
+
+
+    .intro-v2-info-top {
+
+        width: 100%;
+
+        padding-bottom: 12px;
+
+        font-size: 6px;
+
+        letter-spacing: .14em;
+    }
+
+
+    .intro-v2-copy {
+
+        width: 100%;
+        max-width: 100%;
+
+        padding-top: 25px;
+    }
+
+    .intro-v2-copy p {
+
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0 0 22px;
+
+        font-size: 9px;
+
+        line-height: 1.75;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* -------------------------------------------------
+       CENTER CONNECTOR
+    ------------------------------------------------- */
+
+    .intro-v2-center {
+
+        position: relative;
+
+        width: 100%;
+        height: 90px;
+
+        margin: 10px 0 10px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* horizontal construction line */
+
+    .intro-v2-center::before {
+
+        content: "";
+
+        position: absolute;
+
+        top: 50%;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+        height: 1px;
+
+        background: rgba(50,20,95,.20);
+
+        transform: translateY(-50%);
+    }
+
+
+    /* vertical line only inside connector */
+
+    .intro-v2-center::after {
+
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        bottom: 0;
+
+        left: 50%;
+
+        width: 1px;
+
+        background: rgba(50,20,95,.18);
+
+        transform: translateX(-50%);
+    }
+
+
+    .intro-v2-crosshair {
+
+        position: relative;
+
+        z-index: 3;
+
+        width: 52px;
+        height: 52px;
+
+        flex-shrink: 0;
+    }
+
+
+    .crosshair-horizontal {
+        left: -18px;
+        right: -18px;
+    }
+
+    .crosshair-vertical {
+        top: -18px;
+        bottom: -18px;
+    }
+
+    .crosshair-ring {
+        inset: 9px;
+    }
+
+    .axis-number {
+        bottom: -17px;
+
+        font-size: 6px;
+
+        white-space: nowrap;
+    }
+
+
+    /* -------------------------------------------------
+       IMAGE
+    ------------------------------------------------- */
+
+    .intro-v2-visual {
+
+        width: 100%;
+        max-width: 100%;
+
+        padding: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .intro-v2-image {
+
+        width: 100%;
+        max-width: 100%;
+
+        height: 285px;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+    .intro-v2-image img {
+
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+    }
+
+
+    .visual-coordinate-top {
+
+        top: -16px;
+        right: 0;
+
+        font-size: 5px;
+
+        white-space: nowrap;
+    }
+
+
+    .visual-caption {
+
+        width: 100%;
+
+        padding-top: 9px;
+
+        font-size: 5px;
+
+        letter-spacing: .12em;
+    }
+
+
+    /* -------------------------------------------------
+       SPECS
+       Move below text instead of using desktop layout
+    ------------------------------------------------- */
+
+    .intro-v2-specs {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 12px;
+
+        margin-top: 28px;
+
+        padding-top: 14px;
+
+        border-top: 1px solid rgba(50,20,95,.14);
+
+        box-sizing: border-box;
+    }
+
+    .intro-v2-spec {
+
+        min-width: 0;
+
+        gap: 6px;
+    }
+
+    .intro-v2-spec span {
+
+        font-size: 5px;
+
+        letter-spacing: .12em;
+    }
+
+    .intro-v2-spec strong {
+
+        font-size: 8px;
+
+        line-height: 1.3;
+
+        word-break: break-word;
+    }
+
+
+    /* -------------------------------------------------
+       DATA STRIP
+       Desktop 4-column → Mobile 2-column
+    ------------------------------------------------- */
+
+    .intro-v2-data {
+
+        width: calc(100% - 48px);
+        max-width: none;
+
+        margin: 42px auto 0;
+
+        padding-top: 16px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 0;
+
+        border-top: 1px solid rgba(50,20,95,.18);
+
+        box-sizing: border-box;
+    }
+
+
+    .intro-v2-data div {
+
+        min-width: 0;
+
+        padding: 16px 12px 16px 0;
+
+        border-bottom: 1px solid rgba(50,20,95,.12);
+    }
+
+
+    .intro-v2-data div:nth-child(even) {
+
+        padding-left: 12px;
+        padding-right: 0;
+
+        border-left: 1px solid rgba(50,20,95,.12);
+    }
+
+
+    .intro-v2-data span {
+
+        font-size: 5px;
+
+        letter-spacing: .14em;
+
+        margin-bottom: 2px;
+    }
+
+
+    .intro-v2-data strong {
+
+        font-size: 10px;
+
+        line-height: 1.35;
+
+        word-break: break-word;
+    }
+
+
+    /* -------------------------------------------------
+       BOTTOM LINE
+       Remove desktop absolute positioning
+    ------------------------------------------------- */
+
+    .intro-v2-bottom {
+
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        width: calc(100% - 48px);
+
+        margin: 35px auto 35px;
+
+        padding-top: 14px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+        font-size: 5px;
+
+        line-height: 1.5;
+
+        box-sizing: border-box;
+    }
+
+}
+/* =====================================================
    03. OUR STORY — CONNECTING DOT JOURNEY
 ===================================================== */
 
