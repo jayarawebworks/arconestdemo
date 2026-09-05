@@ -2027,3 +2027,501 @@ body {
     }
 
 }
+
+
+/* =====================================================
+   SERVICES — 04. ARCONEST CLOUD
+===================================================== */
+
+.cloud-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 100svh;
+
+    overflow: hidden;
+
+    background: #f8f7f9;
+    color: #32145f;
+
+    padding: 120px 8% 80px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.cloud-header {
+    position: absolute;
+
+    top: 38px;
+    left: 55px;
+
+    display: flex;
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+    letter-spacing: .2em;
+}
+
+.cloud-header span:first-child {
+    opacity: .4;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.cloud-heading {
+    width: min(1200px, 84%);
+
+    margin: 0 auto;
+}
+
+.cloud-heading p {
+    margin: 0 0 18px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+    letter-spacing: .22em;
+
+    opacity: .5;
+}
+
+.cloud-heading h2 {
+    margin: 0;
+
+    max-width: 900px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(55px, 6.5vw, 92px);
+
+    font-weight: 400;
+
+    line-height: .88;
+
+    letter-spacing: -.065em;
+}
+
+.cloud-heading h2 span {
+    display: block;
+
+    margin-left: 8vw;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.cloud-content {
+    width: min(1200px, 84%);
+
+    margin: 65px auto 0;
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.4fr;
+
+    gap: 8vw;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   COPY
+===================================================== */
+
+.cloud-copy {
+    max-width: 330px;
+}
+
+.cloud-tag {
+    display: block;
+
+    margin-bottom: 22px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .18em;
+
+    opacity: .45;
+}
+
+.cloud-copy p {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    opacity: .65;
+}
+
+
+/* =====================================================
+   LINK
+===================================================== */
+
+.cloud-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 32px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid rgba(50,20,95,.35);
+
+    color: #32145f;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .16em;
+}
+
+.cloud-link span {
+    font-size: 15px;
+
+    transition: transform .3s ease;
+}
+
+.cloud-link:hover span {
+    transform: translate(4px, -4px);
+}
+
+
+/* =====================================================
+   WORKFLOW
+===================================================== */
+
+.cloud-workflow {
+    position: relative;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    padding-top: 20px;
+}
+
+
+/* Connecting line */
+
+.workflow-line {
+    position: absolute;
+
+    top: 27px;
+
+    left: 20px;
+    right: 20px;
+
+    height: 1px;
+
+    background: rgba(50,20,95,.16);
+}
+
+
+/* =====================================================
+   WORKFLOW STEP
+===================================================== */
+
+.workflow-step {
+    position: relative;
+
+    width: 100px;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    opacity: .42;
+
+    transition:
+        opacity .4s ease,
+        transform .4s ease;
+}
+
+.workflow-step span {
+    width: 16px;
+    height: 16px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+    background: #f8f7f9;
+
+    border: 1px solid rgba(50,20,95,.35);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 5px;
+}
+
+.workflow-step strong {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: -.01em;
+}
+
+.workflow-step small {
+    margin-top: 10px;
+
+    max-width: 95px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    line-height: 1.5;
+
+    opacity: .65;
+}
+
+
+/* Active */
+
+.workflow-step.active {
+    opacity: 1;
+
+    transform: translateY(-6px);
+}
+
+.workflow-step.active span {
+    background: #32145f;
+
+    border-color: #32145f;
+
+    color: #fff;
+
+    box-shadow: 0 0 0 6px rgba(50,20,95,.08);
+}
+
+
+/* Hover */
+
+.workflow-step:hover {
+    opacity: 1;
+
+    transform: translateY(-6px);
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.cloud-bottom {
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+    bottom: 32px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(50,20,95,.14);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .18em;
+
+    opacity: .4;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .cloud-section {
+        min-height: auto;
+
+        padding: 105px 24px 70px;
+    }
+
+
+    .cloud-header {
+        top: 32px;
+        left: 24px;
+
+        font-size: 7px;
+    }
+
+
+    .cloud-heading {
+        width: 100%;
+    }
+
+    .cloud-heading p {
+        font-size: 7px;
+    }
+
+    .cloud-heading h2 {
+        font-size: clamp(43px, 13vw, 64px);
+
+        line-height: .9;
+    }
+
+    .cloud-heading h2 span {
+        margin-left: 7vw;
+    }
+
+
+    /* Content */
+
+    .cloud-content {
+        width: 100%;
+
+        margin-top: 55px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 60px;
+
+        align-items: flex-start;
+    }
+
+
+    .cloud-copy {
+        max-width: 310px;
+    }
+
+    .cloud-copy p {
+        font-size: 8px;
+    }
+
+
+    /* Workflow */
+
+    .cloud-workflow {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding-left: 15px;
+    }
+
+
+    .workflow-line {
+        top: 20px;
+        bottom: 20px;
+
+        left: 22px;
+        right: auto;
+
+        width: 1px;
+        height: auto;
+    }
+
+
+    .workflow-step {
+        width: 100%;
+
+        min-height: 75px;
+
+        display: grid;
+
+        grid-template-columns: 30px 1fr;
+
+        column-gap: 15px;
+
+        align-items: start;
+
+        text-align: left;
+
+        opacity: .55;
+    }
+
+
+    .workflow-step span {
+        grid-row: 1 / 3;
+
+        margin: 0;
+    }
+
+
+    .workflow-step strong {
+        font-size: 13px;
+    }
+
+
+    .workflow-step small {
+        max-width: 240px;
+
+        margin-top: 4px;
+
+        font-size: 7px;
+    }
+
+
+    .workflow-step.active {
+        transform: none;
+    }
+
+
+    .cloud-bottom {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        margin-top: 20px;
+
+        font-size: 5px;
+    }
+
+}
