@@ -625,15 +625,51 @@ body {
 ===================================================== */
 
 .service-wheel {
-
     position: relative;
 
     width: min(720px, 52vw);
     height: min(720px, 52vw);
 
-    margin: -45px auto 0;
+    margin: 70px auto 0;
 
     border-radius: 50%;
+}
+/* =====================================================
+   DESKTOP — KEEP WHEEL CLEAR OF HEADING
+===================================================== */
+
+@media (min-width: 701px) {
+
+    .service-wheel {
+        margin-top: 70px;
+    }
+
+}
+
+
+/* Larger laptops */
+@media (min-width: 1100px) {
+
+    .service-wheel {
+        width: min(680px, 48vw);
+        height: min(680px, 48vw);
+
+        margin-top: 65px;
+    }
+
+}
+
+
+/* Large desktop */
+@media (min-width: 1500px) {
+
+    .service-wheel {
+        width: 680px;
+        height: 680px;
+
+        margin-top: 60px;
+    }
+
 }
 
 
