@@ -588,3 +588,60 @@ if (careerStages.length) {
     });
 
 }
+
+/* =========================================
+   CONTACT FORM → WHATSAPP
+========================================= */
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const name = contactForm.querySelector('[name="name"]').value.trim();
+        const email = contactForm.querySelector('[name="email"]').value.trim();
+        const phone = contactForm.querySelector('[name="phone"]').value.trim();
+        const project = contactForm.querySelector('[name="project"]').value;
+        const message = contactForm.querySelector('[name="message"]').value.trim();
+
+        // Arconest WhatsApp number
+        const whatsappNumber = "919096202004";
+
+        const whatsappMessage =
+`Hello Arconest Consultants LLP,
+
+I would like to enquire about your construction consulting services.
+
+━━━━━━━━━━━━━━━━
+CLIENT DETAILS
+━━━━━━━━━━━━━━━━
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Project Type: ${project}
+
+━━━━━━━━━━━━━━━━
+PROJECT ENQUIRY
+━━━━━━━━━━━━━━━━
+
+${message}
+
+━━━━━━━━━━━━━━━━
+
+I would like to discuss this project further.
+
+Thank you.`;
+
+        const whatsappURL =
+            `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+        window.open(whatsappURL, "_blank");
+
+    });
+
+}
