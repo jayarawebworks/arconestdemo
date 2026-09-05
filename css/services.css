@@ -1838,6 +1838,43 @@ body {
     opacity: .4;
 }
 
+/* =====================================================
+   PROCESS — DESKTOP POSITION
+===================================================== */
+
+@media (min-width: 701px) {
+
+    .process-wrapper {
+        width: 94%;
+        max-width: 1250px;
+
+        margin-left: 0;
+        margin-right: auto;
+
+        transform: translateX(-2%);
+    }
+
+    .step-01 {
+        left: 5%;
+    }
+
+    .step-02 {
+        left: 26%;
+    }
+
+    .step-03 {
+        left: 48%;
+    }
+
+    .step-04 {
+        left: 70%;
+    }
+
+    .step-05 {
+        left: 91%;
+    }
+
+}
 
 /* =====================================================
    MOBILE
