@@ -1248,3 +1248,457 @@
     }
 
 }
+
+
+/* =========================================================
+   FOUNDER — SECTION 04 / THE JOURNEY
+========================================================= */
+
+.founder-journey {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 110px 7vw 70px;
+
+    background: #160b27;
+    color: #fff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.journey-top {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    align-items: center;
+    gap: 20px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid rgba(255,255,255,.15);
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 9px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.journey-top span:first-child {
+    opacity: .4;
+}
+
+.journey-top span:nth-child(2) {
+    opacity: .65;
+}
+
+.journey-top span:last-child {
+    opacity: .4;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.journey-heading {
+    padding: 75px 0 55px;
+}
+
+.journey-heading p {
+    margin: 0 0 25px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 9px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+
+    opacity: .45;
+}
+
+.journey-heading h2 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(65px, 8vw, 125px);
+    font-weight: 400;
+    line-height: .85;
+    letter-spacing: -.07em;
+}
+
+.journey-heading h2 span {
+    display: block;
+    margin-left: 110px;
+    opacity: .38;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.journey-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 7vw;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   YEARS
+========================================================= */
+
+.journey-years {
+    border-top: 1px solid rgba(255,255,255,.16);
+}
+
+.journey-year {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+
+    gap: 25px;
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.13);
+
+    opacity: .42;
+
+    transition:
+        opacity .4s ease,
+        padding-left .4s ease;
+}
+
+.journey-year:hover,
+.journey-year.active {
+    opacity: 1;
+    padding-left: 15px;
+}
+
+.journey-year-number {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    letter-spacing: .03em;
+}
+
+.journey-year.active .journey-year-number {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+.journey-year-content span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .16em;
+}
+
+.journey-year-content p {
+    max-width: 420px;
+
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    line-height: 1.75;
+
+    color: rgba(255,255,255,.55);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.journey-image {
+    position: relative;
+}
+
+.journey-image-frame {
+    position: relative;
+
+    width: 100%;
+    height: 610px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,.17);
+}
+
+.journey-image-frame::before {
+    content: "";
+
+    position: absolute;
+    inset: 14px;
+
+    z-index: 2;
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    pointer-events: none;
+}
+
+.journey-image-frame img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    filter: saturate(.7);
+
+    transform: scale(1.03);
+
+    transition:
+        transform 1.2s cubic-bezier(.2,.7,.2,1),
+        filter 1s ease;
+}
+
+.journey-image-frame:hover img {
+    transform: scale(1.08);
+    filter: saturate(.9);
+}
+
+
+/* IMAGE OVERLAY */
+
+.journey-image-overlay {
+    position: absolute;
+
+    left: 25px;
+    right: 25px;
+    bottom: 22px;
+
+    z-index: 3;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 8px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.journey-image-overlay span:first-child {
+    opacity: .7;
+}
+
+.journey-image-overlay span:last-child {
+    opacity: .45;
+}
+
+
+/* CAPTION */
+
+.journey-image-caption {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 14px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 8px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+
+    opacity: .4;
+}
+
+
+/* =========================================================
+   BOTTOM PROGRESS
+========================================================= */
+
+.journey-bottom {
+    display: grid;
+    grid-template-columns: 25px 1fr 25px 1.8fr;
+
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 55px;
+}
+
+.journey-bottom > span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 8px;
+    opacity: .4;
+}
+
+.journey-progress {
+    height: 1px;
+
+    background: rgba(255,255,255,.15);
+}
+
+.journey-progress-fill {
+    width: 28%;
+    height: 1px;
+
+    background: rgba(255,255,255,.7);
+}
+
+.journey-bottom p {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: rgba(255,255,255,.45);
+}
+
+.journey-bottom strong {
+    color: #fff;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .founder-journey {
+        padding: 85px 6vw 60px;
+    }
+
+    .journey-heading {
+        padding: 60px 0 45px;
+    }
+
+    .journey-main {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .journey-image {
+        order: -1;
+    }
+
+    .journey-image-frame {
+        height: 600px;
+    }
+
+    .journey-bottom {
+        grid-template-columns: 25px 1fr 25px;
+    }
+
+    .journey-bottom p {
+        grid-column: 1 / -1;
+        margin-top: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .founder-journey {
+        padding: 70px 22px 50px;
+    }
+
+    .journey-top {
+        grid-template-columns: 30px 1fr auto;
+        gap: 12px;
+
+        padding-bottom: 18px;
+    }
+
+    .journey-heading {
+        padding: 50px 0 35px;
+    }
+
+    .journey-heading p {
+        font-size: 8px;
+        margin-bottom: 20px;
+    }
+
+    .journey-heading h2 {
+        font-size: clamp(50px, 14vw, 72px);
+    }
+
+    .journey-heading h2 span {
+        margin-left: 30px;
+    }
+
+    .journey-main {
+        gap: 38px;
+    }
+
+    .journey-image-frame {
+        height: 470px;
+    }
+
+    .journey-image-frame::before {
+        inset: 10px;
+    }
+
+    .journey-image-overlay {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+
+        font-size: 7px;
+    }
+
+    .journey-image-caption {
+        flex-direction: column;
+        gap: 6px;
+
+        font-size: 7px;
+    }
+
+    .journey-year {
+        grid-template-columns: 50px 1fr;
+        gap: 15px;
+
+        padding: 24px 0;
+    }
+
+    .journey-year:hover,
+    .journey-year.active {
+        padding-left: 0;
+    }
+
+    .journey-year.active .journey-year-number {
+        font-size: 20px;
+    }
+
+    .journey-year-content span {
+        font-size: 9px;
+    }
+
+    .journey-year-content p {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .journey-bottom {
+        margin-top: 40px;
+    }
+
+    .journey-bottom p {
+        font-size: 11px;
+    }
+
+}
