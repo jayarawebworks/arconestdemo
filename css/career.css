@@ -1638,3 +1638,525 @@ body {
         line-height: 1.4;
     }
 }
+/* =====================================================
+   CAREER — 04. APPLICATION
+===================================================== */
+
+.career-application {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    overflow: hidden;
+
+    background: #f8f7f9;
+    color: #32145f;
+
+    padding: 120px 7.5% 100px;
+}
+
+
+/* TOP */
+
+.application-top {
+    position: absolute;
+    top: 38px;
+    left: 7.5%;
+
+    display: flex;
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+    letter-spacing: .2em;
+}
+
+.application-top span:first-child {
+    opacity: .4;
+}
+
+
+/* HEADING */
+
+.application-heading {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+.application-heading p {
+    margin: 0 0 20px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+    letter-spacing: .22em;
+
+    opacity: .45;
+}
+
+.application-heading h2 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(60px, 7vw, 100px);
+    font-weight: 400;
+
+    line-height: .86;
+    letter-spacing: -.07em;
+}
+
+.application-heading h2 span {
+    display: block;
+    margin-left: 8vw;
+    font-weight: 500;
+}
+
+
+/* FORM */
+
+.career-form {
+    width: min(1200px, 100%);
+    margin: 65px auto 0;
+}
+
+
+/* POSITION */
+
+.form-position {
+    padding: 24px 0;
+
+    border-top: 1px solid rgba(50,20,95,.18);
+    border-bottom: 1px solid rgba(50,20,95,.18);
+
+    display: grid;
+    grid-template-columns: .7fr 1.3fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.form-label {
+    display: block;
+
+    font-family: "Inter", sans-serif;
+    font-size: 7px;
+    letter-spacing: .18em;
+
+    opacity: .45;
+}
+
+.form-small {
+    display: block;
+    margin-top: 7px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 6px;
+    letter-spacing: .1em;
+
+    opacity: .3;
+}
+
+.form-position select {
+    width: 100%;
+
+    padding: 16px 0;
+
+    border: 0;
+    border-bottom: 1px solid rgba(50,20,95,.25);
+
+    background: transparent;
+    color: #32145f;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 24px;
+
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* GROUP */
+
+.form-group {
+    padding: 45px 0;
+
+    border-bottom: 1px solid rgba(50,20,95,.14);
+}
+
+.form-group-title {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    font-family: "Inter", sans-serif;
+}
+
+.form-group-title span {
+    font-size: 7px;
+    opacity: .35;
+}
+
+.form-group-title strong {
+    font-size: 7px;
+    font-weight: 500;
+    letter-spacing: .2em;
+}
+
+
+/* GRID */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 55px;
+}
+
+
+/* FIELD */
+
+.form-field {
+    min-width: 0;
+}
+
+.form-field label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 6px;
+    letter-spacing: .17em;
+
+    opacity: .45;
+}
+
+.form-field label span {
+    margin-left: 7px;
+    opacity: .45;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+
+    padding: 12px 0;
+
+    border: 0;
+    border-bottom: 1px solid rgba(50,20,95,.18);
+
+    background: transparent;
+    color: #32145f;
+
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+
+    outline: none;
+
+    border-radius: 0;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #32145f;
+    opacity: .25;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-bottom-color: #32145f;
+}
+
+
+/* RESUME */
+
+.resume-upload {
+    position: relative;
+
+    min-height: 150px;
+
+    border: 1px dashed rgba(50,20,95,.3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition:
+        background .35s ease,
+        border-color .35s ease;
+}
+
+.resume-upload:hover {
+    background: rgba(50,20,95,.035);
+    border-color: #32145f;
+}
+
+.resume-upload input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+}
+
+.upload-symbol {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 28px;
+    line-height: 1;
+
+    margin-bottom: 10px;
+}
+
+.upload-main {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+}
+
+.upload-sub {
+    margin-top: 7px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 6px;
+    letter-spacing: .18em;
+
+    opacity: .4;
+}
+
+
+/* MESSAGE */
+
+.form-message textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+/* SUBMIT */
+
+.form-submit {
+    padding-top: 40px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.form-submit p {
+    max-width: 280px;
+
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+    font-size: 7px;
+    line-height: 1.6;
+
+    opacity: .4;
+}
+
+.form-submit button {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 16px 24px;
+
+    border: 1px solid #32145f;
+
+    background: #32145f;
+    color: #fff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 7px;
+    letter-spacing: .18em;
+
+    cursor: pointer;
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        transform .35s ease;
+}
+
+.form-submit button span {
+    font-size: 15px;
+}
+
+.form-submit button:hover {
+    background: transparent;
+    color: #32145f;
+    transform: translateY(-3px);
+}
+
+
+/* BOTTOM */
+
+.application-bottom {
+    position: absolute;
+
+    left: 7.5%;
+    right: 7.5%;
+    bottom: 30px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(50,20,95,.13);
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+    font-size: 6px;
+    letter-spacing: .18em;
+
+    opacity: .4;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .career-application {
+        min-height: auto;
+
+        padding: 110px 20px 65px;
+    }
+
+
+    .application-top {
+        top: 32px;
+        left: 20px;
+
+        gap: 12px;
+        font-size: 7px;
+    }
+
+
+    .application-heading {
+        width: 100%;
+        text-align: center;
+    }
+
+    .application-heading p {
+        margin-bottom: 17px;
+        font-size: 7px;
+    }
+
+    .application-heading h2 {
+        font-size: clamp(45px, 13vw, 64px);
+        line-height: .9;
+    }
+
+    .application-heading h2 span {
+        margin-left: 0;
+    }
+
+
+    /* FORM */
+
+    .career-form {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+
+    /* POSITION */
+
+    .form-position {
+        display: block;
+
+        padding: 22px 0;
+    }
+
+    .form-position select {
+        margin-top: 18px;
+
+        padding: 13px 0;
+
+        font-size: 20px;
+    }
+
+
+    /* GROUP */
+
+    .form-group {
+        padding: 35px 0;
+    }
+
+    .form-group-title {
+        margin-bottom: 25px;
+    }
+
+
+    /* FIELDS */
+
+    .form-grid {
+        display: flex;
+        flex-direction: column;
+
+        gap: 27px;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+        font-size: 10px;
+    }
+
+
+    /* RESUME */
+
+    .resume-upload {
+        min-height: 145px;
+    }
+
+    .upload-main {
+        font-size: 16px;
+    }
+
+
+    /* SUBMIT */
+
+    .form-submit {
+        padding-top: 30px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 25px;
+    }
+
+    .form-submit p {
+        max-width: 260px;
+    }
+
+    .form-submit button {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    /* BOTTOM */
+
+    .application-bottom {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        margin-top: 40px;
+
+        font-size: 5px;
+    }
+
+}
+
