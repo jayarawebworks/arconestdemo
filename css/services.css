@@ -1117,3 +1117,392 @@ body {
         font-size: 6px;
     }
 }
+
+
+/* =====================================================
+   SERVICES — 03. INTERACTIVE EXPLORER
+===================================================== */
+
+.service-explorer {
+    position: relative;
+
+    width: 100%;
+    min-height: 100svh;
+
+    overflow: hidden;
+
+    background: #32145f;
+    color: #fff;
+
+    padding: 120px 8% 80px;
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    column-gap: 8vw;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.explorer-header {
+    position: absolute;
+
+    top: 38px;
+    left: 55px;
+
+    display: flex;
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .2em;
+}
+
+.explorer-header span:first-child {
+    opacity: .4;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.explorer-intro {
+    padding-top: 30px;
+}
+
+.explorer-intro p {
+    margin: 0 0 18px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .22em;
+
+    opacity: .5;
+}
+
+.explorer-intro h2 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(55px, 6vw, 90px);
+
+    font-weight: 400;
+
+    line-height: .88;
+
+    letter-spacing: -.065em;
+}
+
+.explorer-intro h2 span {
+    display: block;
+
+    margin-left: 5vw;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   LIST
+===================================================== */
+
+.explorer-list {
+    width: 100%;
+
+    align-self: center;
+}
+
+.explorer-item {
+    width: 100%;
+
+    min-height: 68px;
+
+    padding: 14px 0;
+
+    border: 0;
+
+    border-top: 1px solid rgba(255,255,255,.18);
+
+    background: transparent;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    display: grid;
+
+    grid-template-columns: 45px 1fr 35px;
+
+    align-items: center;
+
+    text-align: left;
+
+    transition:
+        opacity .4s ease,
+        padding-left .4s ease;
+}
+
+.explorer-item:last-child {
+    border-bottom: 1px solid rgba(255,255,255,.18);
+}
+
+.explorer-number {
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .15em;
+
+    opacity: .4;
+}
+
+.explorer-name {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    letter-spacing: -.02em;
+}
+
+.explorer-arrow {
+    font-size: 17px;
+
+    opacity: .35;
+
+    text-align: right;
+
+    transition: transform .4s ease;
+}
+
+
+/* =====================================================
+   ACTIVE / HOVER
+===================================================== */
+
+.explorer-item:hover {
+    padding-left: 12px;
+}
+
+.explorer-item:hover .explorer-arrow {
+    transform: translate(5px, -5px);
+
+    opacity: 1;
+}
+
+.explorer-item.active {
+    padding-left: 12px;
+}
+
+.explorer-item.active .explorer-number {
+    opacity: .9;
+}
+
+.explorer-item.active .explorer-arrow {
+    transform: translate(5px, -5px);
+
+    opacity: 1;
+}
+
+
+/* =====================================================
+   DETAIL PANEL
+===================================================== */
+
+.explorer-detail {
+    position: absolute;
+
+    left: 8%;
+    bottom: 75px;
+
+    width: 330px;
+
+    padding: 25px 28px;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    background: rgba(22,11,39,.18);
+
+    backdrop-filter: blur(10px);
+}
+
+.detail-label {
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .2em;
+
+    opacity: .45;
+}
+
+.detail-number {
+    margin-top: 28px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .15em;
+
+    opacity: .5;
+}
+
+.explorer-detail h3 {
+    margin: 10px 0 18px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -.04em;
+}
+
+.explorer-detail p {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+
+    opacity: .6;
+}
+
+.detail-meta {
+    margin-top: 25px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 5px;
+
+    letter-spacing: .15em;
+
+    opacity: .4;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .service-explorer {
+
+        min-height: auto;
+
+        padding: 105px 24px 60px;
+
+        display: block;
+    }
+
+
+    .explorer-header {
+
+        top: 32px;
+        left: 24px;
+
+        font-size: 7px;
+    }
+
+
+    .explorer-intro {
+
+        padding-top: 0;
+
+        margin-bottom: 55px;
+    }
+
+    .explorer-intro p {
+
+        font-size: 7px;
+    }
+
+    .explorer-intro h2 {
+
+        font-size: clamp(45px, 13vw, 65px);
+    }
+
+    .explorer-intro h2 span {
+
+        margin-left: 8vw;
+    }
+
+
+    /* List */
+
+    .explorer-list {
+
+        width: 100%;
+    }
+
+    .explorer-item {
+
+        min-height: 78px;
+
+        grid-template-columns: 38px 1fr 25px;
+
+        padding: 15px 0;
+    }
+
+    .explorer-name {
+
+        font-size: 12px;
+
+        padding-right: 15px;
+    }
+
+
+    /* Detail moves below list */
+
+    .explorer-detail {
+
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        width: 100%;
+
+        margin-top: 45px;
+
+        padding: 24px;
+    }
+
+    .explorer-detail h3 {
+
+        font-size: 22px;
+    }
+
+    .explorer-detail p {
+
+        font-size: 8px;
+    }
+}
