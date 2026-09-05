@@ -1754,3 +1754,120 @@
     }
 
 }
+/* =========================================================
+   FINAL FIX — LOCATION CARD POSITION
+   IMPORTANT: KEEP THIS AT THE VERY END OF contact.css
+========================================================= */
+
+.contact-location .location-left {
+    position: absolute !important;
+    left: 8% !important;
+    top: 18% !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 39% !important;
+}
+
+.contact-location .location-card {
+    position: relative !important;
+
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+
+    width: 410px !important;
+    max-width: 100% !important;
+
+    margin-top: 50px !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   RIGHT MAP
+========================================================= */
+
+.contact-location .location-map {
+    position: absolute !important;
+
+    right: 7% !important;
+    left: auto !important;
+    top: 18% !important;
+    bottom: auto !important;
+
+    width: 43% !important;
+    height: 65% !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1101px) {
+
+    .contact-location .location-left {
+        left: 8% !important;
+        top: 18% !important;
+        width: 39% !important;
+    }
+
+    .contact-location .location-card {
+        margin-top: 50px !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .contact-location .location-left {
+        position: relative !important;
+
+        left: auto !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: 100% !important;
+    }
+
+    .contact-location .location-card {
+        position: relative !important;
+
+        left: auto !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin-top: 45px !important;
+
+        transform: none !important;
+    }
+
+    .contact-location .location-map {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        width: 100% !important;
+        height: 390px !important;
+
+        margin-top: 35px !important;
+    }
+
+}
