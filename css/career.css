@@ -2163,8 +2163,8 @@ body {
 
 
 /* =========================================
-   CAREER — SECTION 05
-   THE NEXT LEVEL
+   SECTION 05 — THE NEXT LEVEL
+   OVERLAP FIX
 ========================================= */
 
 .career-growth {
@@ -2176,32 +2176,19 @@ body {
     color: #fff;
 }
 
-/* TOP LABEL */
-
-.growth-top {
-    position: absolute;
-    top: 38px;
-    left: 55px;
-
-    display: flex;
-    gap: 15px;
-
-    font-family: "Inter", sans-serif;
-    font-size: 8px;
-    letter-spacing: .2em;
-}
-
-.growth-top span:first-child {
-    opacity: .4;
-}
-
-/* HEADING */
+/* -------------------------
+   HEADING
+------------------------- */
 
 .growth-heading {
     position: absolute;
     left: 8%;
     top: 18%;
     z-index: 5;
+
+    /* IMPORTANT */
+    width: 52%;
+    max-width: 760px;
 }
 
 .growth-heading p {
@@ -2217,7 +2204,7 @@ body {
     margin: 0;
 
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(60px, 7vw, 105px);
+    font-size: clamp(58px, 6.4vw, 100px);
     font-weight: 400;
     line-height: .86;
     letter-spacing: -.07em;
@@ -2225,24 +2212,34 @@ body {
 
 .growth-heading h2 span {
     display: block;
-    margin-left: 5vw;
+
+    /* reduced from 5vw */
+    margin-left: 4vw;
+
     font-weight: 500;
 }
 
-/* CONSTRUCTION */
+
+/* -------------------------
+   CONSTRUCTION STRUCTURE
+------------------------- */
 
 .growth-structure {
     position: absolute;
 
-    right: 12%;
-    bottom: 14%;
+    /* move structure slightly right */
+    right: 4.5%;
+    bottom: 12%;
 
-    width: min(480px, 38vw);
+    width: min(430px, 31vw);
     height: 58%;
 
     border-left: 1px solid rgba(255,255,255,.08);
     border-right: 1px solid rgba(255,255,255,.08);
+
+    z-index: 2;
 }
+
 
 /* COLUMNS */
 
@@ -2263,6 +2260,7 @@ body {
 .column-right {
     right: 0;
 }
+
 
 /* FLOORS */
 
@@ -2313,6 +2311,7 @@ body {
     bottom: 74%;
 }
 
+
 /* ROOF */
 
 .growth-roof {
@@ -2325,14 +2324,11 @@ body {
     height: 1px;
 
     background: rgba(255,255,255,.6);
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 }
 
 .growth-roof span {
     position: absolute;
+
     top: -20px;
     right: 0;
 
@@ -2342,7 +2338,10 @@ body {
     opacity: .4;
 }
 
-/* COPY */
+
+/* -------------------------
+   DESCRIPTION
+------------------------- */
 
 .growth-copy {
     position: absolute;
@@ -2351,6 +2350,8 @@ body {
     bottom: 17%;
 
     width: 280px;
+
+    z-index: 5;
 }
 
 .growth-copy p {
@@ -2369,7 +2370,10 @@ body {
     opacity: .35;
 }
 
-/* BOTTOM */
+
+/* -------------------------
+   BOTTOM
+------------------------- */
 
 .growth-bottom {
     position: absolute;
@@ -2390,30 +2394,55 @@ body {
     letter-spacing: .18em;
 
     opacity: .4;
-}
 
+    z-index: 10;
+}
+@media (min-width: 1101px) {
+
+    .growth-heading {
+        width: 48%;
+        max-width: 700px;
+    }
+
+    .growth-heading h2 {
+        font-size: clamp(58px, 6vw, 96px);
+    }
+
+    .growth-heading h2 span {
+        margin-left: 3.5vw;
+    }
+
+    .growth-structure {
+        right: 4%;
+        width: min(410px, 29vw);
+    }
+
+}
 @media (max-width: 700px) {
 
     .career-growth {
-        min-height: 100svh;
+        min-height: auto;
         padding: 110px 24px 80px;
     }
 
     .growth-top {
+        position: absolute;
         top: 32px;
         left: 24px;
+
         font-size: 7px;
     }
 
     .growth-heading {
         position: relative;
+
         left: auto;
         top: auto;
 
         width: 100%;
-        margin: 0;
+        max-width: 100%;
 
-        z-index: 5;
+        margin: 0;
     }
 
     .growth-heading p {
@@ -2422,6 +2451,7 @@ body {
     }
 
     .growth-heading h2 {
+        width: 100%;
         font-size: clamp(45px, 13vw, 65px);
         line-height: .88;
     }
@@ -2433,25 +2463,19 @@ body {
     .growth-structure {
         position: relative;
 
+        left: auto;
         right: auto;
+        top: auto;
         bottom: auto;
 
         width: 78%;
+        max-width: 360px;
         height: 330px;
 
         margin: 65px auto 0;
-    }
 
-    .growth-floor {
-        padding: 0 12px;
-    }
-
-    .growth-floor span {
-        font-size: 6px;
-    }
-
-    .growth-floor strong {
-        font-size: 5px;
+        border-left: 1px solid rgba(255,255,255,.08);
+        border-right: 1px solid rgba(255,255,255,.08);
     }
 
     .growth-copy {
