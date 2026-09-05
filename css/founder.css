@@ -2261,3 +2261,525 @@
     }
 
 }
+
+/* =========================================================
+   FOUNDER — SECTION 06 / THE NEXT CHAPTER
+========================================================= */
+
+.founder-next {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 110px 7vw 70px;
+
+    background: #160b27;
+    color: #fff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.next-top {
+    position: relative;
+    z-index: 10;
+
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+
+    align-items: center;
+    gap: 20px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid rgba(255,255,255,.15);
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 9px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.next-top span:first-child {
+    opacity: .4;
+}
+
+.next-top span:nth-child(2) {
+    opacity: .65;
+}
+
+.next-top span:last-child {
+    opacity: .4;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.next-content {
+    position: relative;
+    z-index: 5;
+
+    max-width: 850px;
+
+    padding-top: 110px;
+}
+
+
+.next-kicker {
+    margin: 0 0 30px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 9px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+
+    opacity: .45;
+}
+
+
+.next-content h2 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(65px, 9vw, 140px);
+    font-weight: 400;
+
+    line-height: .84;
+    letter-spacing: -.075em;
+}
+
+.next-content h2 span {
+    display: block;
+
+    margin-left: 100px;
+
+    color: rgba(255,255,255,.35);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.next-description {
+    max-width: 500px;
+
+    margin: 55px 0 0 105px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: rgba(255,255,255,.58);
+}
+
+
+/* =========================================================
+   FOUNDER SIGNATURE
+========================================================= */
+
+.next-founder {
+    display: flex;
+    flex-direction: column;
+
+    margin: 55px 0 0 105px;
+
+    padding-left: 20px;
+
+    border-left: 1px solid rgba(255,255,255,.25);
+}
+
+.next-founder span {
+    margin-bottom: 10px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 8px;
+    letter-spacing: .18em;
+
+    opacity: .4;
+}
+
+.next-founder strong {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: .04em;
+}
+
+.next-founder small {
+    margin-top: 7px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 8px;
+    letter-spacing: .15em;
+
+    opacity: .4;
+}
+
+
+/* =========================================================
+   ARCHITECTURAL MARK
+========================================================= */
+
+.next-mark {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -80px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 1;
+
+    opacity: .13;
+
+    pointer-events: none;
+}
+
+.next-mark-ring {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    border: 1px solid #fff;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.ring-a {
+    width: 360px;
+    height: 360px;
+}
+
+.ring-b {
+    width: 590px;
+    height: 590px;
+}
+
+
+.next-mark-core {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 105px;
+    height: 105px;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.7);
+    border-radius: 50%;
+
+    background: #160b27;
+}
+
+.next-mark-core span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+
+    letter-spacing: -.04em;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.next-actions {
+    position: absolute;
+
+    right: 7vw;
+    bottom: 145px;
+
+    z-index: 10;
+
+    width: min(430px, 35vw);
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.next-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(255,255,255,.2);
+
+    color: #fff;
+    text-decoration: none;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 9px;
+    letter-spacing: .15em;
+
+    transition:
+        padding-left .4s ease,
+        opacity .4s ease;
+}
+
+.next-action:last-child {
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+.next-action:hover {
+    padding-left: 15px;
+}
+
+.next-action b {
+    font-size: 16px;
+    font-weight: 300;
+
+    transition: transform .4s ease;
+}
+
+.next-action:hover b {
+    transform: translate(5px, -5px);
+}
+
+.next-action-primary {
+    color: #fff;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.next-bottom {
+    position: absolute;
+
+    left: 7vw;
+    right: 7vw;
+    bottom: 65px;
+
+    z-index: 10;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+
+    align-items: center;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 8px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+
+    opacity: .42;
+}
+
+.next-bottom span:nth-child(2) {
+    text-align: center;
+}
+
+.next-bottom span:last-child {
+    text-align: right;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .founder-next {
+        padding: 85px 6vw 60px;
+
+        min-height: 900px;
+    }
+
+    .next-content {
+        padding-top: 80px;
+    }
+
+    .next-content h2 {
+        font-size: clamp(60px, 10vw, 100px);
+    }
+
+    .next-description {
+        margin-left: 70px;
+    }
+
+    .next-founder {
+        margin-left: 70px;
+    }
+
+    .next-mark {
+        right: -170px;
+        top: 48%;
+    }
+
+    .next-actions {
+        left: 70px;
+        right: auto;
+        bottom: 145px;
+
+        width: min(430px, 65vw);
+    }
+
+    .next-bottom {
+        left: 6vw;
+        right: 6vw;
+
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+    }
+
+    .next-bottom span:nth-child(2) {
+        text-align: right;
+    }
+
+    .next-bottom span:last-child {
+        grid-column: 1 / -1;
+        text-align: left;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .founder-next {
+        min-height: 900px;
+
+        padding: 70px 22px 45px;
+    }
+
+    .next-top {
+        grid-template-columns: 30px 1fr auto;
+
+        gap: 12px;
+
+        padding-bottom: 18px;
+
+        font-size: 8px;
+    }
+
+    .next-content {
+        padding-top: 75px;
+    }
+
+    .next-kicker {
+        font-size: 8px;
+        margin-bottom: 24px;
+    }
+
+    .next-content h2 {
+        font-size: clamp(50px, 14vw, 74px);
+        line-height: .88;
+    }
+
+    .next-content h2 span {
+        margin-left: 28px;
+    }
+
+    .next-description {
+        margin: 40px 0 0 28px;
+
+        max-width: 300px;
+
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .next-founder {
+        margin: 40px 0 0 28px;
+    }
+
+    .next-founder strong {
+        font-size: 13px;
+    }
+
+    .next-mark {
+        width: 430px;
+        height: 430px;
+
+        right: -210px;
+        top: 45%;
+
+        opacity: .1;
+    }
+
+    .ring-a {
+        width: 260px;
+        height: 260px;
+    }
+
+    .ring-b {
+        width: 420px;
+        height: 420px;
+    }
+
+    .next-mark-core {
+        width: 80px;
+        height: 80px;
+    }
+
+    .next-mark-core span {
+        font-size: 17px;
+    }
+
+    .next-actions {
+        left: 22px;
+        right: 22px;
+        bottom: 145px;
+
+        width: auto;
+    }
+
+    .next-action {
+        padding: 18px 0;
+
+        font-size: 8px;
+    }
+
+    .next-bottom {
+        left: 22px;
+        right: 22px;
+        bottom: 35px;
+
+        grid-template-columns: 1fr 1fr;
+
+        font-size: 7px;
+    }
+
+    .next-bottom span:nth-child(2) {
+        display: none;
+    }
+
+    .next-bottom span:last-child {
+        grid-column: 2;
+        text-align: right;
+    }
+
+}
