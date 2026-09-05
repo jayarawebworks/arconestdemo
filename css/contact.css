@@ -929,3 +929,828 @@
     }
 
 }
+
+/* =========================================================
+   CONTACT — SECTION 02 / OUR LOCATION
+========================================================= */
+
+.contact-location {
+
+    position: relative;
+
+    width: 100%;
+    min-height: 100svh;
+
+    overflow: hidden;
+
+    background: #32145f;
+    color: #fff;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.location-top {
+
+    position: absolute;
+
+    top: 105px;
+    left: 55px;
+
+    z-index: 20;
+
+    display: flex;
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+    letter-spacing: .2em;
+
+}
+
+.location-top span:first-child {
+    opacity: .4;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.location-left {
+
+    position: absolute;
+
+    left: 8%;
+    top: 18%;
+
+    width: 39%;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.location-title {
+
+    width: 100%;
+
+}
+
+.location-title p {
+
+    margin: 0 0 20px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .22em;
+
+    opacity: .45;
+
+}
+
+
+.location-title h2 {
+
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(65px, 7.5vw, 110px);
+
+    font-weight: 400;
+
+    line-height: .82;
+
+    letter-spacing: -.075em;
+
+}
+
+
+.location-title h2 span {
+
+    display: block;
+
+    margin-left: 4vw;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================================
+   ADDRESS CARD
+========================================================= */
+
+.location-card {
+
+    width: 410px;
+
+    max-width: 100%;
+
+    margin-top: 55px;
+
+    padding: 27px;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    background: rgba(255,255,255,.035);
+
+    box-sizing: border-box;
+
+}
+
+
+/* Card Header */
+
+.location-card-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid rgba(255,255,255,.15);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .18em;
+
+    opacity: .45;
+
+}
+
+
+/* Address */
+
+.location-address {
+
+    margin-top: 27px;
+
+}
+
+.location-address p {
+
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.3;
+
+    letter-spacing: -.025em;
+
+}
+
+
+/* =========================================================
+   PHONE / EMAIL
+========================================================= */
+
+.location-links {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+
+.location-links a {
+
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    transition: opacity .3s ease;
+
+}
+
+
+.location-links a:hover {
+    opacity: .55;
+}
+
+
+.location-links span {
+
+    font-size: 6px;
+
+    letter-spacing: .16em;
+
+    opacity: .4;
+
+}
+
+
+.location-links strong {
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================================
+   MAP BUTTON INSIDE CARD
+========================================================= */
+
+.location-map-button {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 28px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .18em;
+
+}
+
+
+.location-map-button b {
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    transition: transform .3s ease;
+
+}
+
+
+.location-map-button:hover b {
+
+    transform: translate(5px,-5px);
+
+}
+
+
+/* =========================================================
+   RIGHT SIDE MAP
+========================================================= */
+
+.location-map {
+
+    position: absolute;
+
+    right: 7%;
+    top: 18%;
+
+    width: 43%;
+    height: 65%;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    background: #eee;
+
+    z-index: 4;
+
+}
+
+
+/* Google Map */
+
+.location-map iframe {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+
+    filter: grayscale(100%) contrast(.85);
+
+}
+
+
+/* Slight purple tint */
+
+.map-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background: rgba(50,20,95,.10);
+
+}
+
+
+/* =========================================================
+   MAP LABEL
+========================================================= */
+
+.map-label {
+
+    position: absolute;
+
+    top: 18px;
+    left: 20px;
+    right: 20px;
+
+    z-index: 10;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    pointer-events: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .18em;
+
+    color: #32145f;
+
+}
+
+
+.map-label span {
+
+    padding: 8px 10px;
+
+    background: rgba(255,255,255,.88);
+
+}
+
+
+/* =========================================================
+   MAP LOCATION POINT
+========================================================= */
+
+.map-location-point {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%,-50%);
+
+    z-index: 10;
+
+    width: 20px;
+    height: 20px;
+
+    pointer-events: none;
+
+}
+
+
+/* Main point */
+
+.map-location-point::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 12px;
+    height: 12px;
+
+    transform: translate(-50%,-50%);
+
+    border-radius: 50%;
+
+    background: #32145f;
+
+    border: 3px solid #fff;
+
+    box-shadow: 0 2px 12px rgba(0,0,0,.35);
+
+}
+
+
+/* Pulse */
+
+.map-pulse {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 45px;
+    height: 45px;
+
+    transform: translate(-50%,-50%);
+
+    border: 1px solid #32145f;
+
+    border-radius: 50%;
+
+    animation: mapPulse 2.2s ease-out infinite;
+
+}
+
+
+@keyframes mapPulse {
+
+    0% {
+        transform: translate(-50%,-50%) scale(.5);
+        opacity: .7;
+    }
+
+    100% {
+        transform: translate(-50%,-50%) scale(2);
+        opacity: 0;
+    }
+
+}
+
+
+/* Label beside marker */
+
+.map-location-point span {
+
+    position: absolute;
+
+    left: 24px;
+    top: 2px;
+
+    white-space: nowrap;
+
+    padding: 6px 8px;
+
+    background: #32145f;
+
+    color: #fff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .14em;
+
+}
+
+
+/* =========================================================
+   MAP OPEN BUTTON
+========================================================= */
+
+.map-open-button {
+
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 14px 17px;
+
+    background: #32145f;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .18em;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+
+}
+
+
+.map-open-button b {
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    transition: transform .3s ease;
+
+}
+
+
+.map-open-button:hover {
+
+    background: #fff;
+
+    color: #32145f;
+
+    transform: translateY(-3px);
+
+}
+
+
+.map-open-button:hover b {
+
+    transform: translate(4px,-4px);
+
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.location-bottom {
+
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+
+    bottom: 30px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .18em;
+
+    opacity: .4;
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 1101px) {
+
+    .location-left {
+
+        top: 18%;
+
+    }
+
+    .location-card {
+
+        margin-top: 50px;
+
+    }
+
+    .location-map {
+
+        top: 18%;
+
+        width: 43%;
+
+        height: 65%;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .contact-location {
+
+        min-height: auto;
+
+        padding: 115px 20px 70px;
+
+        overflow: hidden;
+
+    }
+
+
+    /* Section label */
+
+    .location-top {
+
+        top: 105px;
+        left: 20px;
+
+        font-size: 7px;
+
+        gap: 12px;
+
+    }
+
+
+    /* Left content */
+
+    .location-left {
+
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        width: 100%;
+
+        margin-top: 25px;
+
+    }
+
+
+    /* Heading */
+
+    .location-title p {
+
+        font-size: 7px;
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .location-title h2 {
+
+        font-size: clamp(50px, 14vw, 70px);
+
+        line-height: .86;
+
+    }
+
+
+    .location-title h2 span {
+
+        margin-left: 0;
+
+    }
+
+
+    /* Address card */
+
+    .location-card {
+
+        width: 100%;
+
+        margin-top: 45px;
+
+        padding: 22px;
+
+    }
+
+
+    .location-address p {
+
+        font-size: 18px;
+
+        line-height: 1.3;
+
+    }
+
+
+    .location-links a {
+
+        grid-template-columns: 55px 1fr;
+
+        font-size: 8px;
+
+    }
+
+
+    /* =====================================================
+       MAP
+    ===================================================== */
+
+    .location-map {
+
+        position: relative;
+
+        right: auto;
+        top: auto;
+
+        width: 100%;
+
+        height: 390px;
+
+        margin-top: 35px;
+
+    }
+
+
+    .map-label {
+
+        top: 12px;
+        left: 12px;
+        right: 12px;
+
+        font-size: 5px;
+
+    }
+
+
+    .map-open-button {
+
+        right: 12px;
+        bottom: 12px;
+
+        padding: 13px 15px;
+
+        font-size: 5px;
+
+    }
+
+
+    .map-location-point span {
+
+        font-size: 5px;
+
+    }
+
+
+    /* Bottom */
+
+    .location-bottom {
+
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        width: 100%;
+
+        margin-top: 40px;
+
+        font-size: 5px;
+
+    }
+
+
+    .location-bottom span:nth-child(2) {
+
+        display: none;
+
+    }
+
+}
