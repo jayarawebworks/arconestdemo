@@ -391,124 +391,341 @@
 
 </section>
 
-        <!-- =====================================================
-     CAREER — 03. OPEN POSITIONS
+      <!-- =====================================================
+     CAREER — 04. APPLICATION
 ===================================================== -->
 
-<section class="career-positions" id="open-positions">
+<section class="career-application" id="career-application">
 
-    <div class="positions-top">
-        <span>03</span>
-        <span>OPEN POSITIONS</span>
+    <div class="application-top">
+        <span>04</span>
+        <span>APPLICATION</span>
     </div>
 
-    <div class="positions-intro">
-        <p>JOIN THE TEAM</p>
+    <div class="application-heading">
+        <p>TAKE THE NEXT STEP</p>
 
         <h2>
-            Find where
-            <span>you fit in.</span>
+            Build your
+            <span>next chapter.</span>
         </h2>
     </div>
 
-    <div class="positions-layout">
 
-        <!-- LEFT : POSITIONS -->
+    <form class="career-form" id="careerForm">
 
-        <div class="positions-list">
+        <!-- POSITION -->
 
-            <button class="position-item active" data-position="interns">
-                <span class="position-number">01</span>
-                <strong>Interns</strong>
-                <i>↗</i>
-            </button>
+        <div class="form-position">
 
-            <button class="position-item" data-position="designer">
-                <span class="position-number">02</span>
-                <strong>Junior Interior Designer</strong>
-                <i>↗</i>
-            </button>
-
-            <button class="position-item" data-position="architect">
-                <span class="position-number">03</span>
-                <strong>Junior Architect</strong>
-                <i>↗</i>
-            </button>
-
-            <button class="position-item" data-position="admin">
-                <span class="position-number">04</span>
-                <strong>Admin / Accountant</strong>
-                <i>↗</i>
-            </button>
-
-            <button class="position-item" data-position="social">
-                <span class="position-number">05</span>
-                <strong>Social Media Manager</strong>
-                <i>↗</i>
-            </button>
-
-            <button class="position-item" data-position="landscape">
-                <span class="position-number">06</span>
-                <strong>Landscape Designer / Architect</strong>
-                <i>↗</i>
-            </button>
-
-            <button class="position-item" data-position="structural">
-                <span class="position-number">07</span>
-                <strong>Structural Engineer</strong>
-                <i>↗</i>
-            </button>
-
-            <button class="position-item" data-position="project">
-                <span class="position-number">08</span>
-                <strong>Project Manager</strong>
-                <i>↗</i>
-            </button>
-
-        </div>
-
-
-        <!-- RIGHT : DETAILS -->
-
-        <div class="position-detail">
-
-            <div class="position-detail-top">
-                <span id="position-detail-number">01</span>
-                <span>ARCONEST · CAREERS</span>
+            <div>
+                <span class="form-label">POSITION</span>
+                <span class="form-small">
+                    SELECTED FROM OPEN POSITIONS
+                </span>
             </div>
 
-            <div class="position-detail-main">
+            <select id="applicationPosition"
+                    name="position"
+                    required>
 
-                <p id="position-detail-label">OPPORTUNITY</p>
+                <option value="">Select a position</option>
 
-                <h3 id="position-detail-title">
+                <option value="Interns">
                     Interns
-                </h3>
+                </option>
 
-                <p id="position-detail-description">
-                    Begin your professional journey by gaining
-                    practical exposure to construction consulting,
-                    project management and technical processes.
-                </p>
+                <option value="Junior Interior Designer">
+                    Junior Interior Designer
+                </option>
 
+                <option value="Junior Architect">
+                    Junior Architect
+                </option>
+
+                <option value="Admin / Accountant">
+                    Admin / Accountant
+                </option>
+
+                <option value="Social Media Manager">
+                    Social Media Manager
+                </option>
+
+                <option value="Landscape Designer / Architect">
+                    Landscape Designer / Architect
+                </option>
+
+                <option value="Structural Engineer">
+                    Structural Engineer
+                </option>
+
+                <option value="Project Manager">
+                    Project Manager
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- PERSONAL DETAILS -->
+
+        <div class="form-group">
+
+            <div class="form-group-title">
+                <span>01</span>
+                <strong>YOUR DETAILS</strong>
             </div>
 
-            <div class="position-detail-bottom">
-                <span>POSITION</span>
-                <span id="position-detail-role">INTERNS</span>
+
+            <div class="form-grid">
+
+                <div class="form-field">
+                    <label for="fullName">
+                        FULL NAME
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Your full name"
+                        required>
+                </div>
+
+
+                <div class="form-field">
+                    <label for="email">
+                        EMAIL ADDRESS
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required>
+                </div>
+
+
+                <div class="form-field">
+                    <label for="phone">
+                        PHONE NUMBER
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+91"
+                        required>
+                </div>
+
+
+                <div class="form-field">
+                    <label for="city">
+                        CURRENT CITY
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        placeholder="Pune"
+                        required>
+                </div>
+
             </div>
 
         </div>
 
-    </div>
 
-    <div class="positions-bottom">
-        <span>EXPLORE · LEARN · CONTRIBUTE</span>
+        <!-- PROFESSIONAL DETAILS -->
+
+        <div class="form-group">
+
+            <div class="form-group-title">
+                <span>02</span>
+                <strong>PROFESSIONAL DETAILS</strong>
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-field">
+
+                    <label for="qualification">
+                        HIGHEST QUALIFICATION
+                    </label>
+
+                    <input
+                        type="text"
+                        id="qualification"
+                        name="qualification"
+                        placeholder="B.Arch / B.E. / Diploma etc."
+                        required>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="experience">
+                        EXPERIENCE
+                    </label>
+
+                    <select
+                        id="experience"
+                        name="experience"
+                        required>
+
+                        <option value="">
+                            Select
+                        </option>
+
+                        <option value="Fresher">
+                            Fresher
+                        </option>
+
+                        <option value="0-2 Years">
+                            0–2 Years
+                        </option>
+
+                        <option value="2-5 Years">
+                            2–5 Years
+                        </option>
+
+                        <option value="5+ Years">
+                            5+ Years
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="linkedin">
+                        LINKEDIN PROFILE
+                        <span>OPTIONAL</span>
+                    </label>
+
+                    <input
+                        type="url"
+                        id="linkedin"
+                        name="linkedin"
+                        placeholder="https://linkedin.com/in/...">
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="portfolio">
+                        PORTFOLIO / WEBSITE
+                        <span>OPTIONAL</span>
+                    </label>
+
+                    <input
+                        type="url"
+                        id="portfolio"
+                        name="portfolio"
+                        placeholder="https://...">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESUME -->
+
+        <div class="form-group">
+
+            <div class="form-group-title">
+                <span>03</span>
+                <strong>YOUR RESUME</strong>
+            </div>
+
+
+            <label class="resume-upload">
+
+                <input
+                    type="file"
+                    id="resume"
+                    name="resume"
+                    accept=".pdf,.doc,.docx"
+                    required>
+
+                <span class="upload-symbol">+</span>
+
+                <span class="upload-main">
+                    Upload your resume
+                </span>
+
+                <span class="upload-sub">
+                    PDF · DOC · DOCX
+                </span>
+
+            </label>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="form-group">
+
+            <div class="form-group-title">
+                <span>04</span>
+                <strong>MESSAGE</strong>
+            </div>
+
+
+            <div class="form-field form-message">
+
+                <label for="message">
+                    TELL US A LITTLE ABOUT YOURSELF
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Your message..."></textarea>
+
+            </div>
+
+        </div>
+
+
+        <!-- SUBMIT -->
+
+        <div class="form-submit">
+
+            <p>
+                By submitting this form, you confirm
+                that the information provided is accurate.
+            </p>
+
+            <button type="submit">
+                SUBMIT APPLICATION
+                <span>↗</span>
+            </button>
+
+        </div>
+
+    </form>
+
+
+    <div class="application-bottom">
         <span>ARCONEST CONSULTANTS LLP</span>
+        <span>PUNE · INDIA</span>
     </div>
 
 </section>
-
 
       
       
