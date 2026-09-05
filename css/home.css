@@ -1,4 +1,24 @@
+/* REMOVE ONLY THE OUTER BORDER / FRAME FROM HOME PAGE */
+
+html,
+body {
+    border: none !important;
+    outline: none !important;
+}
+
+body {
+    box-shadow: none !important;
+}
+
+.home-page,
+.home-page::before,
+.home-page::after {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
 /* =====================================================
+
    ARCONEST CONSULTANTS
    HERO SECTION
 ===================================================== */
