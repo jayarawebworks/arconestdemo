@@ -1506,3 +1506,487 @@ body {
         font-size: 8px;
     }
 }
+
+/* =====================================================
+   SERVICES — 03. HOW WE WORK
+===================================================== */
+
+.how-we-work {
+    position: relative;
+
+    width: 100%;
+    min-height: 100svh;
+
+    overflow: hidden;
+
+    background: #160b27;
+    color: #fff;
+
+    padding: 120px 8% 80px;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.how-work-label {
+    position: absolute;
+
+    top: 38px;
+    left: 55px;
+
+    display: flex;
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .2em;
+}
+
+.how-work-label span:first-child {
+    opacity: .4;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.how-work-heading {
+    width: min(1200px, 84%);
+
+    margin: 0 auto;
+}
+
+.how-work-heading p {
+    margin: 0 0 18px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .22em;
+
+    opacity: .5;
+}
+
+.how-work-heading h2 {
+    margin: 0;
+
+    max-width: 850px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(55px, 6.5vw, 92px);
+
+    font-weight: 400;
+
+    line-height: .88;
+
+    letter-spacing: -.065em;
+}
+
+.how-work-heading h2 span {
+    display: block;
+
+    margin-left: 8vw;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   PROCESS WRAPPER
+===================================================== */
+
+.process-wrapper {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 1250px;
+
+    height: 390px;
+
+    margin: 45px auto 0;
+}
+
+
+/* =====================================================
+   FLOWING PATH
+===================================================== */
+
+.process-path {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+}
+
+.process-path path {
+
+    fill: none;
+
+    stroke: rgba(255,255,255,.25);
+
+    stroke-width: 1;
+
+    stroke-dasharray: 5 8;
+}
+
+
+/* =====================================================
+   PROCESS STEP
+===================================================== */
+
+.process-step {
+
+    position: absolute;
+
+    width: 180px;
+
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+
+    transition: transform .5s ease;
+}
+
+
+/* positions */
+
+.step-01 {
+    left: 4%;
+    top: 70%;
+}
+
+.step-02 {
+    left: 25%;
+    top: 24%;
+}
+
+.step-03 {
+    left: 48%;
+    top: 70%;
+}
+
+.step-04 {
+    left: 70%;
+    top: 24%;
+}
+
+.step-05 {
+    left: 96%;
+    top: 40%;
+}
+
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.step-number {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .18em;
+
+    opacity: .35;
+}
+
+
+/* =====================================================
+   DOT
+===================================================== */
+
+.step-dot {
+
+    width: 10px;
+    height: 10px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    box-shadow:
+        0 0 0 5px rgba(255,255,255,.08);
+
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.step-content h3 {
+
+    margin: 0 0 10px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -.04em;
+}
+
+.step-content p {
+
+    margin: 0;
+
+    max-width: 175px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    line-height: 1.65;
+
+    opacity: .45;
+
+    transition: opacity .4s ease;
+}
+
+
+/* =====================================================
+   ACTIVE
+===================================================== */
+
+.process-step.active {
+
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+.process-step.active .step-dot {
+
+    transform: scale(1.5);
+
+    box-shadow:
+        0 0 0 7px rgba(255,255,255,.08),
+        0 0 30px rgba(255,255,255,.15);
+}
+
+.process-step.active .step-content p {
+
+    opacity: .75;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.process-step:hover {
+
+    transform: translate(-50%, -50%) scale(1.06);
+}
+
+.process-step:hover .step-dot {
+
+    transform: scale(1.4);
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.process-bottom {
+
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+    bottom: 32px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .18em;
+
+    opacity: .4;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .how-we-work {
+
+        min-height: auto;
+
+        padding: 105px 24px 70px;
+    }
+
+
+    .how-work-label {
+
+        top: 32px;
+        left: 24px;
+
+        font-size: 7px;
+    }
+
+
+    .how-work-heading {
+
+        width: 100%;
+    }
+
+    .how-work-heading p {
+
+        font-size: 7px;
+    }
+
+    .how-work-heading h2 {
+
+        font-size: clamp(43px, 13vw, 64px);
+
+        line-height: .9;
+    }
+
+    .how-work-heading h2 span {
+
+        margin-left: 7vw;
+    }
+
+
+    /* Turn path vertical */
+
+    .process-wrapper {
+
+        height: auto;
+
+        margin-top: 60px;
+
+        padding-left: 20px;
+    }
+
+
+    .process-path {
+
+        display: none;
+    }
+
+
+    .process-step {
+
+        position: relative;
+
+        width: 100%;
+
+        left: auto !important;
+        top: auto !important;
+
+        transform: none !important;
+
+        padding: 0 0 55px 35px;
+
+        margin: 0;
+    }
+
+
+    .process-step::before {
+
+        content: "";
+
+        position: absolute;
+
+        left: 4px;
+        top: 15px;
+        bottom: -5px;
+
+        width: 1px;
+
+        background: rgba(255,255,255,.18);
+    }
+
+
+    .process-step:last-child::before {
+
+        display: none;
+    }
+
+
+    .step-dot {
+
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        width: 9px;
+        height: 9px;
+
+        margin: 0;
+    }
+
+
+    .step-number {
+
+        margin-bottom: 12px;
+    }
+
+
+    .step-content h3 {
+
+        font-size: 24px;
+    }
+
+
+    .step-content p {
+
+        max-width: 280px;
+
+        font-size: 8px;
+    }
+
+
+    .process-bottom {
+
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        margin-top: 15px;
+
+        font-size: 5px;
+    }
+
+}
