@@ -490,3 +490,37 @@ if (positionItems.length) {
     });
 
 }
+
+/* =====================================================
+   CAREER — APPLICATION POSITION
+===================================================== */
+
+const applicationPosition =
+    document.getElementById("applicationPosition");
+
+if (applicationPosition) {
+
+    const params =
+        new URLSearchParams(window.location.search);
+
+    const selectedPosition =
+        params.get("position");
+
+    if (selectedPosition) {
+
+        const decodedPosition =
+            decodeURIComponent(selectedPosition);
+
+        const option =
+            Array.from(applicationPosition.options)
+                .find(
+                    option =>
+                    option.value.toLowerCase() ===
+                    decodedPosition.toLowerCase()
+                );
+
+        if (option) {
+            applicationPosition.value = option.value;
+        }
+    }
+}
