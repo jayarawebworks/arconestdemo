@@ -294,3 +294,74 @@ document.querySelectorAll(".explorer-item").forEach(item => {
     });
 
 });
+
+// =====================================================
+// SERVICES — WHO WE SERVE
+// =====================================================
+
+const serveData = {
+
+    contractors: {
+        number: "01",
+        title: "Contractors",
+        text: "Construction management, estimation, costing and technical assistance structured around project requirements and execution."
+    },
+
+    architects: {
+        number: "02",
+        title: "Architects",
+        text: "Technical and construction consulting support that helps translate design intent into informed project decisions."
+    },
+
+    developers: {
+        number: "03",
+        title: "Real Estate Developers",
+        text: "Planning, costing, project management and technical guidance supporting informed development decisions."
+    },
+
+    structural: {
+        number: "04",
+        title: "Structural Consultants",
+        text: "Technical assistance and structural audit services supporting assessment, coordination and construction requirements."
+    },
+
+    individuals: {
+        number: "05",
+        title: "Individuals",
+        text: "Structured construction guidance for individuals seeking greater clarity across planning, costing and execution."
+    }
+
+};
+
+
+document.querySelectorAll(".serve-item").forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        const data = serveData[item.dataset.role];
+
+        if (!data) return;
+
+        document
+            .querySelectorAll(".serve-item")
+            .forEach(el => el.classList.remove("active"));
+
+        item.classList.add("active");
+
+        const detail = document.querySelector(".serve-detail");
+
+        detail.querySelector(".serve-detail-number")
+            .textContent = data.number;
+
+        detail.querySelector("h3")
+            .textContent = data.title;
+
+        detail.querySelector(".serve-detail-text")
+            .textContent = data.text;
+
+        detail.querySelector(".serve-detail-footer span:last-child")
+            .textContent = `${data.number} / 05`;
+
+    });
+
+});
