@@ -2471,115 +2471,615 @@
 
 
 /* =====================================================
-   MOBILE
+   MOBILE — COMPLETE RESET
 ===================================================== */
 
 @media (max-width: 700px) {
 
+    /* ---------------------------------------------
+       SECTION
+    --------------------------------------------- */
+
     .about-purpose {
-        min-height: auto;
-        padding-bottom: 90px;
+        position: relative;
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        overflow: hidden;
+        padding: 0 0 70px;
+        box-sizing: border-box;
     }
+
+
+    /* ---------------------------------------------
+       SECTION LABEL
+    --------------------------------------------- */
 
     .purpose-section-mark {
-        top: 40px;
-        left: 25px;
+        position: absolute;
+
+        top: 32px;
+        left: 22px;
+
+        width: auto;
+        height: auto;
+
+        z-index: 20;
+
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        font-size: 7px;
+        letter-spacing: .18em;
     }
+
+
+    /* ---------------------------------------------
+       AXIS
+       Keep only a short architectural axis.
+       Do NOT run it through the entire page.
+    --------------------------------------------- */
 
     .purpose-axis {
-        left: 25px;
+        position: absolute;
+
+        top: 0;
+        bottom: 0;
+        left: 22px;
+
+        width: 1px;
+        height: 100%;
+
+        background: rgba(50,20,95,.10);
+
+        pointer-events: none;
     }
 
-    .purpose-intro {
-        width: calc(100% - 50px);
 
-        padding-top: 100px;
+    /* ---------------------------------------------
+       GRID
+    --------------------------------------------- */
+
+    .purpose-grid {
+        position: absolute;
+        inset: 0;
+
+        background-size: 55px 55px;
+
+        opacity: .55;
+
+        pointer-events: none;
+    }
+
+
+    /* ---------------------------------------------
+       INTRO
+    --------------------------------------------- */
+
+    .purpose-intro {
+        position: relative;
+
+        width: calc(100% - 44px);
+
+        margin: 0 auto;
+
+        padding-top: 105px;
+
+        z-index: 5;
+
+        box-sizing: border-box;
+    }
+
+    .purpose-intro p {
+        margin: 0 0 20px;
+
+        font-size: 7px;
+        line-height: 1.5;
+
+        letter-spacing: .18em;
     }
 
     .purpose-intro h2 {
-        font-size: clamp(45px,13vw,65px);
+        margin: 0;
+
+        width: 100%;
+        max-width: 100%;
+
+        font-size: clamp(43px, 12.5vw, 62px);
+
+        line-height: .92;
+
+        letter-spacing: -.055em;
+
+        overflow-wrap: normal;
+        word-break: normal;
     }
 
     .purpose-intro h2 span {
+        display: block;
+
         margin-left: 9vw;
+
+        max-width: calc(100% - 9vw);
     }
 
 
-    /* Stack blocks */
+    /* =================================================
+       MAIN LAYOUT
+    ================================================= */
 
     .purpose-layout {
-        width: calc(100% - 50px);
+        position: relative !important;
 
-        margin-top: 70px;
+        width: calc(100% - 44px) !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        margin: 55px auto 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        gap: 0 !important;
+
+        grid-template-columns: none !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        z-index: 5;
+    }
+
+
+    /* =================================================
+       VISION / MISSION BLOCK
+       IMPORTANT:
+       These are now completely normal-flow elements.
+    ================================================= */
+
+    .purpose-block {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        margin: 0 !important;
+
+        padding: 30px 24px 45px !important;
+
+        box-sizing: border-box;
+
+        transform: none !important;
+
+        border: 1px solid rgba(50,20,95,.18);
+
+        background: rgba(255,255,255,.45);
+
+        overflow: hidden;
+
+        z-index: 3;
+    }
+
+
+    /* ---------------------------------------------
+       NUMBER
+    --------------------------------------------- */
+
+    .purpose-number {
+        position: relative !important;
+
+        display: block;
+
+        margin: 0 0 30px !important;
+
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        font-size: 7px;
+        letter-spacing: .16em;
+    }
+
+
+    /* ---------------------------------------------
+       VISION / MISSION LABEL
+    --------------------------------------------- */
+
+    .purpose-label {
+        position: relative !important;
 
         display: flex;
 
-        flex-direction: column;
+        align-items: center;
 
-        gap: 25px;
+        gap: 11px;
+
+        margin: 0 0 28px !important;
+
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        font-size: 7px;
+        letter-spacing: .17em;
     }
 
+    .purpose-label span {
+        flex: 0 0 30px;
 
-    .purpose-block {
-        width: 100%;
+        width: 30px;
+        height: 30px;
 
-        min-height: 360px;
-
-        padding: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         box-sizing: border-box;
     }
 
 
+    /* ---------------------------------------------
+       TITLE
+    --------------------------------------------- */
+
     .purpose-block h3 {
-        font-size: 34px;
+        position: relative !important;
+
+        width: 100%;
+        max-width: 100% !important;
+
+        margin: 0 0 25px !important;
+
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        font-size: clamp(36px, 10vw, 52px);
+
+        line-height: .95;
+
+        letter-spacing: -.05em;
+
+        overflow-wrap: normal;
+        word-break: normal;
     }
+
+    .purpose-block h3 span {
+        display: block;
+
+        margin-left: 25px;
+
+        max-width: calc(100% - 25px);
+
+        color: #32145f;
+    }
+
+
+    /* ---------------------------------------------
+       DESCRIPTION
+    --------------------------------------------- */
 
     .purpose-block p {
-        max-width: 100%;
+        position: relative !important;
+
+        width: 100%;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
 
         font-size: 9px;
+
+        line-height: 1.75;
     }
 
 
-    /* Center becomes connector */
+    /* ---------------------------------------------
+       CORNER
+    --------------------------------------------- */
+
+    .purpose-corner {
+        position: absolute;
+
+        right: 18px;
+        bottom: 18px;
+
+        width: 35px;
+        height: 35px;
+    }
+
+
+    /* =================================================
+       CENTER CIRCLE
+       
+       This sits BETWEEN Vision and Mission.
+    ================================================= */
 
     .purpose-center {
-        width: 100%;
-        height: 70px;
+        position: relative !important;
+
+        width: 100% !important;
+
+        height: 105px !important;
+
+        margin: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        flex-shrink: 0;
+
+        z-index: 8;
     }
+
+
+    /* Horizontal construction line */
 
     .purpose-center::before {
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        right: 0;
+
+        top: 50%;
+
         width: 100%;
         height: 1px;
+
+        background: rgba(50,20,95,.20);
+
+        transform: translateY(-50%);
     }
+
+
+    /* Vertical short axis */
+
+    .purpose-center::after {
+        content: "";
+
+        position: absolute;
+
+        top: 15px;
+        bottom: 15px;
+
+        left: 50%;
+
+        width: 1px;
+
+        background: rgba(50,20,95,.16);
+
+        transform: translateX(-50%);
+    }
+
+
+    /* ---------------------------------------------
+       LARGE ORBIT
+    --------------------------------------------- */
 
     .purpose-orbit {
-        width: 45px;
-        height: 45px;
+        position: relative !important;
+
+        width: 72px !important;
+        height: 72px !important;
+
+        flex: 0 0 72px;
+
+        border: 1px dashed rgba(50,20,95,.35);
+
+        border-radius: 50%;
+
+        z-index: 4;
+
+        animation: purposeRotate 18s linear infinite;
+
+        box-sizing: border-box;
     }
 
-    .purpose-center span {
-        bottom: -5px;
+
+    .purpose-orbit::before {
+        width: 7px;
+        height: 7px;
+
+        top: -4px;
     }
 
+
+    /* ---------------------------------------------
+       CENTER DOT
+    --------------------------------------------- */
+
+    .purpose-center-dot {
+        position: absolute !important;
+
+        left: 50%;
+        top: 50%;
+
+        width: 15px;
+        height: 15px;
+
+        margin: 0;
+
+        transform: translate(-50%, -50%) !important;
+
+        z-index: 7;
+    }
+
+
+    /* ---------------------------------------------
+       CENTER LABEL
+    --------------------------------------------- */
+
+    .purpose-center > span {
+        position: absolute !important;
+
+        left: 50%;
+        bottom: 3px;
+
+        width: max-content;
+
+        transform: translateX(-50%) !important;
+
+        margin: 0 !important;
+
+        font-size: 6px;
+
+        letter-spacing: .18em;
+
+        white-space: nowrap;
+
+        z-index: 10;
+    }
+
+
+    /* =================================================
+       MISSION
+       Explicitly reset it again.
+    ================================================= */
+
+    .purpose-layout > .purpose-block:last-child {
+        position: relative !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        margin: 0 !important;
+
+        padding: 30px 24px 45px !important;
+
+        display: block !important;
+
+        box-sizing: border-box;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        overflow: hidden;
+
+        z-index: 3;
+    }
+
+
+    .purpose-layout > .purpose-block:last-child h3 {
+        position: relative !important;
+
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 0 25px !important;
+
+        padding: 0 !important;
+
+        transform: none !important;
+
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+
+        font-size: clamp(36px, 10vw, 52px);
+
+        line-height: .95;
+
+        overflow: visible;
+    }
+
+
+    .purpose-layout > .purpose-block:last-child p {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+
+        transform: none !important;
+
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+    }
+
+
+    /* =================================================
+       BOTTOM META
+    ================================================= */
 
     .purpose-bottom {
-        position: relative;
+        position: relative !important;
 
-        left: auto;
-        right: auto;
-        bottom: auto;
+        width: calc(100% - 44px);
 
-        width: calc(100% - 50px);
+        height: auto;
 
-        margin: 40px auto 0;
+        margin: 35px auto 0;
+
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
 
         display: grid;
 
         grid-template-columns: 1fr 1fr;
 
-        gap: 10px;
+        gap: 12px 20px;
+
+        padding-top: 15px;
+
+        box-sizing: border-box;
+
+        transform: none !important;
     }
 }
 /* =====================================================
