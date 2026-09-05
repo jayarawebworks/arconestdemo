@@ -973,3 +973,492 @@
     }
 
 }
+
+/* =========================================================
+   CONTACT — SECTION 03 / CONNECT
+========================================================= */
+
+.contact-connect {
+
+    position: relative;
+
+    width: 100%;
+    min-height: 100svh;
+
+    overflow: hidden;
+
+    background: #160b27;
+    color: #fff;
+
+    padding: 130px 8% 90px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TOP LABEL
+========================================================= */
+
+.connect-top {
+
+    position: absolute;
+
+    top: 38px;
+    left: 55px;
+
+    display: flex;
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .2em;
+
+    z-index: 10;
+}
+
+.connect-top span:first-child {
+    opacity: .4;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.connect-heading {
+
+    width: min(1200px, 84%);
+
+    margin: 0 auto;
+
+}
+
+
+.connect-heading p {
+
+    margin: 0 0 20px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .22em;
+
+    opacity: .45;
+}
+
+
+.connect-heading h2 {
+
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(65px, 7.5vw, 110px);
+
+    font-weight: 400;
+
+    line-height: .82;
+
+    letter-spacing: -.075em;
+
+}
+
+
+.connect-heading h2 span {
+
+    display: block;
+
+    margin-left: 7vw;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.connect-options {
+
+    width: min(1200px, 84%);
+
+    margin: 80px auto 0;
+
+    border-top: 1px solid rgba(255,255,255,.18);
+
+}
+
+
+/* =========================================================
+   SINGLE OPTION
+========================================================= */
+
+.connect-option {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr 60px;
+
+    align-items: center;
+
+    min-height: 125px;
+
+    padding: 0 15px 0 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.18);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    transition:
+        padding-left .45s ease,
+        background .45s ease;
+
+}
+
+
+/* NUMBER */
+
+.connect-option-number {
+
+    align-self: start;
+
+    padding-top: 25px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .15em;
+
+    opacity: .35;
+}
+
+
+/* CONTENT */
+
+.connect-option-content {
+
+    transition: transform .45s ease;
+
+}
+
+
+.connect-option-content > span {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .2em;
+
+    opacity: .4;
+}
+
+
+.connect-option-content h3 {
+
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(24px, 3vw, 40px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -.045em;
+}
+
+
+.connect-option-content p {
+
+    margin: 10px 0 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    opacity: .4;
+}
+
+
+/* ARROW */
+
+.connect-arrow {
+
+    justify-self: end;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(255,255,255,.22);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        transform .35s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.connect-option:hover {
+
+    padding-left: 18px;
+
+    background: rgba(255,255,255,.035);
+
+}
+
+
+.connect-option:hover .connect-option-content {
+
+    transform: translateX(12px);
+
+}
+
+
+.connect-option:hover .connect-arrow {
+
+    background: #fff;
+
+    color: #32145f;
+
+    transform: translate(5px,-5px);
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.connect-bottom {
+
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+
+    bottom: 30px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .18em;
+
+    opacity: .35;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .contact-connect {
+
+        min-height: auto;
+
+        padding: 115px 20px 75px;
+
+    }
+
+
+    .connect-top {
+
+        top: 105px;
+
+        left: 20px;
+
+        gap: 12px;
+
+        font-size: 7px;
+
+    }
+
+
+    .connect-heading {
+
+        width: 100%;
+
+        margin-top: 30px;
+
+    }
+
+
+    .connect-heading p {
+
+        font-size: 7px;
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .connect-heading h2 {
+
+        font-size: clamp(50px, 14vw, 70px);
+
+        line-height: .86;
+
+    }
+
+
+    .connect-heading h2 span {
+
+        margin-left: 0;
+
+    }
+
+
+    /* OPTIONS */
+
+    .connect-options {
+
+        width: 100%;
+
+        margin-top: 55px;
+
+    }
+
+
+    .connect-option {
+
+        grid-template-columns: 38px 1fr 42px;
+
+        min-height: 115px;
+
+        padding: 0;
+
+    }
+
+
+    .connect-option:hover {
+
+        padding-left: 0;
+
+    }
+
+
+    .connect-option-number {
+
+        padding-top: 22px;
+
+        font-size: 6px;
+
+    }
+
+
+    .connect-option-content {
+
+        min-width: 0;
+
+    }
+
+
+    .connect-option-content > span {
+
+        font-size: 5px;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .connect-option-content h3 {
+
+        font-size: clamp(19px, 5.5vw, 27px);
+
+        line-height: 1.05;
+
+        word-break: break-word;
+
+    }
+
+
+    .connect-option-content p {
+
+        font-size: 7px;
+
+        line-height: 1.5;
+
+        margin-top: 8px;
+
+    }
+
+
+    .connect-arrow {
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 14px;
+
+    }
+
+
+    .connect-option:hover .connect-option-content {
+
+        transform: none;
+
+    }
+
+
+    .connect-bottom {
+
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        width: 100%;
+
+        margin-top: 45px;
+
+        font-size: 5px;
+
+        line-height: 1.4;
+
+    }
+
+
+    .connect-bottom span:nth-child(2) {
+
+        display: none;
+
+    }
+
+}
