@@ -1,1 +1,507 @@
+/* =====================================================
+   SERVICES PAGE
+   01 — HERO
+===================================================== */
 
+.services-hero {
+    position: relative;
+
+    width: 100%;
+    height: 100svh;
+    min-height: 700px;
+
+    overflow: hidden;
+
+    background: #160b27;
+    color: #fff;
+}
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.services-hero-media {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+}
+
+.services-hero-media video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transform: scale(1.03);
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.services-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(22,11,39,.82) 0%,
+            rgba(22,11,39,.52) 42%,
+            rgba(22,11,39,.20) 100%
+        );
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   CORNER DETAILS
+===================================================== */
+
+.services-corner {
+    position: absolute;
+
+    width: 75px;
+    height: 75px;
+
+    z-index: 5;
+
+    opacity: .8;
+}
+
+.services-corner-tl {
+    top: 38px;
+    left: 38px;
+
+    border-top: 1px solid rgba(255,255,255,.5);
+    border-left: 1px solid rgba(255,255,255,.5);
+}
+
+.services-corner-br {
+    right: 38px;
+    bottom: 38px;
+
+    border-right: 1px solid rgba(255,255,255,.5);
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+
+/* =====================================================
+   SECTION LABEL
+===================================================== */
+
+.services-hero-label {
+    position: absolute;
+
+    top: 45px;
+    left: 55px;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .2em;
+}
+
+.services-hero-label span:first-child {
+    opacity: .4;
+}
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.services-hero-location {
+    position: absolute;
+
+    top: 45px;
+    right: 55px;
+
+    z-index: 10;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .2em;
+
+    opacity: .55;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.services-hero-content {
+    position: absolute;
+
+    left: 8%;
+
+    top: 50%;
+
+    width: min(850px, 75%);
+
+    transform: translateY(-43%);
+
+    z-index: 10;
+}
+
+
+/* Kicker */
+
+.services-hero-kicker {
+    margin: 0 0 25px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .24em;
+
+    opacity: .6;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.services-hero-title {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(70px, 9vw, 135px);
+
+    font-weight: 400;
+
+    line-height: .82;
+
+    letter-spacing: -.075em;
+}
+
+.services-hero-title span {
+    display: block;
+
+    margin-left: 9vw;
+
+    color: #fff;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.services-hero-description {
+    width: min(390px, 100%);
+
+    margin: 38px 0 0 9vw;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    letter-spacing: .01em;
+
+    opacity: .62;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.services-hero-bottom {
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+    bottom: 38px;
+
+    z-index: 10;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(255,255,255,.2);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .17em;
+
+    opacity: .55;
+}
+
+
+/* Scroll */
+
+.services-scroll {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.services-scroll i {
+    display: block;
+
+    width: 35px;
+    height: 1px;
+
+    background: rgba(255,255,255,.6);
+
+    position: relative;
+}
+
+.services-scroll i::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    top: -2px;
+
+    width: 5px;
+    height: 5px;
+
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
+
+    transform: rotate(45deg);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .services-hero {
+
+        min-height: 680px;
+
+        height: 100svh;
+    }
+
+
+    /* Video */
+
+    .services-hero-media video {
+
+        object-position: 60% center;
+
+        transform: scale(1.06);
+    }
+
+
+    /* Overlay */
+
+    .services-hero-overlay {
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(22,11,39,.72) 0%,
+                rgba(22,11,39,.48) 45%,
+                rgba(22,11,39,.88) 100%
+            );
+    }
+
+
+    /* Corners */
+
+    .services-corner {
+
+        width: 42px;
+        height: 42px;
+    }
+
+    .services-corner-tl {
+
+        top: 24px;
+        left: 24px;
+    }
+
+    .services-corner-br {
+
+        right: 24px;
+        bottom: 24px;
+    }
+
+
+    /* Label */
+
+    .services-hero-label {
+
+        top: 30px;
+        left: 24px;
+
+        font-size: 7px;
+    }
+
+
+    /* Location */
+
+    .services-hero-location {
+
+        top: 31px;
+        right: 24px;
+
+        font-size: 6px;
+    }
+
+
+    /* Content */
+
+    .services-hero-content {
+
+        left: 24px;
+        right: 24px;
+
+        top: 50%;
+
+        width: auto;
+
+        transform: translateY(-45%);
+    }
+
+
+    .services-hero-kicker {
+
+        margin-bottom: 20px;
+
+        font-size: 6px;
+
+        line-height: 1.5;
+
+        letter-spacing: .16em;
+    }
+
+
+    /* Title */
+
+    .services-hero-title {
+
+        width: 100%;
+
+        font-size: clamp(52px, 15vw, 76px);
+
+        line-height: .87;
+
+        letter-spacing: -.07em;
+    }
+
+    .services-hero-title span {
+
+        margin-left: 10vw;
+    }
+
+
+    /* Description */
+
+    .services-hero-description {
+
+        width: min(300px, 100%);
+
+        margin: 30px 0 0 10vw;
+
+        font-size: 8px;
+
+        line-height: 1.7;
+    }
+
+
+    /* Bottom */
+
+    .services-hero-bottom {
+
+        left: 24px;
+        right: 24px;
+
+        bottom: 25px;
+
+        padding-top: 12px;
+
+        font-size: 5px;
+
+        letter-spacing: .12em;
+    }
+
+
+    .services-hero-bottom > span:first-child {
+
+        display: none;
+    }
+
+
+    .services-scroll {
+
+        gap: 8px;
+    }
+
+    .services-scroll i {
+
+        width: 22px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .services-hero-content {
+
+        top: 48%;
+    }
+
+    .services-hero-title {
+
+        font-size: 48px;
+    }
+
+    .services-hero-description {
+
+        font-size: 7px;
+
+        margin-top: 24px;
+    }
+
+    .services-hero-bottom {
+
+        font-size: 4.5px;
+    }
+}
