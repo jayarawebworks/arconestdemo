@@ -3284,3 +3284,62 @@ body {
     }
 
 }
+
+/* =====================================================
+   MOBILE — CENTER ALIGNMENT FIX
+===================================================== */
+
+@media (max-width: 700px) {
+
+    /* Who We Serve */
+
+    .serve-intro {
+        width: 100%;
+        text-align: center;
+    }
+
+    .serve-intro h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .serve-intro h2 span {
+        margin-left: 0;
+    }
+
+
+    /* Serve content */
+
+    .serve-content {
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .serve-detail {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* Final CTA */
+
+    .services-cta-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .services-cta-content h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .services-cta-content h2 span {
+        margin-left: 0;
+    }
+
+    .services-cta-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
