@@ -1,20 +1,19 @@
-/* REMOVE ONLY THE OUTER BORDER / FRAME FROM HOME PAGE */
+/* HOME PAGE — REMOVE OUTER FRAME ONLY */
 
 html,
 body {
-    border: none !important;
-    outline: none !important;
-}
-
-body {
+    border: 0 !important;
+    outline: 0 !important;
     box-shadow: none !important;
 }
 
+main,
+#main,
 .home-page,
-.home-page::before,
-.home-page::after {
-    border: none !important;
-    outline: none !important;
+.home-wrapper,
+.page-wrapper {
+    border: 0 !important;
+    outline: 0 !important;
     box-shadow: none !important;
 }
 /* =====================================================
