@@ -524,3 +524,67 @@ if (applicationPosition) {
         }
     }
 }
+
+/* =========================================
+   CAREER — NEXT LEVEL
+========================================= */
+
+const careerStages = document.querySelectorAll(".path-stage");
+
+const levelTitle = document.getElementById("levelDetailTitle");
+const levelText = document.getElementById("levelDetailText");
+
+const careerStageData = {
+
+    learn: {
+        title: "Learn from real projects.",
+        text: "Build your technical understanding through exposure to real construction projects, experienced professionals and practical challenges."
+    },
+
+    experience: {
+        title: "Turn knowledge into experience.",
+        text: "Work closer to the realities of construction and develop the ability to understand, coordinate and contribute."
+    },
+
+    lead: {
+        title: "Take responsibility.",
+        text: "Grow into roles where your decisions, coordination and technical understanding directly influence project outcomes."
+    },
+
+    excel: {
+        title: "Become the expert.",
+        text: "Build the confidence and expertise to take on greater responsibility and create meaningful impact across projects."
+    }
+
+};
+
+if (careerStages.length) {
+
+    careerStages.forEach(stage => {
+
+        stage.addEventListener("mouseenter", () => {
+
+            const key = stage.dataset.stage;
+            const data = careerStageData[key];
+
+            if (!data) return;
+
+            careerStages.forEach(item =>
+                item.classList.remove("active")
+            );
+
+            stage.classList.add("active");
+
+            if (levelTitle) {
+                levelTitle.textContent = data.title;
+            }
+
+            if (levelText) {
+                levelText.textContent = data.text;
+            }
+
+        });
+
+    });
+
+}
