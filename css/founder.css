@@ -1,4 +1,834 @@
 /* =========================================================
+   ARCONEST FOUNDER PAGE
+   MASTER SCREEN LAYOUT
+========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f1eb;
+    color: #160b27;
+}
+
+
+/* =========================================================
+   SHARED SECTION RULES
+========================================================= */
+
+.founder-hero,
+.founder-beginning,
+.founder-work,
+.founder-journey,
+.founder-principle,
+.founder-next {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.founder-hero {
+    background: #f4f1eb;
+}
+
+.founder-beginning,
+.founder-journey,
+.founder-next {
+    background: #160b27;
+}
+
+.founder-work,
+.founder-principle {
+    background: #f4f1eb;
+}
+
+
+/* =========================================================
+   FLOATING NAVBAR
+========================================================= */
+
+.founder-page .site-nav,
+.site-nav {
+    position: fixed;
+
+    top: 38px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 14vw);
+    max-width: 1380px;
+
+    min-height: 90px;
+
+    z-index: 9999;
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,.88);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 55px rgba(22,11,39,.10);
+
+    border: 1px solid rgba(22,11,39,.06);
+}
+
+
+/* =========================================================
+   SECTION 01
+========================================================= */
+
+.founder-hero {
+    min-height: 100svh;
+
+    display: grid;
+
+    grid-template-columns: 52% 48%;
+
+    padding-top: 0;
+}
+
+
+/* HERO IMAGE */
+
+.founder-hero .founder-photo {
+    position: relative;
+
+    width: 100%;
+    height: 100svh;
+
+    overflow: hidden;
+}
+
+.founder-hero .founder-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* HERO CONTENT */
+
+.founder-hero .founder-hero-content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 120px 7vw 80px 6vw;
+}
+
+.founder-hero .founder-hero-content h1 {
+    margin: 20px 0 30px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(60px, 6.5vw, 105px);
+
+    font-weight: 400;
+
+    line-height: .88;
+
+    letter-spacing: -.065em;
+}
+
+.founder-hero .founder-hero-content h1 span {
+    display: block;
+
+    margin-left: 60px;
+
+    color: rgba(22,11,39,.35);
+}
+
+.founder-intro {
+    max-width: 420px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: rgba(22,11,39,.58);
+}
+
+
+/* =========================================================
+   SECTION 02
+========================================================= */
+
+.founder-beginning {
+    min-height: 100svh;
+
+    padding: 110px 7vw 65px;
+}
+
+.beginning-layout {
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 6vw;
+
+    align-items: center;
+}
+
+.beginning-content {
+    position: relative;
+
+    padding: 60px 0;
+}
+
+.beginning-content h2 {
+    font-size: clamp(55px, 6vw, 100px);
+}
+
+.beginning-image {
+    width: 100%;
+    height: auto;
+}
+
+.beginning-image-frame {
+    width: 100%;
+    height: 580px;
+
+    overflow: hidden;
+}
+
+.beginning-image-frame img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================================
+   SECTION 03
+========================================================= */
+
+.founder-work {
+    min-height: 100svh;
+
+    padding: 110px 7vw 65px;
+}
+
+.work-intro {
+    padding: 70px 0 55px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.6fr;
+
+    gap: 5vw;
+
+    align-items: end;
+}
+
+.work-stage {
+    display: grid;
+
+    grid-template-columns: 1.05fr .95fr;
+
+    gap: 6vw;
+
+    align-items: stretch;
+}
+
+.work-image {
+    width: 100%;
+    height: 600px;
+
+    overflow: hidden;
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.work-principles {
+    width: 100%;
+}
+
+
+/* =========================================================
+   SECTION 04
+========================================================= */
+
+.founder-journey {
+    min-height: 100svh;
+
+    padding: 110px 7vw 65px;
+}
+
+.journey-heading {
+    padding: 65px 0 50px;
+}
+
+.journey-main {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 7vw;
+
+    align-items: center;
+}
+
+.journey-years {
+    width: 100%;
+}
+
+.journey-image {
+    width: 100%;
+}
+
+.journey-image-frame {
+    width: 100%;
+    height: 580px;
+
+    overflow: hidden;
+}
+
+.journey-image-frame img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   SECTION 05
+========================================================= */
+
+.founder-principle {
+    min-height: 100svh;
+
+    padding: 110px 7vw 65px;
+}
+
+.principle-center {
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 110px 0 170px;
+
+    text-align: center;
+}
+
+.principle-center h2 {
+    position: relative;
+
+    z-index: 6;
+
+    margin: 0;
+
+    font-size: clamp(65px, 8.5vw, 135px);
+
+    line-height: .86;
+}
+
+.principle-center h2 span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: rgba(22,11,39,.32);
+}
+
+.principle-geometry {
+    position: absolute;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    opacity: .08;
+}
+
+.principle-bottom {
+    position: absolute;
+
+    z-index: 10;
+
+    left: 7vw;
+    right: 7vw;
+    bottom: 60px;
+}
+
+
+/* =========================================================
+   SECTION 06
+========================================================= */
+
+.founder-next {
+    min-height: 100svh;
+
+    padding: 110px 7vw 65px;
+}
+
+
+/* MAIN CONTENT */
+
+.next-content {
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 900px;
+
+    padding-top: 95px;
+}
+
+.next-content h2 {
+    margin: 0;
+
+    font-size: clamp(65px, 8.5vw, 130px);
+
+    line-height: .86;
+}
+
+.next-content h2 span {
+    display: block;
+
+    margin-left: 100px;
+
+    color: rgba(255,255,255,.35);
+}
+
+.next-description {
+    max-width: 500px;
+
+    margin: 55px 0 0 105px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: rgba(255,255,255,.58);
+}
+
+.next-founder {
+    margin: 45px 0 0 105px;
+}
+
+
+/* CTA */
+
+.next-actions {
+    position: relative;
+
+    z-index: 10;
+
+    width: min(430px, 100%);
+
+    margin: 70px 0 0 auto;
+}
+
+
+/* GEOMETRY */
+
+.next-mark {
+    position: absolute;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    right: -120px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    opacity: .08;
+}
+
+
+/* BOTTOM */
+
+.next-bottom {
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+
+    margin-top: 70px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-nav {
+        width: calc(100% - 10vw);
+
+        top: 25px;
+    }
+
+
+    /* HERO */
+
+    .founder-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-hero .founder-photo {
+        height: 70svh;
+    }
+
+    .founder-hero .founder-hero-content {
+        min-height: 55svh;
+
+        padding: 80px 7vw;
+    }
+
+
+    /* BEGINNING */
+
+    .beginning-layout {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .beginning-image {
+        order: -1;
+    }
+
+    .beginning-image-frame {
+        height: 550px;
+    }
+
+
+    /* WORK */
+
+    .work-intro {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .work-stage {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .work-image {
+        height: 550px;
+    }
+
+
+    /* JOURNEY */
+
+    .journey-main {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .journey-image {
+        order: -1;
+    }
+
+
+    /* PRINCIPLE */
+
+    .principle-center {
+        padding: 100px 0 190px;
+    }
+
+
+    /* NEXT */
+
+    .next-actions {
+        margin: 65px 0 0 65px;
+
+        width: min(500px, calc(100% - 65px));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* GLOBAL */
+
+    .site-nav {
+        top: 15px;
+
+        width: calc(100% - 30px);
+
+        min-height: 65px;
+
+        border-radius: 17px;
+    }
+
+
+    /* COMMON */
+
+    .founder-beginning,
+    .founder-work,
+    .founder-journey,
+    .founder-principle,
+    .founder-next {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+
+    /* HERO */
+
+    .founder-hero {
+        display: block;
+
+        min-height: auto;
+    }
+
+    .founder-hero .founder-photo {
+        width: 100%;
+        height: 65svh;
+
+        min-height: 480px;
+    }
+
+    .founder-hero .founder-hero-content {
+        min-height: auto;
+
+        padding: 70px 22px 65px;
+    }
+
+    .founder-hero .founder-hero-content h1 {
+        font-size: clamp(50px, 14vw, 75px);
+    }
+
+    .founder-hero .founder-hero-content h1 span {
+        margin-left: 28px;
+    }
+
+
+    /* BEGINNING */
+
+    .founder-beginning {
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+
+    .beginning-layout {
+        min-height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .beginning-content {
+        padding: 45px 0 10px;
+    }
+
+    .beginning-content h2 {
+        font-size: clamp(48px, 14vw, 70px);
+    }
+
+    .beginning-image {
+        width: 100%;
+    }
+
+    .beginning-image-frame {
+        height: 470px;
+    }
+
+
+    /* WORK */
+
+    .founder-work {
+        padding-top: 70px;
+    }
+
+    .work-intro {
+        padding: 50px 0 40px;
+    }
+
+    .work-intro h2 {
+        font-size: clamp(48px, 14vw, 70px);
+    }
+
+    .work-stage {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .work-image {
+        height: 470px;
+    }
+
+
+    /* JOURNEY */
+
+    .founder-journey {
+        padding-top: 70px;
+    }
+
+    .journey-heading {
+        padding: 50px 0 35px;
+    }
+
+    .journey-heading h2 {
+        font-size: clamp(50px, 14vw, 72px);
+    }
+
+    .journey-main {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .journey-image {
+        order: -1;
+    }
+
+    .journey-image-frame {
+        height: 470px;
+    }
+
+
+    /* PRINCIPLE */
+
+    .founder-principle {
+        min-height: 900px;
+
+        padding-top: 70px;
+    }
+
+    .principle-center {
+        padding: 100px 0 270px;
+    }
+
+    .principle-center h2 {
+        font-size: clamp(50px, 14vw, 74px);
+    }
+
+    .principle-geometry {
+        width: 430px;
+        height: 430px;
+
+        left: 50%;
+        top: 52%;
+    }
+
+    .principle-bottom {
+        position: absolute;
+
+        left: 22px;
+        right: 22px;
+
+        bottom: 40px;
+    }
+
+
+    /* NEXT */
+
+    .founder-next {
+        min-height: auto;
+
+        padding-top: 70px;
+        padding-bottom: 45px;
+    }
+
+    .next-content {
+        padding-top: 65px;
+    }
+
+    .next-content h2 {
+        font-size: clamp(48px, 14vw, 72px);
+    }
+
+    .next-content h2 span {
+        margin-left: 28px;
+    }
+
+    .next-description {
+        margin: 38px 0 0 28px;
+
+        max-width: 310px;
+
+        font-size: 12px;
+    }
+
+    .next-founder {
+        margin: 38px 0 0 28px;
+    }
+
+    .next-actions {
+        width: 100%;
+
+        margin: 65px 0 0;
+    }
+
+    .next-bottom {
+        margin-top: 55px;
+    }
+
+    .next-mark {
+        right: -240px;
+
+        top: 45%;
+    }
+
+}
+
+/* =========================================================
    FOUNDER — SECTION 01 / HERO
 ========================================================= */
 
