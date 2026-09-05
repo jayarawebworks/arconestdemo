@@ -2251,12 +2251,20 @@ body {
 
 /* CAREER PATH */
 
+
+
+/* =========================================
+   CAREER PATH — DESKTOP FIX
+========================================= */
+
 .career-path {
     position: absolute;
 
     left: 8%;
     right: 8%;
-    bottom: 22%;
+
+    /* MOVE IT DOWN */
+    bottom: 9%;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -2324,6 +2332,22 @@ body {
 
     font-weight: 400;
     letter-spacing: -.04em;
+}
+@media (min-width: 1101px) {
+
+    .level-intro {
+        top: 15%;
+    }
+
+    .level-intro h2,
+    .level-intro h3 {
+        font-size: clamp(55px, 6vw, 94px);
+    }
+
+    .career-path {
+        bottom: 8%;
+    }
+
 }
 
 
