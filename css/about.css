@@ -3723,19 +3723,27 @@
    MAIN ORBIT SYSTEM
 ===================================================== */
 
-.principles-orbit {
+/* =====================================================
+   MAIN ORBIT SYSTEM — DESKTOP FIX
+===================================================== */
 
+.principles-orbit {
     position: absolute;
 
     width: min(650px, 48vw);
     aspect-ratio: 1 / 1;
 
     right: 9%;
-    top: 53%;
+
+    /* Keep the complete circle inside Section 05 */
+    top: 57%;
 
     transform: translateY(-50%);
 
     z-index: 5;
+
+    /* IMPORTANT */
+    margin: 0;
 }
 
 
@@ -4294,6 +4302,43 @@
     opacity: .5;
 
     z-index: 10;
+}
+/* =====================================================
+   DESKTOP — KEEP ORBIT INSIDE SECTION
+===================================================== */
+
+@media (min-width: 1101px) {
+
+    .about-principles {
+        min-height: 100svh;
+
+        /*
+         * Extra room prevents the orbit from touching
+         * the next section.
+         */
+        padding-bottom: 90px;
+
+        box-sizing: border-box;
+    }
+
+    .principles-orbit {
+        /*
+         * Move the orbit slightly upward so its
+         * bottom never reaches Section 06.
+         */
+        top: 54%;
+
+        /*
+         * Keep the complete orbit within the section.
+         */
+        max-height: calc(100svh - 300px);
+        max-width: calc(100svh - 300px);
+    }
+
+    .principles-bottom {
+        bottom: 40px;
+        z-index: 20;
+    }
 }
 
 
