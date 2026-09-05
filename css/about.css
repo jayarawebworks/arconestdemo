@@ -5641,4 +5641,854 @@ main::after {
     }
 
 
- 
+
+ /* =========================================================
+   ARCONEST — COMPLETE MOBILE OVERRIDE
+   IMPORTANT: Keep this at the VERY END of about.css
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* -----------------------------------------------------
+       GLOBAL MOBILE SAFETY
+    ----------------------------------------------------- */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .about-page,
+    main,
+    section {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Prevent large desktop text from creating overflow */
+    h1,
+    h2,
+    h3,
+    p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+
+    /* =====================================================
+       01 — ABOUT HERO
+    ===================================================== */
+
+    .about-hero {
+        min-height: 100svh;
+        height: auto;
+        padding: 110px 25px 70px;
+        box-sizing: border-box;
+    }
+
+    .about-hero-grid {
+        background-size: 55px 55px;
+    }
+
+    .about-hero-number {
+        top: 30px;
+        left: 25px;
+        font-size: 7px;
+    }
+
+    .about-hero-content {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .about-hero-title {
+        max-width: 100%;
+        font-size: clamp(52px, 15vw, 76px);
+        line-height: .92;
+        letter-spacing: -.065em;
+        word-break: normal;
+    }
+
+    .about-hero-title span {
+        display: block;
+        margin-left: 12vw;
+    }
+
+    .about-hero-bottom {
+        position: relative;
+        width: 100%;
+        margin-top: 55px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about-hero-bottom p {
+        width: 100%;
+        max-width: 320px;
+        font-size: 10px;
+        line-height: 1.7;
+    }
+
+    .about-hero-location {
+        position: relative;
+        right: auto;
+        bottom: auto;
+    }
+
+    .about-hero-mark {
+        right: 15px;
+        bottom: 35px;
+        transform: scale(.65);
+        transform-origin: bottom right;
+    }
+
+    .about-scroll {
+        display: none;
+    }
+
+
+    /* =====================================================
+       02 — WHO WE ARE
+    ===================================================== */
+
+    .about-intro {
+        min-height: auto;
+        height: auto;
+        padding: 100px 25px 70px;
+        box-sizing: border-box;
+    }
+
+    .intro-grid {
+        background-size: 55px 55px;
+    }
+
+    .intro-axis-v {
+        left: 25px;
+        height: 100%;
+    }
+
+    .intro-axis-h {
+        top: 48%;
+    }
+
+    .intro-section-mark {
+        position: absolute;
+        top: 35px;
+        left: 25px;
+        z-index: 10;
+    }
+
+    .intro-heading {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .intro-kicker {
+        margin-bottom: 25px;
+        font-size: 7px;
+        letter-spacing: .18em;
+    }
+
+    .intro-heading h2 {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(48px, 14vw, 70px);
+        line-height: .93;
+        letter-spacing: -.065em;
+    }
+
+    .intro-heading h2 span {
+        display: block;
+        margin-left: 9vw;
+    }
+
+
+    /* Main content becomes a NORMAL vertical flow */
+
+    .intro-composition {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: 65px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+
+    /* Text */
+
+    .intro-copy {
+        position: relative;
+        width: 100%;
+        max-width: 330px;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    .intro-copy-number {
+        margin-bottom: 25px;
+    }
+
+    .intro-copy p {
+        width: 100%;
+        max-width: 330px;
+
+        font-size: 10px;
+        line-height: 1.75;
+    }
+
+
+    /* Image */
+
+    .intro-image-wrap {
+        position: relative;
+
+        width: 100%;
+        max-width: 100%;
+
+        height: 300px;
+
+        margin: 0;
+        padding: 0;
+
+        overflow: visible;
+    }
+
+    .intro-image-frame {
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+
+        margin: 0;
+
+        overflow: hidden;
+    }
+
+    .intro-image-frame img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        display: block;
+    }
+
+    .image-coordinate {
+        font-size: 6px;
+        white-space: nowrap;
+    }
+
+    .image-coordinate-top {
+        top: -18px;
+        left: 0;
+    }
+
+    .image-coordinate-bottom {
+        bottom: -18px;
+        left: 0;
+    }
+
+
+    /* Data */
+
+    .intro-data {
+        position: relative;
+
+        width: 100%;
+        max-width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 0;
+
+        border-top: 1px solid rgba(50,20,95,.16);
+    }
+
+    .intro-data-item {
+        min-width: 0;
+
+        padding: 18px 12px 18px 0;
+
+        border-bottom: 1px solid rgba(50,20,95,.16);
+    }
+
+    .intro-data-item:nth-child(odd) {
+        border-right: 1px solid rgba(50,20,95,.16);
+        padding-right: 15px;
+    }
+
+    .intro-data-item:nth-child(even) {
+        padding-left: 15px;
+    }
+
+    .intro-data-item span {
+        font-size: 6px;
+    }
+
+    .intro-data-item strong {
+        display: block;
+
+        margin-top: 9px;
+
+        font-size: 12px;
+
+        line-height: 1.25;
+
+        word-break: normal;
+    }
+
+
+    /* Bottom keywords */
+
+    .intro-bottom-line {
+        position: relative;
+
+        width: 100%;
+
+        margin-top: 35px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 14px;
+
+        padding-top: 15px;
+
+        border-top: 1px solid rgba(50,20,95,.16);
+    }
+
+    .intro-bottom-line span {
+        font-size: 6px;
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       03 — OUR STORY
+    ===================================================== */
+
+    .about-story {
+        min-height: auto;
+        height: auto;
+
+        padding: 100px 25px 70px;
+
+        box-sizing: border-box;
+    }
+
+    .story-grid {
+        background-size: 55px 55px;
+    }
+
+    .story-axis-v {
+        left: 25px;
+    }
+
+    .story-section-mark {
+        top: 35px;
+        left: 25px;
+    }
+
+    .story-heading {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    .story-heading h2 {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: clamp(48px, 13vw, 68px);
+
+        line-height: .93;
+
+        letter-spacing: -.06em;
+    }
+
+    .story-heading h2 span {
+        margin-left: 8vw;
+    }
+
+
+    /* Story network = clean vertical timeline */
+
+    .story-network {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        top: auto;
+
+        width: 100%;
+        height: auto;
+
+        margin: 70px 0 0;
+
+        padding-left: 42px;
+
+        box-sizing: border-box;
+    }
+
+    .story-connection {
+        display: none;
+    }
+
+    .story-network::before {
+        content: "";
+
+        position: absolute;
+
+        left: 7px;
+        top: 0;
+        bottom: 0;
+
+        width: 1px;
+
+        background: rgba(255,255,255,.3);
+    }
+
+    .story-node {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        width: 100%;
+
+        min-height: auto;
+
+        margin: 0 0 55px;
+
+        box-sizing: border-box;
+    }
+
+    .node-01 .node-dot,
+    .node-02 .node-dot,
+    .node-03 .node-dot,
+    .node-04 .node-dot,
+    .node-05 .node-dot {
+        left: -42px;
+        top: 2px;
+        bottom: auto;
+    }
+
+    .node-content {
+        width: 100%;
+        max-width: 280px;
+
+        padding: 0;
+    }
+
+    .node-content h3 {
+        font-size: 21px;
+        line-height: 1.1;
+    }
+
+    .node-content p {
+        width: 100%;
+        max-width: 270px;
+
+        font-size: 9px;
+        line-height: 1.7;
+    }
+
+    .story-bottom {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        width: 100%;
+
+        margin: 10px 0 0;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+
+        font-size: 6px;
+    }
+
+
+    /* =====================================================
+       04 — VISION / MISSION
+    ===================================================== */
+
+    .about-direction,
+    .about-vision,
+    .vision-mission,
+    .about-vision-mission {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: auto;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+    /*
+       If your actual section class is .about-direction,
+       these rules force the desktop two-column layout
+       into a clean vertical mobile layout.
+    */
+
+    .vision-layout,
+    .direction-layout,
+    .vision-mission-layout {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .vision-card,
+    .mission-card,
+    .direction-card {
+        position: relative;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       05 — WHAT WE STAND FOR
+    ===================================================== */
+
+    .about-principles {
+        min-height: auto;
+        height: auto;
+
+        padding: 100px 25px 70px;
+
+        box-sizing: border-box;
+    }
+
+    .principles-grid {
+        background-size: 55px 55px;
+    }
+
+    .principles-section-mark {
+        top: 35px;
+        left: 25px;
+    }
+
+    .principles-heading {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    .principles-heading h2 {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: clamp(48px, 13vw, 68px);
+
+        line-height: .93;
+
+        letter-spacing: -.06em;
+    }
+
+    .principles-heading h2 span {
+        margin-left: 8vw;
+    }
+
+
+    /* Main principles area */
+
+    .principles-layout {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+
+        width: 100%;
+        height: auto;
+
+        margin: 75px 0 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+
+    /* Large circle FIRST */
+
+    .principles-center {
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        width: 250px;
+        height: 250px;
+
+        margin: 0 auto 70px;
+
+        transform: none;
+
+        flex-shrink: 0;
+    }
+
+    .ring-one {
+        width: 250px;
+        height: 250px;
+    }
+
+    .ring-two {
+        width: 185px;
+        height: 185px;
+    }
+
+    .center-cross.horizontal {
+        width: 300px;
+    }
+
+    .center-cross.vertical {
+        height: 300px;
+    }
+
+    .center-point {
+        width: 20px;
+        height: 20px;
+    }
+
+    .center-label {
+        bottom: -35px;
+        white-space: nowrap;
+    }
+
+
+    /* Hide desktop boxes */
+
+    .principle {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        margin: 0 0 18px;
+
+        padding: 25px;
+
+        min-height: auto;
+
+        background: rgba(255,255,255,.72);
+    }
+
+    .principle p {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* =====================================================
+       PRINCIPLE ORBIT / MOVING DOTS
+    ===================================================== */
+
+    .principles-center {
+        overflow: visible;
+    }
+
+    .principles-center::before,
+    .principles-center::after {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        width: 100%;
+        height: 100%;
+
+        border: 1px solid rgba(50,20,95,.10);
+
+        border-radius: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+
+    .principles-center::after {
+        width: 185px;
+        height: 185px;
+
+        border-style: dashed;
+
+        animation: mobileOrbit 12s linear infinite;
+    }
+
+    @keyframes mobileOrbit {
+
+        from {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        to {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+
+    }
+
+
+    /* =====================================================
+       BOTTOM
+    ===================================================== */
+
+    .principles-bottom {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        width: 100%;
+
+        margin: 30px 0 0;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+
+        box-sizing: border-box;
+    }
+
+    .principles-bottom span {
+        font-size: 6px;
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       06 — WHO WE WORK WITH
+    ===================================================== */
+
+    .about-clients,
+    .about-work-with,
+    .who-we-work {
+        width: 100%;
+        max-width: 100%;
+
+        min-height: auto;
+        height: auto;
+
+        padding: 100px 25px 70px;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       07 — CTA
+    ===================================================== */
+
+    .about-cta {
+        width: 100%;
+        max-width: 100%;
+
+        min-height: 100svh;
+        height: auto;
+
+        padding: 100px 25px 70px;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    .about-cta-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-cta-title {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: clamp(48px, 14vw, 72px);
+
+        line-height: .93;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .site-footer {
+        width: 100%;
+        max-width: 100%;
+
+        overflow: hidden;
+    }
+
+    .footer-main,
+    .footer-bottom,
+    .footer-copyright {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+}
