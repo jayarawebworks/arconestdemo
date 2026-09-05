@@ -1702,3 +1702,506 @@
     }
 
 }
+
+/* =========================================================
+   FOUNDER — SECTION 05 / THE PRINCIPLE
+========================================================= */
+
+.founder-principle {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 105px 7vw 70px;
+
+    background: #f4f1eb;
+    color: #160b27;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.principle-top {
+    position: relative;
+    z-index: 10;
+
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+
+    align-items: center;
+    gap: 20px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid rgba(22,11,39,.15);
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 9px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.principle-top span:first-child {
+    opacity: .4;
+}
+
+.principle-top span:nth-child(2) {
+    opacity: .65;
+}
+
+.principle-top span:last-child {
+    opacity: .4;
+}
+
+
+/* =========================================================
+   CENTER
+========================================================= */
+
+.principle-center {
+    position: relative;
+    z-index: 5;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 125px 0 150px;
+
+    text-align: center;
+}
+
+.principle-kicker {
+    margin: 0 0 35px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 9px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+
+    opacity: .45;
+}
+
+
+.principle-center h2 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(70px, 9vw, 145px);
+    font-weight: 400;
+
+    line-height: .82;
+    letter-spacing: -.075em;
+}
+
+.principle-center h2 span {
+    display: block;
+
+    margin-top: 10px;
+
+    color: rgba(22,11,39,.32);
+}
+
+
+/* =========================================================
+   STATEMENT
+========================================================= */
+
+.principle-statement {
+    position: relative;
+
+    max-width: 540px;
+
+    margin: 60px auto 0;
+
+    padding-top: 35px;
+
+    border-top: 1px solid rgba(22,11,39,.15);
+}
+
+.principle-quote-mark {
+    position: absolute;
+
+    top: 18px;
+    left: -30px;
+
+    font-family: Georgia, serif;
+    font-size: 45px;
+
+    opacity: .25;
+}
+
+.principle-statement p {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+
+    color: rgba(22,11,39,.62);
+}
+
+
+/* =========================================================
+   ARCHITECTURAL GEOMETRY
+========================================================= */
+
+.principle-geometry {
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+
+    opacity: .16;
+}
+
+
+/* RINGS */
+
+.principle-ring {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    border: 1px solid #160b27;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.ring-one {
+    width: 250px;
+    height: 250px;
+}
+
+.ring-two {
+    width: 430px;
+    height: 430px;
+}
+
+.ring-three {
+    width: 620px;
+    height: 620px;
+}
+
+
+/* CORE */
+
+.principle-core {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 105px;
+    height: 105px;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #160b27;
+    border-radius: 50%;
+
+    background: #f4f1eb;
+}
+
+.principle-core span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 6px;
+    letter-spacing: .18em;
+}
+
+.principle-core strong {
+    margin-top: 4px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+/* POINTS */
+
+.geometry-point {
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    background: #160b27;
+
+    border-radius: 50%;
+}
+
+.point-one {
+    top: 4%;
+    left: 50%;
+}
+
+.point-two {
+    top: 50%;
+    right: 4%;
+}
+
+.point-three {
+    bottom: 4%;
+    left: 50%;
+}
+
+.point-four {
+    top: 50%;
+    left: 4%;
+}
+
+
+/* =========================================================
+   BOTTOM DETAILS
+========================================================= */
+
+.principle-bottom {
+    position: absolute;
+
+    left: 7vw;
+    right: 7vw;
+    bottom: 65px;
+
+    z-index: 8;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid rgba(22,11,39,.15);
+}
+
+.principle-detail {
+    display: flex;
+
+    gap: 18px;
+
+    padding: 20px 15px 0;
+
+    border-right: 1px solid rgba(22,11,39,.12);
+}
+
+.principle-detail:first-child {
+    padding-left: 0;
+}
+
+.principle-detail:last-child {
+    border-right: none;
+}
+
+.principle-detail > span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 8px;
+
+    opacity: .4;
+}
+
+.principle-detail p {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 8px;
+    line-height: 1.5;
+
+    letter-spacing: .14em;
+
+    opacity: .6;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .founder-principle {
+        padding: 85px 6vw 60px;
+    }
+
+    .principle-center {
+        padding: 110px 0 190px;
+    }
+
+    .principle-geometry {
+        width: 550px;
+        height: 550px;
+    }
+
+    .ring-one {
+        width: 210px;
+        height: 210px;
+    }
+
+    .ring-two {
+        width: 360px;
+        height: 360px;
+    }
+
+    .ring-three {
+        width: 530px;
+        height: 530px;
+    }
+
+    .principle-bottom {
+        left: 6vw;
+        right: 6vw;
+        bottom: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .founder-principle {
+        min-height: 900px;
+
+        padding: 70px 22px 45px;
+    }
+
+    .principle-top {
+        grid-template-columns: 30px 1fr auto;
+
+        gap: 12px;
+
+        padding-bottom: 18px;
+
+        font-size: 8px;
+    }
+
+    .principle-center {
+        padding: 100px 0 260px;
+    }
+
+    .principle-kicker {
+        margin-bottom: 25px;
+
+        font-size: 8px;
+    }
+
+    .principle-center h2 {
+        font-size: clamp(52px, 15vw, 76px);
+        line-height: .88;
+    }
+
+    .principle-center h2 span {
+        margin-top: 8px;
+    }
+
+    .principle-statement {
+        max-width: 330px;
+
+        margin-top: 45px;
+
+        padding-top: 25px;
+    }
+
+    .principle-statement p {
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .principle-quote-mark {
+        left: -2px;
+        top: 12px;
+
+        font-size: 30px;
+    }
+
+    .principle-geometry {
+        width: 430px;
+        height: 430px;
+
+        top: 53%;
+    }
+
+    .ring-one {
+        width: 160px;
+        height: 160px;
+    }
+
+    .ring-two {
+        width: 290px;
+        height: 290px;
+    }
+
+    .ring-three {
+        width: 420px;
+        height: 420px;
+    }
+
+    .principle-core {
+        width: 80px;
+        height: 80px;
+    }
+
+    .principle-core span {
+        font-size: 5px;
+    }
+
+    .principle-core strong {
+        font-size: 17px;
+    }
+
+    .principle-bottom {
+        left: 22px;
+        right: 22px;
+        bottom: 40px;
+
+        grid-template-columns: 1fr 1fr;
+
+        row-gap: 0;
+    }
+
+    .principle-detail {
+        min-height: 65px;
+
+        padding: 14px 8px 0;
+
+        gap: 10px;
+    }
+
+    .principle-detail:nth-child(2) {
+        border-right: none;
+    }
+
+    .principle-detail:nth-child(3),
+    .principle-detail:nth-child(4) {
+        border-top: 1px solid rgba(22,11,39,.12);
+    }
+
+    .principle-detail:nth-child(3) {
+        padding-left: 0;
+    }
+
+    .principle-detail p {
+        font-size: 7px;
+    }
+
+}
