@@ -2525,3 +2525,433 @@ body {
     }
 
 }
+
+
+/* =====================================================
+   SERVICES — 05. WHO WE SERVE
+===================================================== */
+
+.serve-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 100svh;
+
+    overflow: hidden;
+
+    background: #fff;
+    color: #32145f;
+
+    padding: 120px 8% 80px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.serve-header {
+    position: absolute;
+
+    top: 38px;
+    left: 55px;
+
+    display: flex;
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+    letter-spacing: .2em;
+}
+
+.serve-header span:first-child {
+    opacity: .4;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.serve-intro {
+    width: min(1200px, 84%);
+
+    margin: 0 auto;
+}
+
+.serve-intro p {
+    margin: 0 0 18px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+    letter-spacing: .22em;
+
+    opacity: .45;
+}
+
+.serve-intro h2 {
+    margin: 0;
+
+    max-width: 800px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(55px, 6.5vw, 92px);
+
+    font-weight: 400;
+
+    line-height: .88;
+
+    letter-spacing: -.065em;
+}
+
+.serve-intro h2 span {
+    display: block;
+
+    margin-left: 8vw;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.serve-content {
+    width: min(1200px, 84%);
+
+    margin: 70px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr .8fr;
+
+    gap: 10vw;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   LIST
+===================================================== */
+
+.serve-list {
+    width: 100%;
+}
+
+.serve-item {
+    width: 100%;
+
+    min-height: 72px;
+
+    padding: 12px 0;
+
+    border: 0;
+
+    border-top: 1px solid rgba(50,20,95,.14);
+
+    background: transparent;
+
+    color: #32145f;
+
+    cursor: pointer;
+
+    display: grid;
+
+    grid-template-columns: 45px 1fr 30px;
+
+    align-items: center;
+
+    text-align: left;
+
+    transition:
+        padding-left .4s ease,
+        opacity .4s ease;
+}
+
+.serve-item:last-child {
+    border-bottom: 1px solid rgba(50,20,95,.14);
+}
+
+.serve-item span {
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .15em;
+
+    opacity: .35;
+}
+
+.serve-item strong {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(20px, 2vw, 27px);
+
+    font-weight: 400;
+
+    letter-spacing: -.035em;
+}
+
+.serve-item i {
+    font-style: normal;
+
+    font-size: 17px;
+
+    opacity: .3;
+
+    transition: transform .35s ease;
+}
+
+
+/* Active */
+
+.serve-item.active {
+    padding-left: 14px;
+}
+
+.serve-item.active span,
+.serve-item.active i {
+    opacity: .8;
+}
+
+.serve-item.active i {
+    transform: translate(4px, -4px);
+}
+
+
+/* Hover */
+
+.serve-item:hover {
+    padding-left: 14px;
+}
+
+.serve-item:hover i {
+    transform: translate(4px, -4px);
+}
+
+
+/* =====================================================
+   DETAIL
+===================================================== */
+
+.serve-detail {
+    min-height: 320px;
+
+    padding: 35px;
+
+    background: #32145f;
+
+    color: #fff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    box-shadow: 25px 25px 0 rgba(50,20,95,.06);
+}
+
+.serve-detail-number {
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .15em;
+
+    opacity: .4;
+}
+
+.serve-detail-label {
+    margin: 25px 0 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .18em;
+
+    opacity: .5;
+}
+
+.serve-detail h3 {
+    margin: 12px 0 20px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    line-height: .95;
+
+    letter-spacing: -.05em;
+}
+
+.serve-detail-text {
+    max-width: 330px;
+
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.75;
+
+    opacity: .62;
+}
+
+.serve-detail-footer {
+    margin-top: 35px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 5px;
+
+    letter-spacing: .15em;
+
+    opacity: .4;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.serve-bottom {
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+    bottom: 32px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(50,20,95,.13);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .18em;
+
+    opacity: .4;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .serve-section {
+        min-height: auto;
+
+        padding: 105px 24px 70px;
+    }
+
+
+    .serve-header {
+        top: 32px;
+        left: 24px;
+
+        font-size: 7px;
+    }
+
+
+    .serve-intro {
+        width: 100%;
+    }
+
+    .serve-intro p {
+        font-size: 7px;
+    }
+
+    .serve-intro h2 {
+        font-size: clamp(43px, 13vw, 64px);
+    }
+
+    .serve-intro h2 span {
+        margin-left: 7vw;
+    }
+
+
+    /* Content */
+
+    .serve-content {
+        width: 100%;
+
+        margin-top: 55px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 35px;
+
+        align-items: stretch;
+    }
+
+
+    /* List */
+
+    .serve-item {
+        min-height: 65px;
+
+        grid-template-columns: 35px 1fr 25px;
+    }
+
+    .serve-item strong {
+        font-size: 18px;
+    }
+
+
+    /* Detail */
+
+    .serve-detail {
+        min-height: 280px;
+
+        padding: 28px;
+    }
+
+    .serve-detail h3 {
+        font-size: 30px;
+    }
+
+    .serve-detail-text {
+        font-size: 8px;
+    }
+
+
+    .serve-bottom {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        margin-top: 30px;
+
+        font-size: 5px;
+    }
+
+}
