@@ -365,3 +365,128 @@ document.querySelectorAll(".serve-item").forEach(item => {
     });
 
 });
+
+
+/* =====================================================
+   CAREER — OPEN POSITIONS
+===================================================== */
+
+const positionData = {
+    interns: {
+        number: "01",
+        title: "Interns",
+        description:
+            "Begin your professional journey by gaining practical exposure to construction consulting, project management and technical processes."
+    },
+
+    designer: {
+        number: "02",
+        title: "Junior Interior Designer",
+        description:
+            "Work alongside the design and consulting team while developing practical experience across interior projects and construction processes."
+    },
+
+    architect: {
+        number: "03",
+        title: "Junior Architect",
+        description:
+            "Develop architectural experience through project coordination, technical understanding and exposure to real construction environments."
+    },
+
+    admin: {
+        number: "04",
+        title: "Admin / Accountant",
+        description:
+            "Support the organisation through structured administration, documentation, coordination and financial responsibilities."
+    },
+
+    social: {
+        number: "05",
+        title: "Social Media Manager",
+        description:
+            "Shape the digital presence of Arconest through thoughtful content, project storytelling and professional communication."
+    },
+
+    landscape: {
+        number: "06",
+        title: "Landscape Designer / Architect",
+        description:
+            "Contribute to landscape planning and design while working alongside multidisciplinary construction professionals."
+    },
+
+    structural: {
+        number: "07",
+        title: "Structural Engineer",
+        description:
+            "Apply structural knowledge to real project requirements while supporting technical review, coordination and construction decisions."
+    },
+
+    project: {
+        number: "08",
+        title: "Project Manager",
+        description:
+            "Take responsibility for project coordination, planning, communication and disciplined execution across construction activities."
+    }
+};
+
+
+const positionItems =
+    document.querySelectorAll(".position-item");
+
+const detailNumber =
+    document.getElementById("position-detail-number");
+
+const detailTitle =
+    document.getElementById("position-detail-title");
+
+const detailDescription =
+    document.getElementById("position-detail-description");
+
+const detailRole =
+    document.getElementById("position-detail-role");
+
+
+if (positionItems.length) {
+
+    positionItems.forEach(item => {
+
+        item.addEventListener("click", () => {
+
+            const key = item.dataset.position;
+            const data = positionData[key];
+
+            if (!data) return;
+
+
+            positionItems.forEach(position => {
+                position.classList.remove("active");
+            });
+
+            item.classList.add("active");
+
+
+            detailNumber.textContent = data.number;
+
+            detailTitle.textContent = data.title;
+
+            detailDescription.textContent =
+                data.description;
+
+            detailRole.textContent =
+                data.title.toUpperCase();
+
+
+            const detail =
+                document.querySelector(".position-detail");
+
+            detail.style.transform = "translateY(6px)";
+
+            setTimeout(() => {
+                detail.style.transform = "translateY(0)";
+            }, 180);
+
+        });
+
+    });
+
+}
