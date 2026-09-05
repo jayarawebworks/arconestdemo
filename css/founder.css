@@ -2205,3 +2205,59 @@
     }
 
 }
+
+/* =========================================================
+   FIX — FOUNDER SECTION 05 OVERLAP
+========================================================= */
+
+/* Keep Section 05 content below the floating navbar */
+.founder-principle {
+    position: relative;
+    z-index: 1;
+    padding-top: 170px;
+}
+
+
+/* Keep the main typography clearly above the geometry */
+.founder-principle .principle-center {
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Push the architectural rings behind everything */
+.founder-principle .principle-geometry {
+    z-index: 1;
+    opacity: .09;
+}
+
+
+/* Keep top label above the geometry */
+.founder-principle .principle-top {
+    position: relative;
+    z-index: 20;
+}
+
+
+/* Keep bottom information above the geometry */
+.founder-principle .principle-bottom {
+    position: absolute;
+    z-index: 20;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .founder-principle {
+        padding-top: 125px;
+    }
+
+    .founder-principle .principle-geometry {
+        opacity: .07;
+    }
+
+}
