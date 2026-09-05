@@ -1462,3 +1462,570 @@
     }
 
 }
+
+
+/* =========================================================
+   CONTACT — SECTION 04 / FINAL CTA
+========================================================= */
+
+.contact-final {
+
+    position: relative;
+
+    width: 100%;
+    min-height: 82svh;
+
+    overflow: hidden;
+
+    background: #f8f7f9;
+    color: #32145f;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ARCHITECTURAL BACKGROUND
+========================================================= */
+
+.final-architecture {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: min(700px, 65vw);
+    height: min(700px, 65vw);
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+}
+
+
+/* Outer square */
+
+.final-square {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(50,20,95,.12);
+
+    transition:
+        width 1s ease,
+        height 1s ease;
+}
+
+.square-one {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.square-two {
+
+    width: 68%;
+    height: 68%;
+
+    border-color: rgba(50,20,95,.08);
+
+}
+
+
+/* =========================================================
+   CORNER MARKS
+========================================================= */
+
+.final-corner {
+
+    position: absolute;
+
+    width: 45px;
+    height: 45px;
+
+    z-index: 3;
+}
+
+
+/* top left */
+
+.corner-tl {
+
+    left: 0;
+    top: 0;
+
+    border-left: 1px solid #32145f;
+    border-top: 1px solid #32145f;
+
+}
+
+
+/* top right */
+
+.corner-tr {
+
+    right: 0;
+    top: 0;
+
+    border-right: 1px solid #32145f;
+    border-top: 1px solid #32145f;
+
+}
+
+
+/* bottom left */
+
+.corner-bl {
+
+    left: 0;
+    bottom: 0;
+
+    border-left: 1px solid #32145f;
+    border-bottom: 1px solid #32145f;
+
+}
+
+
+/* bottom right */
+
+.corner-br {
+
+    right: 0;
+    bottom: 0;
+
+    border-right: 1px solid #32145f;
+    border-bottom: 1px solid #32145f;
+
+}
+
+
+/* =========================================================
+   TOP LABEL
+========================================================= */
+
+.contact-final-top {
+
+    position: absolute;
+
+    top: 38px;
+    left: 55px;
+
+    display: flex;
+
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .2em;
+
+    z-index: 10;
+}
+
+.contact-final-top span:first-child {
+
+    opacity: .4;
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.contact-final-content {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: min(850px, 85%);
+
+    text-align: center;
+
+}
+
+
+/* eyebrow */
+
+.contact-final-eyebrow {
+
+    margin: 0 0 24px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .25em;
+
+    opacity: .45;
+
+}
+
+
+/* heading */
+
+.contact-final-content h2 {
+
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(65px, 8vw, 115px);
+
+    font-weight: 400;
+
+    line-height: .84;
+
+    letter-spacing: -.075em;
+
+}
+
+
+.contact-final-content h2 span {
+
+    display: block;
+
+    margin-left: 6vw;
+
+    font-weight: 500;
+
+}
+
+
+/* description */
+
+.contact-final-description {
+
+    width: min(390px, 100%);
+
+    margin: 32px auto 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+
+    line-height: 1.75;
+
+    opacity: .5;
+
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.contact-final-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 32px;
+
+}
+
+
+/* common */
+
+.final-primary,
+.final-whatsapp {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 15px 20px;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: .18em;
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        transform .35s ease;
+
+}
+
+
+.final-primary {
+
+    background: #32145f;
+
+    color: #fff;
+
+    border: 1px solid #32145f;
+
+}
+
+
+.final-whatsapp {
+
+    background: transparent;
+
+    color: #32145f;
+
+    border: 1px solid rgba(50,20,95,.3);
+
+}
+
+
+/* arrows */
+
+.final-primary span,
+.final-whatsapp span {
+
+    font-size: 14px;
+
+    transition: transform .3s ease;
+
+}
+
+
+/* hover */
+
+.final-primary:hover {
+
+    background: transparent;
+
+    color: #32145f;
+
+    transform: translateY(-3px);
+
+}
+
+
+.final-whatsapp:hover {
+
+    background: #32145f;
+
+    color: #fff;
+
+    transform: translateY(-3px);
+
+}
+
+
+.final-primary:hover span,
+.final-whatsapp:hover span {
+
+    transform: translate(4px,-4px);
+
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.contact-final-bottom {
+
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+
+    bottom: 30px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(50,20,95,.14);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: .18em;
+
+    opacity: .4;
+
+}
+
+
+/* =========================================================
+   SUBTLE FRAME ANIMATION
+========================================================= */
+
+.contact-final:hover .square-one {
+
+    width: 96%;
+    height: 96%;
+
+}
+
+.contact-final:hover .square-two {
+
+    width: 64%;
+    height: 64%;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .contact-final {
+
+        min-height: 78svh;
+
+        padding: 100px 20px 75px;
+
+    }
+
+
+    .contact-final-top {
+
+        top: 32px;
+        left: 20px;
+
+        gap: 12px;
+
+        font-size: 7px;
+
+    }
+
+
+    .final-architecture {
+
+        width: 310px;
+        height: 310px;
+
+    }
+
+
+    .final-corner {
+
+        width: 28px;
+        height: 28px;
+
+    }
+
+
+    .contact-final-content {
+
+        width: 100%;
+
+    }
+
+
+    .contact-final-eyebrow {
+
+        margin-bottom: 20px;
+
+        font-size: 6px;
+
+    }
+
+
+    .contact-final-content h2 {
+
+        font-size: clamp(48px, 14vw, 70px);
+
+        line-height: .87;
+
+    }
+
+
+    .contact-final-content h2 span {
+
+        margin-left: 0;
+
+    }
+
+
+    .contact-final-description {
+
+        width: 285px;
+
+        max-width: 100%;
+
+        margin-top: 27px;
+
+        font-size: 8px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .contact-final-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: min(250px, 100%);
+
+        margin: 28px auto 0;
+
+        gap: 10px;
+
+    }
+
+
+    .final-primary,
+    .final-whatsapp {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 14px 17px;
+
+        font-size: 6px;
+
+    }
+
+
+    .contact-final-bottom {
+
+        left: 20px;
+        right: 20px;
+
+        bottom: 22px;
+
+        font-size: 5px;
+
+        line-height: 1.4;
+
+    }
+
+
+    .contact-final-bottom span:nth-child(2) {
+
+        display: none;
+
+    }
+
+}
