@@ -7276,3 +7276,255 @@ main::after {
         transform: none !important;
     }
 }
+
+
+/* =====================================================
+   GLOBAL MOBILE OVERFLOW FIX
+   Add this at the VERY END of about.css
+===================================================== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Prevent sections from becoming wider than viewport */
+
+.about-purpose,
+.about-story,
+.about-intro,
+.about-hero,
+.about-principles {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   PURPOSE — MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .about-purpose {
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        overflow: hidden;
+    }
+
+    .purpose-grid {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .purpose-section-mark {
+        left: 25px;
+        right: 25px;
+        max-width: calc(100% - 50px);
+    }
+
+    .purpose-intro {
+        width: calc(100% - 50px);
+        max-width: calc(100% - 50px);
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .purpose-intro h2 {
+        max-width: 100%;
+        overflow-wrap: normal;
+    }
+
+    .purpose-layout {
+        width: calc(100% - 50px);
+        max-width: calc(100% - 50px);
+        margin-left: 25px;
+        margin-right: 25px;
+
+        display: flex;
+        flex-direction: column;
+
+        overflow: visible;
+    }
+
+    .purpose-block {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .purpose-block h3,
+    .purpose-block p {
+        max-width: 100%;
+    }
+
+    .purpose-center {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .purpose-center::before {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .purpose-bottom {
+        width: calc(100% - 50px);
+        max-width: calc(100% - 50px);
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+
+/* =====================================================
+   STORY — MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .about-story {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .story-heading {
+        width: calc(100% - 50px);
+        max-width: calc(100% - 50px);
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .story-heading h2 {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .story-network {
+        width: calc(100% - 50px);
+        max-width: calc(100% - 50px);
+        margin-left: 25px;
+        margin-right: 25px;
+        padding-left: 45px;
+    }
+
+    .story-node {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .node-content {
+        min-width: 0;
+    }
+
+    .node-content p {
+        max-width: 100%;
+    }
+
+    .story-bottom {
+        width: calc(100% - 50px);
+        max-width: calc(100% - 50px);
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+
+/* =====================================================
+   WHO WE ARE — MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .about-intro {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .intro-heading,
+    .intro-composition,
+    .intro-bottom-line {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .intro-copy,
+    .intro-image-wrap,
+    .intro-data {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .intro-image-wrap img {
+        max-width: 100%;
+    }
+}
+
+
+/* =====================================================
+   VISION / MISSION — MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .about-purpose * {
+        max-width: 100%;
+    }
+
+    .purpose-block {
+        overflow: hidden;
+    }
+
+    .purpose-label,
+    .purpose-number,
+    .purpose-corner {
+        max-width: none;
+    }
+}
+
+
+/* =====================================================
+   PRINCIPLES — MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .about-principles {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .principles-heading,
+    .principles-layout,
+    .principles-bottom {
+        max-width: calc(100% - 50px);
+    }
+
+    .principle {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .principle p {
+        max-width: 100%;
+    }
+}
