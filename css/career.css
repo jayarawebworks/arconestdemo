@@ -807,3 +807,418 @@ body {
     }
 
 }
+
+/* =====================================================
+   CAREER — 03. OPEN POSITIONS
+===================================================== */
+
+.career-positions {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    overflow: hidden;
+
+    background: #160b27;
+    color: #fff;
+
+    padding: 120px 7.5% 90px;
+}
+
+
+/* TOP LABEL */
+
+.positions-top {
+    position: absolute;
+    top: 38px;
+    left: 7.5%;
+
+    display: flex;
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+    letter-spacing: .2em;
+}
+
+.positions-top span:first-child {
+    opacity: .4;
+}
+
+
+/* INTRO */
+
+.positions-intro {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+.positions-intro > p {
+    margin: 0 0 20px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+    letter-spacing: .22em;
+
+    opacity: .45;
+}
+
+.positions-intro h2 {
+    margin: 0;
+
+    max-width: 850px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(60px, 7vw, 100px);
+    font-weight: 400;
+    line-height: .86;
+    letter-spacing: -.07em;
+}
+
+.positions-intro h2 span {
+    display: block;
+    margin-left: 8vw;
+    font-weight: 500;
+}
+
+
+/* MAIN LAYOUT */
+
+.positions-layout {
+    width: min(1200px, 100%);
+    margin: 65px auto 0;
+
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 8vw;
+
+    align-items: stretch;
+}
+
+
+/* POSITION LIST */
+
+.positions-list {
+    width: 100%;
+}
+
+.position-item {
+    width: 100%;
+    min-height: 65px;
+
+    padding: 10px 0;
+
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,.14);
+
+    background: transparent;
+    color: #fff;
+
+    display: grid;
+    grid-template-columns: 45px minmax(0,1fr) 30px;
+    align-items: center;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        padding-left .4s ease,
+        opacity .4s ease,
+        background .4s ease;
+}
+
+.position-item:last-child {
+    border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.position-number {
+    font-family: "Inter", sans-serif;
+    font-size: 7px;
+    letter-spacing: .15em;
+
+    opacity: .35;
+}
+
+.position-item strong {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(19px, 2vw, 27px);
+    font-weight: 400;
+
+    letter-spacing: -.035em;
+}
+
+.position-item i {
+    font-style: normal;
+    font-size: 17px;
+
+    opacity: .3;
+
+    transition:
+        transform .35s ease,
+        opacity .35s ease;
+}
+
+
+/* ACTIVE / HOVER */
+
+.position-item:hover,
+.position-item.active {
+    padding-left: 14px;
+}
+
+.position-item:hover i,
+.position-item.active i {
+    opacity: 1;
+    transform: translate(4px,-4px);
+}
+
+.position-item.active .position-number {
+    opacity: .8;
+}
+
+
+/* DETAIL PANEL */
+
+.position-detail {
+    min-height: 390px;
+
+    padding: 32px;
+
+    background: #fff;
+    color: #32145f;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow: 20px 20px 0 rgba(255,255,255,.06);
+
+    transition: transform .45s ease;
+}
+
+.position-detail-top {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+    font-size: 6px;
+    letter-spacing: .16em;
+}
+
+.position-detail-top span:first-child {
+    opacity: .4;
+}
+
+.position-detail-main {
+    margin-top: 30px;
+}
+
+.position-detail-label {
+    margin: 0 0 12px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 7px;
+    letter-spacing: .2em;
+
+    opacity: .4;
+}
+
+.position-detail h3 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(35px, 4vw, 58px);
+    font-weight: 400;
+
+    line-height: .92;
+    letter-spacing: -.055em;
+}
+
+.position-detail-description {
+    max-width: 330px;
+
+    margin: 28px 0 0;
+
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+    line-height: 1.75;
+
+    opacity: .55;
+}
+
+.position-detail-bottom {
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(50,20,95,.14);
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+    font-size: 6px;
+    letter-spacing: .16em;
+
+    opacity: .45;
+}
+
+
+/* BOTTOM */
+
+.positions-bottom {
+    position: absolute;
+
+    left: 7.5%;
+    right: 7.5%;
+    bottom: 30px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(255,255,255,.13);
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+    font-size: 6px;
+    letter-spacing: .18em;
+
+    opacity: .4;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .career-positions {
+        min-height: auto;
+
+        padding: 110px 20px 65px;
+    }
+
+
+    .positions-top {
+        top: 32px;
+        left: 20px;
+
+        gap: 12px;
+
+        font-size: 7px;
+    }
+
+
+    .positions-intro {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .positions-intro > p {
+        margin-bottom: 17px;
+        font-size: 7px;
+    }
+
+    .positions-intro h2 {
+        width: 100%;
+
+        font-size: clamp(45px,13vw,64px);
+        line-height: .9;
+    }
+
+    .positions-intro h2 span {
+        margin-left: 0;
+    }
+
+
+    /* STACK */
+
+    .positions-layout {
+        width: 100%;
+
+        margin-top: 55px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+
+    /* LIST */
+
+    .position-item {
+        min-height: 62px;
+
+        grid-template-columns: 32px minmax(0,1fr) 25px;
+
+        padding: 10px 0;
+    }
+
+    .position-item strong {
+        min-width: 0;
+
+        font-size: 17px;
+        line-height: 1.15;
+    }
+
+    .position-number {
+        font-size: 6px;
+    }
+
+    .position-item i {
+        font-size: 15px;
+        text-align: right;
+    }
+
+    .position-item:hover,
+    .position-item.active {
+        padding-left: 8px;
+    }
+
+
+    /* DETAIL */
+
+    .position-detail {
+        width: 100%;
+        min-height: 330px;
+
+        padding: 28px;
+
+        box-sizing: border-box;
+
+        box-shadow: 14px 14px 0 rgba(255,255,255,.06);
+    }
+
+    .position-detail h3 {
+        font-size: clamp(31px,9vw,43px);
+    }
+
+    .position-detail-description {
+        max-width: 280px;
+
+        font-size: 8px;
+        line-height: 1.7;
+    }
+
+    .position-detail-bottom {
+        font-size: 5px;
+    }
+
+
+    /* BOTTOM */
+
+    .positions-bottom {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        margin-top: 35px;
+
+        font-size: 5px;
+        line-height: 1.4;
+    }
+}
