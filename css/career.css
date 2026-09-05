@@ -2391,3 +2391,94 @@ body {
 
     opacity: .4;
 }
+
+@media (max-width: 700px) {
+
+    .career-growth {
+        min-height: 100svh;
+        padding: 110px 24px 80px;
+    }
+
+    .growth-top {
+        top: 32px;
+        left: 24px;
+        font-size: 7px;
+    }
+
+    .growth-heading {
+        position: relative;
+        left: auto;
+        top: auto;
+
+        width: 100%;
+        margin: 0;
+
+        z-index: 5;
+    }
+
+    .growth-heading p {
+        font-size: 7px;
+        margin-bottom: 18px;
+    }
+
+    .growth-heading h2 {
+        font-size: clamp(45px, 13vw, 65px);
+        line-height: .88;
+    }
+
+    .growth-heading h2 span {
+        margin-left: 0;
+    }
+
+    .growth-structure {
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+
+        width: 78%;
+        height: 330px;
+
+        margin: 65px auto 0;
+    }
+
+    .growth-floor {
+        padding: 0 12px;
+    }
+
+    .growth-floor span {
+        font-size: 6px;
+    }
+
+    .growth-floor strong {
+        font-size: 5px;
+    }
+
+    .growth-copy {
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        width: 100%;
+
+        margin-top: 40px;
+    }
+
+    .growth-copy p {
+        width: 270px;
+        font-size: 8px;
+    }
+
+    .growth-bottom {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        margin-top: 45px;
+
+        font-size: 5px;
+    }
+}
