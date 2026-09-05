@@ -2676,3 +2676,336 @@ body {
         font-size: 5px;
     }
 }
+
+/* =========================================
+   CAREER — SECTION 06
+   MAKE YOUR MOVE
+========================================= */
+
+.career-final {
+    position: relative;
+    width: 100%;
+    min-height: 82svh;
+    overflow: hidden;
+
+    background: #32145f;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   ARCHITECTURAL FRAMES
+========================================= */
+
+.final-frame {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(255,255,255,.13);
+
+    pointer-events: none;
+
+    transition:
+        width 1.2s ease,
+        height 1.2s ease,
+        transform 1.2s ease;
+}
+
+.final-frame-outer {
+    width: 78%;
+    height: 72%;
+}
+
+.final-frame-middle {
+    width: 60%;
+    height: 54%;
+    border-color: rgba(255,255,255,.09);
+}
+
+.final-frame-inner {
+    width: 38%;
+    height: 35%;
+    border-color: rgba(255,255,255,.08);
+}
+
+
+/* =========================================
+   TOP
+========================================= */
+
+.final-top {
+    position: absolute;
+
+    top: 38px;
+    left: 55px;
+
+    display: flex;
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+    letter-spacing: .2em;
+}
+
+.final-top span:first-child {
+    opacity: .4;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.final-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(900px, 85%);
+
+    text-align: center;
+}
+
+.final-eyebrow {
+    margin: 0 0 25px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 7px;
+    letter-spacing: .25em;
+
+    opacity: .5;
+}
+
+.final-content h2 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(65px, 8vw, 120px);
+
+    font-weight: 400;
+    line-height: .84;
+
+    letter-spacing: -.075em;
+}
+
+.final-content h2 span {
+    display: block;
+
+    margin-left: 5vw;
+
+    font-weight: 500;
+}
+
+.final-description {
+    width: 350px;
+    max-width: 100%;
+
+    margin: 35px auto 0;
+
+    font-family: "Inter", sans-serif;
+    font-size: 9px;
+    line-height: 1.75;
+
+    opacity: .55;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.final-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 32px;
+
+    padding: 15px 22px;
+
+    border: 1px solid rgba(255,255,255,.35);
+
+    color: #fff;
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+    font-size: 7px;
+    letter-spacing: .18em;
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        transform .35s ease;
+}
+
+.final-button span {
+    font-size: 15px;
+
+    transition: transform .35s ease;
+}
+
+.final-button:hover {
+    background: #fff;
+    color: #32145f;
+
+    transform: translateY(-3px);
+}
+
+.final-button:hover span {
+    transform: translate(4px,-4px);
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.final-bottom {
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+    bottom: 30px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+
+    font-family: "Inter", sans-serif;
+    font-size: 6px;
+    letter-spacing: .18em;
+
+    opacity: .4;
+}
+
+.final-bottom span:nth-child(2) {
+    text-align: center;
+}
+
+.final-bottom span:last-child {
+    text-align: right;
+}
+
+
+/* =========================================
+   HOVER — FRAMES OPEN
+========================================= */
+
+.career-final:hover .final-frame-outer {
+    width: 82%;
+    height: 76%;
+}
+
+.career-final:hover .final-frame-middle {
+    width: 64%;
+    height: 58%;
+}
+
+.career-final:hover .final-frame-inner {
+    width: 42%;
+    height: 39%;
+}
+
+@media (max-width: 700px) {
+
+    .career-final {
+        min-height: 82svh;
+        padding: 100px 24px 75px;
+
+        box-sizing: border-box;
+    }
+
+    .final-top {
+        top: 32px;
+        left: 24px;
+
+        font-size: 7px;
+        gap: 12px;
+    }
+
+    .final-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .final-eyebrow {
+        margin-bottom: 20px;
+        font-size: 6px;
+    }
+
+    .final-content h2 {
+        font-size: clamp(48px, 14vw, 70px);
+        line-height: .87;
+    }
+
+    .final-content h2 span {
+        margin-left: 0;
+    }
+
+    .final-description {
+        width: 285px;
+
+        margin-top: 28px;
+
+        font-size: 8px;
+        line-height: 1.7;
+    }
+
+    .final-button {
+        margin-top: 28px;
+
+        padding: 14px 18px;
+
+        font-size: 6px;
+    }
+
+    .final-frame-outer {
+        width: 88%;
+        height: 65%;
+    }
+
+    .final-frame-middle {
+        width: 70%;
+        height: 48%;
+    }
+
+    .final-frame-inner {
+        width: 48%;
+        height: 32%;
+    }
+
+    .final-bottom {
+        left: 24px;
+        right: 24px;
+        bottom: 22px;
+
+        display: flex;
+        justify-content: space-between;
+
+        gap: 12px;
+
+        font-size: 5px;
+    }
+
+    .final-bottom span:nth-child(2) {
+        display: none;
+    }
+
+    .final-bottom span:last-child {
+        text-align: right;
+    }
+}
